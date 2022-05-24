@@ -553,16 +553,6 @@ Use the <see cref="P:DevExpress.XtraEditors.Controls.PictureEditOptionsMask.Rect
 
 
         </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit.CustomColors">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit.EditorTypeName">
             <summary>
                 <para>Gets the editor's class name. 
@@ -1350,7 +1340,7 @@ For the <see cref="T:DevExpress.XtraGrid.GridControl"/>, these operations are in
 <para>
 
 </para>
-For a <see cref="T:DevExpress.XtraEditors.DateEdit"/> control, you use the control's mask (see the <see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.Mask"/> inherited property) to specify which portions of a date-time value can be edited by end-users in the calendar.
+For a <see cref="T:DevExpress.XtraEditors.DateEdit"/> control, you use the the control's mask (see the <see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.Mask"/> inherited property) to specify which portions of a date-time value can be edited by end-users in the calendar.
 </para>
             </summary>
 
@@ -2619,7 +2609,7 @@ The object specifies dates that lie in the range between the DateRange.StartDate
 
 </para>
             </summary>
-            <value>A <see cref="DefaultBoolean"/> enumeration value that specifies whether the control's visual elements are aligned to support locales using right-to-left fonts. The <b>DefaultBoolean.Default</b> value is equivalent to <b>DefaultBoolean.False</b>.
+            <value>A <see cref="DefaultBoolean"/> enumeration value that specifies whether the control's visual elements are aligned to support locales using right-to-left fonts.
 
 </value>
 
@@ -5721,16 +5711,6 @@ The range's minimum value is the lowest column value, but not greater than <b>0<
 
 
         </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemRatingControl.ShowToolTips">
-            <summary>
-                <para>Gets or sets whether a tooltip should be displayed when the mouse pointer is over the control.
-</para>
-            </summary>
-            <value><b>true</b>, to display tooltips; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemRatingControl.TextLocation">
             <summary>
                 <para>Gets or sets the RepositoryItemRatingControl's text position relative to the rating items.
@@ -5850,16 +5830,6 @@ The range's minimum value is the lowest column value, but not greater than <b>0<
 </para>
             </summary>
             <value>A Decimal value that is the current RatingControl rating.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.RatingControl.ShowToolTips">
-            <summary>
-                <para>Gets or sets whether a tooltip should be displayed when the mouse pointer is over the control.
-</para>
-            </summary>
-            <value><b>true</b>, to display tooltips; otherwise, <b>false</b>.
 </value>
 
 
@@ -5992,11 +5962,11 @@ The range's minimum value is the lowest column value, but not greater than <b>0<
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit.MaxDays">
             <summary>
-                <para>Gets or sets the maximum number of days in the time interval.
+                <para>Gets or sets the maximum value of the day component in the time interval.
 
 </para>
             </summary>
-            <value>An integer value that specifies the maximum number of days in the time interval.
+            <value>An integer value that specifies the maximum value of the day component in the time interval.
 
 </value>
 
@@ -6004,31 +5974,31 @@ The range's minimum value is the lowest column value, but not greater than <b>0<
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit.MaxHours">
             <summary>
-                <para>Gets or sets the maximum number of hours of the time interval.
+                <para>Gets or sets the maximum value of the hours component of the time interval.
 </para>
             </summary>
-            <value>An integer value that specifies the maximum number of hours of the time interval.
+            <value>An integer value that specifies the maximum value of the hours component of the time interval.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit.MaxMilliseconds">
             <summary>
-                <para>Gets or sets the maximum number of milliseconds of the time interval.
+                <para>Gets or sets the maximum value of the milliseconds component of the time interval.
 </para>
             </summary>
-            <value>An integer value that specifies the maximum number of milliseconds of the time interval.
+            <value>An integer value that specifies the maximum value of the milliseconds component of the time interval.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit.MaxMinutes">
             <summary>
-                <para>Gets or sets the maximum number of minutes of the time interval.
+                <para>Gets or sets the maximum value of the minutes component of the time interval.
 
 </para>
             </summary>
-            <value>An integer value that specifies the maximum number of minutes of the time interval.
+            <value>An integer value that specifies the maximum value of the minutes component of the time interval.
 
 </value>
 
@@ -6036,63 +6006,13 @@ The range's minimum value is the lowest column value, but not greater than <b>0<
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit.MaxSeconds">
             <summary>
-                <para>Gets or sets the maximum number of seconds of the time interval.
+                <para>Gets or sets the maximum value of the seconds component of the time interval.
 
 </para>
             </summary>
-            <value>An integer value that specifies the maximum number of seconds of the time interval.
+            <value>An integer value that specifies the maximum value of the seconds component of the time interval.
 
 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit.MinDays">
-            <summary>
-                <para>Gets or sets the minimum number of days in the time interval.
-</para>
-            </summary>
-            <value>An integer value that specifies the minimum number of days in the time interval.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit.MinHours">
-            <summary>
-                <para>Gets or sets the minimum number of hours of the time interval.
-</para>
-            </summary>
-            <value>An integer value that specifies the minimum number of hours of the time interval.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit.MinMilliseconds">
-            <summary>
-                <para>Gets or sets the minimum number of milliseconds of the time interval.
-</para>
-            </summary>
-            <value>An integer value that specifies the minimum number of milliseconds of the time interval.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit.MinMinutes">
-            <summary>
-                <para>Gets or sets the minimum number of minutes of the time interval.
-</para>
-            </summary>
-            <value>An integer value that specifies the minimum number of minutes of the time interval.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit.MinSeconds">
-            <summary>
-                <para>Gets or sets the minimum number of seconds of the time interval.
-</para>
-            </summary>
-            <value>An integer value that specifies the minimum number of seconds of the time interval.
 </value>
 
 
@@ -9473,14 +9393,6 @@ In bound mode, this method populates the item collection before returning it.
 
 
         </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit.ResetTextEditStyleToStandardInFilterControl">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemCheckedComboBoxEdit.SelectAllItemCaption">
             <summary>
                 <para>Gets or sets whether the 'Select All' check item is visible.
@@ -12280,13 +12192,6 @@ In a <see cref="T:DevExpress.XtraEditors.BaseListBoxControl"/> control's descend
 
 
         </member>
-        <member name="E:DevExpress.XtraEditors.BreadCrumbEdit.SelectedNodeChanged">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
         <member name="P:DevExpress.XtraEditors.BreadCrumbEdit.Selector">
             <summary>
                 <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
@@ -13995,8 +13900,7 @@ In a <see cref="T:DevExpress.XtraEditors.BaseListBoxControl"/> control's descend
         <member name="T:DevExpress.XtraEditors.Filtering.ExcelFilteringDataEventArgs`1">
 
             <summary>
-                <para>Provides data for events that allow you to customize filter conditions in the Excel-inspired filter dropdowns. 
-</para>
+                <para> </para>
             </summary>
 
         </member>
@@ -17102,23 +17006,6 @@ Currently, <b>Default</b> is equivalent to <b>AboveParent</b>.
 
 
         </member>
-        <member name="M:DevExpress.XtraEditors.FilterControl.GetClauseImageByType(DevExpress.Skins.ISkinProvider,System.String,DevExpress.Utils.Drawing.ObjectState)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="skinProvider">
-		 
-            </param>
-            <param name="sType">
-		 
-            </param>
-            <param name="state">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
         <member name="M:DevExpress.XtraEditors.FilterControl.GetDefaultColumn">
             <summary>
                 <para>Gets the default column used to create a new filter in the Filter Control.
@@ -18115,14 +18002,6 @@ Currently, <b>Default</b> is equivalent to <b>AboveParent</b>.
             </summary>
             <value>A DevExpress.Utils.HorzAlignment enumeration value specifying the check box's vertical alignment. 
 </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.BaseRepositoryItemCheckEdit.GlyphVerticalAlignment">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>
@@ -22885,11 +22764,9 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraEditors.TileItemE
         </member>
         <member name="P:DevExpress.XtraEditors.TileItem.OptionsTableLayout">
             <summary>
-                <para>Provides access to options that affect the table layout of tile elements.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="TileItemTableLayoutOptions"/> object that specifies options that affect the table layout of tile elements.
-</value>
+            <value> </value>
 
 
         </member>
@@ -28700,10 +28577,10 @@ When setting the <see cref="P:DevExpress.XtraEditors.FormatConditionRule3ColorSc
         </member>
         <member name="P:DevExpress.XtraEditors.Calendar.CustomDrawDayNumberCellEventArgs.Highlighted">
             <summary>
-                <para>Gets whether the currently processed cell is under the mouse cursor.
+                <para>Gets a value indicating whether the processed day number cell corresponds to a day within the currently selected month.
 </para>
             </summary>
-            <value><b>true</b>, if the processed day number cell is hovered over by the mouse cursor; otherwise, <b>false</b>.
+            <value><b>true</b> if the processed day number cell corresponds to a day within the currently selected month; otherwise, <b>false</b>.
 </value>
 
 
@@ -30036,11 +29913,9 @@ In standalone editors, because of the .NET binding mechanism, the <b>Ignore</b> 
         </member>
         <member name="P:DevExpress.XtraEditors.TileItemElement.ColumnIndex">
             <summary>
-                <para>Gets or sets the column alignment of the current element.
-</para>
+                <para> </para>
             </summary>
-            <value>The zero-based index of the table column that the element should appear within.
-</value>
+            <value> </value>
 
 
         </member>
@@ -30190,11 +30065,9 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="P:DevExpress.XtraEditors.TileItemElement.RowIndex">
             <summary>
-                <para>Gets or sets the row alignment of the current element.
-</para>
+                <para> </para>
             </summary>
-            <value>The zero-based index of the table row that the element should appear within.
-</value>
+            <value> </value>
 
 
         </member>
@@ -33543,13 +33416,6 @@ The default value is <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/>.
             </summary>
             <value>A <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemMRUEdit"/> object instance containing settings for the MRU editor.
 </value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraEditors.MRUEdit.RemovingMRUItem">
-            <summary>
-                <para> </para>
-            </summary>
 
 
         </member>
@@ -44208,16 +44074,6 @@ Return value: Unknown picture format
 
 
         </member>
-        <member name="M:DevExpress.XtraEditors.SimpleButton.CalcBestSize">
-            <summary>
-                <para>Calculates the button size required to fit its content, but not exceeding the maximum and minimum values.
-</para>
-            </summary>
-            <returns>A <b>System.Drawing.Size</b> object specifying the button size that best fits its content, but does not exceed the maximum and minimum values.
-</returns>
-
-
-        </member>
         <member name="M:DevExpress.XtraEditors.SimpleButton.GetButtonViewInfo">
             <summary>
                 <para>Gets the SimpleButton's view information. 
@@ -49179,16 +49035,6 @@ Allows you to disable fade-in and fade-out effects for the image and draw custom
 
 
         </member>
-        <member name="P:DevExpress.XtraWaitForm.ProgressPanel.ViewInfo">
-            <summary>
-                <para>Returns the object which contains internal information used to render the control.
-</para>
-            </summary>
-            <value>A <see cref="ProgressPanelViewInfo"/> object which contains internal information used to render the control.
-</value>
-
-
-        </member>
         <member name="P:DevExpress.XtraWaitForm.ProgressPanel.WaitAnimationType">
             <summary>
                 <para>Gets or sets the type of wait indicator.
@@ -53641,19 +53487,9 @@ This property is in effect for standalone editors and for editors embedded in to
 
 
         </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.ZoomAcceleration">
-            <summary>
-                <para>Gets or sets the factor that adjusts the default zoom speed via the mouse wheel.
-</para>
-            </summary>
-            <value>A <see cref="Double"/> value that specifies the factor that adjusts the default zoom speed via the mouse wheel. The default is <b>1</b>.
-</value>
-
-
-        </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.ZoomAccelerationFactor">
             <summary>
-                <para>Gets or sets the factor that adjusts the default zoom speed via the mouse wheel. This property is obsolete. Use the <see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.ZoomAcceleration"/> property instead.
+                <para>Gets or sets the factor that adjusts the default zoom speed via the mouse wheel.
 
 </para>
             </summary>
@@ -56215,11 +56051,9 @@ This property is in effect for standalone editors and for editors embedded in to
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItem.DefaultBorderStyleInBars">
             <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
+                <para> </para>
             </summary>
-            <value> 
-</value>
+            <value> </value>
 
 
         </member>
@@ -60231,48 +60065,37 @@ Note: the value is in effect when the <see cref="P:DevExpress.XtraEditors.Reposi
         </member>
         <member name="M:DevExpress.XtraTab.Buttons.CustomHeaderButton.#ctor(DevExpress.XtraEditors.Controls.ButtonPredefines,System.String,System.Int32,System.Boolean,System.Boolean,DevExpress.XtraEditors.Controls.EditorButtonImageOptions,DevExpress.Utils.AppearanceObject,System.String,System.Object,DevExpress.Utils.SuperToolTip)">
             <summary>
-                <para>Initializes a new instance of the CustomHeaderButton class with the specified settings.
-</para>
+                <para> </para>
             </summary>
             <param name="kind">
-		A ButtonPredefines enumeration value that specifies the surface icon of a button.
-
+		 
             </param>
             <param name="caption">
-		A String value that is the button caption.
-
+		 
             </param>
             <param name="width">
-		An Int32 value that is the button width.
-
+		 
             </param>
             <param name="enabled">
-		<b>true</b>, if the button is enabled; otherwise, <b>false</b>.
-
+		 
             </param>
             <param name="visible">
-		<b>true</b>, if the button is visible; otherwise, <b>false</b>.
-
+		 
             </param>
             <param name="imageOptions">
-		An EditorButtonImageOptions object that stores image-related properties.
-
+		 
             </param>
             <param name="appearance">
-		An <see cref="T:DevExpress.Utils.AppearanceObject"/> assigned to this button.
-
+		 
             </param>
             <param name="toolTip">
-		A String value that is the button hint.
-
+		 
             </param>
             <param name="tag">
-		An Object that can be used to identify different buttons.
-
+		 
             </param>
             <param name="superTip">
-		A <see cref="T:DevExpress.Utils.SuperToolTip"/> that is the button super tip.
-
+		 
             </param>
 
 

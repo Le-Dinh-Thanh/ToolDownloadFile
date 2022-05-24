@@ -2501,7 +2501,7 @@
 
 </para>
             </summary>
-            <value>An object of the <see cref="T:System.Collections.Generic.IEnumerable`1"/> generic type, representing a collection of Ribbon pages.
+            <value>An object of the <see cref="T:System.Collections.Generic.IEnumerable"/>&#60;T&#62; generic type, representing a collection of Ribbon pages.
 </value>
 
 

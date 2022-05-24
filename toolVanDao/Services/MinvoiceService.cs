@@ -342,6 +342,46 @@ namespace toolVanDao.Services
 
 
         }
+        public static void DownloadPDF( string txtPath, List<string> listid, List<InvoiceObject> invoiceObjects)
+        {
+            try
+            {
+                foreach (var id in invoiceObjects)
+                {
+
+
+
+                    var webClient = SetupWebClient();
+                    var url = BaseConfig.UrlDownloadPDF + id.InvInvoiceAuthId;
+
+                    byte[] ketqua = webClient.DownloadData(url);
+
+                    //var url = BaseConfig.UrlDownloadXML;
+                    ////var ketqua1 = webClient.UploadString(url, json.ToString());
+                    //byte[] byteArray = Encoding.ASCII.GetBytes(json.ToString());
+
+                    //byte[] ketqua = webClient.UploadData(url, byteArray);
+                    //Encoding.ASCII.GetString(ketqua);
+
+                    //string filenameEncoding = webClient.ResponseHeaders["Content-Disposition"].ToString();
+                    //string fileName = filenameEncoding.Substring(filenameEncoding.IndexOf("=") + 1);
+                    string fileName = "sohd_" + id.InvoiceNumber + "_" + id.ngay_hd.ToString("yyyy-MM-dd") + "_" + id.KyHieu.Trim().Replace("/","-") + ".pdf";
+
+                    System.IO.File.WriteAllBytes(txtPath + "\\" + fileName, ketqua);
+
+                }
+            }
+            catch (Exception e)
+            {
+                ck = true;
+                XtraMessageBox.Show(e.ToString(), "Lỗi kết nối!", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+
+            }
+          
+
+
+        }
         public static void DownloadXML78( string txtPath, List<string> listid ,List<InvoiceObject> invoiceObjects78)
         {
             try
@@ -404,8 +444,8 @@ namespace toolVanDao.Services
                     var webClient = SetupWebClient();
                     var url = BaseConfig.UrlDownloadpdf78 + id78.hoadon68id;
 
-                    var ketqua = webClient.DownloadString(url);
-                    // Encoding.ASCII.GetString(ketqua);
+                    byte[] ketqua = webClient.DownloadData(url);
+                     //Encoding.ASCII.GetString(ketqua);
                     //JObject pdf = JObject.Parse(ketqua.ToString());
                     //XDocument pdfraw = null;
 
@@ -426,10 +466,11 @@ namespace toolVanDao.Services
                     //string theDate = id78.ngay_hd.ToString("yyyy-MM-dd");
                     // DateTime dt = id78.ngay_hd.Date;
 
-                    //string filenameEncoding = webClient.ResponseHeaders.ToString();
+                    //string filenameEncoding = webClient.ResponseHeaders["Content-Disposition"].ToString();
+                    //string fileName = filenameEncoding.Substring(filenameEncoding.IndexOf("=") + 1);
                     string fileName = "sohd_" + id78.shdon + "_" + id78.ngay_hd.ToString("yyyy-MM-dd") + "_" + id78.KyHieu + ".pdf";
 
-                    //System.IO.File.WriteAllBytes(txtPath + "\\" + fileName, Encoding.UTF8.GetBytes(pdfraw.ToString()));
+                    System.IO.File.WriteAllBytes(txtPath + "\\" + fileName, ketqua);
 
                 }
             }

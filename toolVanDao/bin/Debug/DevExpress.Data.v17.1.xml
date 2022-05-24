@@ -4439,7 +4439,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="F:DevExpress.Export.ProgressMode.Automatic">
             <summary>
-                <para>The progress bar is visible only when copying large portions of RTF- or HTML-formatted data.
+                <para>The progress bar is visible only when copying large amounts of RTF- or HTML-formatted data.
 </para>
             </summary>
 
@@ -5407,7 +5407,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
 </para>
             </summary>
             <param name="match">
-		The <see cref="T:System.Predicate`1[[]]"/> delegate that defines the conditions of the element to search for.
+		The <see cref="T:System.Predicate"/><b>&lt;T&gt;</b> delegate that defines the conditions of the element to search for.
 
 
 
@@ -6593,7 +6593,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
 </para>
             </summary>
             <param name="filter">
-		A <b>System.Func</b> delegate specifying a filtering condition.
+		A <see cref="T:System.Func"/> delegate specifying a filtering condition.
 
             </param>
             <returns>A collection of <see cref="T:DevExpress.Entity.ProjectModel.IDXTypeInfo"/> objects.
@@ -6607,7 +6607,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
 </para>
             </summary>
             <param name="filter">
-		A <b>System.Func</b> delegate specifying a filtering condition.
+		A <see cref="T:System.Func"/> delegate specifying a filtering condition.
 
             </param>
             <returns>A collection of <see cref="T:DevExpress.Entity.ProjectModel.IDXAssemblyInfo"/> objects.
@@ -8277,7 +8277,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
 </para>
             </summary>
             <param name="predicate">
-		A <b>System.Predicate</b> delegate.
+		A <see cref="T:System.Predicate"/> delegate.
 
             </param>
             <returns>An <see cref="T:DevExpress.Entity.ProjectModel.IDXTypeInfo"/> object.
@@ -8291,7 +8291,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
 </para>
             </summary>
             <param name="predicate">
-		A <b>System.Predicate</b> delegate.
+		A <see cref="T:System.Predicate"/> delegate.
 
             </param>
             <returns>A collection of <see cref="T:DevExpress.Entity.ProjectModel.IDXTypeInfo"/> objects.
@@ -8309,7 +8309,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
 
             </param>
             <param name="predicate">
-		A <b>System.Predicate</b> delegate.
+		A <see cref="T:System.Predicate"/> delegate.
 
             </param>
             <returns>A collection of <see cref="T:DevExpress.Entity.ProjectModel.IDXTypeInfo"/> objects.
@@ -11399,7 +11399,7 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
 
             </param>
             <param name="pickManager">
-		A <see cref="T:DevExpress.Data.Browsing.Design.PickManagerBase"/> descendant.
+		A <b>DevExpress.Data.Browsing.Design.PickManagerBase</b> descendant.
 
 
             </param>
@@ -12065,1049 +12065,74 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
 
 
         </member>
-        <member name="T:DevExpress.Xpo.DB.ConnectionProviderSql">
-
-            <summary>
-                <para>Implements the base functionality for  SQL-based data store adapters, including the <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/> and other adapters listed in the Database Systems Supported by XPO topic.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.Xpo.DB.ConnectionProviderSql.BraceJoin">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.DB.ConnectionProviderSql.CanCreateDatabase">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.DB.ConnectionProviderSql.CanCreateSchema">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.CollectTablesToCreate(System.Collections.ICollection)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="tables">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.ComposeSafeColumnName(System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="columnName">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.ComposeSafeConstraintName(System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="constraintName">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.ComposeSafeSchemaName(System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="tableName">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.ComposeSafeTableName(System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="tableName">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.DB.ConnectionProviderSql.Connection">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.DB.ConnectionProviderSql.ConnectionString">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.CreateColumn(DevExpress.Xpo.DB.DBTable,DevExpress.Xpo.DB.DBColumn)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="table">
-		 
-            </param>
-            <param name="column">
-		 
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.CreateCommand">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.CreateForeignKey(DevExpress.Xpo.DB.DBTable,DevExpress.Xpo.DB.DBForeignKey)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="table">
-		 
-            </param>
-            <param name="fk">
-		 
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.CreateIndex(DevExpress.Xpo.DB.DBTable,DevExpress.Xpo.DB.DBIndex)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="table">
-		 
-            </param>
-            <param name="index">
-		 
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.CreatePrimaryKey(DevExpress.Xpo.DB.DBTable)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="table">
-		 
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.CreateTable(DevExpress.Xpo.DB.DBTable)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="table">
-		 
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.DB.ConnectionProviderSql.CustomFunctionOperators">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.DB.ConnectionProviderSql.DefaultCommandTimeout">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.DB.ConnectionProviderSql.EnableConnectionStringArgumentEscaping">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.EscapeConnectionStringArgument(System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="argument">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.ExecSql(DevExpress.Xpo.DB.Helpers.Query)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="query">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.ExplicitBeginTransaction(System.Data.IsolationLevel)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="il">
-		 
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.ExplicitBeginTransaction">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.ExplicitCommitTransaction">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.ExplicitRollbackTransaction">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatBinary(DevExpress.Data.Filtering.BinaryOperatorType,System.String,System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="operatorType">
-		 
-            </param>
-            <param name="leftOperand">
-		 
-            </param>
-            <param name="rightOperand">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatColumn(System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="columnName">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatColumn(System.String,System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="columnName">
-		 
-            </param>
-            <param name="tableAlias">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatColumnSafe(System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="columnName">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatConstraint(System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="constraintName">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatConstraintSafe(System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="constraintName">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatDelete(System.String,System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="tableName">
-		 
-            </param>
-            <param name="whereClause">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatFunction(DevExpress.Xpo.DB.Helpers.ProcessParameter,DevExpress.Data.Filtering.FunctionOperatorType,System.Object[])">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="processParameter">
-		 
-            </param>
-            <param name="operatorType">
-		 
-            </param>
-            <param name="operands">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatFunction(DevExpress.Data.Filtering.FunctionOperatorType,System.String[])">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="operatorType">
-		 
-            </param>
-            <param name="operands">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatInsert(System.String,System.String,System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="tableName">
-		 
-            </param>
-            <param name="fields">
-		 
-            </param>
-            <param name="values">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatInsertDefaultValues(System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="tableName">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatOrder(System.String,DevExpress.Xpo.DB.SortingDirection)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="sortProperty">
-		 
-            </param>
-            <param name="direction">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatOuterApply(System.String,System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="sql">
-		 
-            </param>
-            <param name="alias">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatSelect(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="selectedPropertiesSql">
-		 
-            </param>
-            <param name="fromSql">
-		 
-            </param>
-            <param name="whereSql">
-		 
-            </param>
-            <param name="orderBySql">
-		 
-            </param>
-            <param name="groupBySql">
-		 
-            </param>
-            <param name="havingSql">
-		 
-            </param>
-            <param name="skipSelectedRecords">
-		 
-            </param>
-            <param name="topSelectedRecords">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatSelect(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="selectedPropertiesSql">
-		 
-            </param>
-            <param name="fromSql">
-		 
-            </param>
-            <param name="whereSql">
-		 
-            </param>
-            <param name="orderBySql">
-		 
-            </param>
-            <param name="groupBySql">
-		 
-            </param>
-            <param name="havingSql">
-		 
-            </param>
-            <param name="topSelectedRecords">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatTable(System.String,System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="schema">
-		 
-            </param>
-            <param name="tableName">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatTable(System.String,System.String,System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="schema">
-		 
-            </param>
-            <param name="tableName">
-		 
-            </param>
-            <param name="tableAlias">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatTableSafe(DevExpress.Xpo.DB.DBTable)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="table">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatUnary(DevExpress.Data.Filtering.UnaryOperatorType,System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="operatorType">
-		 
-            </param>
-            <param name="operand">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.FormatUpdate(System.String,System.String,System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="tableName">
-		 
-            </param>
-            <param name="sets">
-		 
-            </param>
-            <param name="whereClause">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.GenerateStoredProcedures(DevExpress.Xpo.DB.DBTable,System.String@)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="table">
-		 
-            </param>
-            <param name="dropLines">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.GenerateStoredProceduresInfoOnce">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.GetColumnType(System.Data.DbType,System.Boolean)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="type">
-		 
-            </param>
-            <param name="suppressExceptionOnUnknown">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.GetCustomFunctionOperator(System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="functionName">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.GetDbType(DevExpress.Xpo.DB.DBColumnType)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="type">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.GetParameterName(DevExpress.Data.Filtering.OperandValue,System.Int32,System.Boolean@)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="parameter">
-		 
-            </param>
-            <param name="index">
-		 
-            </param>
-            <param name="createParameter">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.GetSqlCreateColumnFullAttributes(DevExpress.Xpo.DB.DBTable,DevExpress.Xpo.DB.DBColumn)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="table">
-		 
-            </param>
-            <param name="column">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.GetStorageTables(System.String[])">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="tables">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.GetStorageTablesList(System.Boolean)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="includeViews">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.GetStoredProcedures">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.GetTableSchema(DevExpress.Xpo.DB.DBTable,System.Boolean,System.Boolean)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="table">
-		 
-            </param>
-            <param name="checkIndexes">
-		 
-            </param>
-            <param name="checkForeignKeys">
-		 
-            </param>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.DB.ConnectionProviderSql.GlobalDefaultCommandTimeout">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.DB.ConnectionProviderSql.IdentityColumnMagicName">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.DB.ConnectionProviderSql.MaxDeadLockRetryDelayMilliseconds">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.DB.ConnectionProviderSql.MaxDeadLockTryCount">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.ModifyData(DevExpress.Xpo.DB.ModificationStatement[])">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="dmlStatements">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.DB.ConnectionProviderSql.NativeOuterApplySupported">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.DB.ConnectionProviderSql.NativeSkipTakeSupported">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="E:DevExpress.Xpo.DB.ConnectionProviderSql.Reconnected">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.RegisterCustomFunctionOperator(DevExpress.Data.Filtering.ICustomFunctionOperatorFormattable)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="customFunction">
-		 
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.RegisterCustomFunctionOperators(System.Collections.Generic.ICollection`1)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="customFunctions">
-		 
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.SelectData(DevExpress.Xpo.DB.SelectStatement[])">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="selects">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.DB.ConnectionProviderSql.SupportNamedParameters">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.DB.ConnectionProviderSql.SyncRoot">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.DB.ConnectionProviderSql.Transaction">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.UnregisterCustomFunctionOperator(DevExpress.Data.Filtering.ICustomFunctionOperatorFormattable)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="customFunction">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.UnregisterCustomFunctionOperator(System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="functionName">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Xpo.DB.ConnectionProviderSql.UpdateSchema(System.Boolean,DevExpress.Xpo.DB.DBTable[])">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="dontCreateIfFirstTableNotExist">
-		 
-            </param>
-            <param name="tables">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Xpo.DB.ConnectionProviderSql.UseLegacyTimeSpanSupport">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="T:DevExpress.Utils.UrlAccessSecurityLevel">
-
-            <summary>
-                <para>Lists the values specifying whether a report control allows loading images using the "file://" protocol.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Utils.UrlAccessSecurityLevel.Custom">
-            <summary>
-                <para>Enables loading of images from custom directories (defined using the <see cref="M:DevExpress.Utils.UrlAccessSecurityLevelSetting.RegisterCustomBaseDirectories"/> or <see cref="M:DevExpress.Utils.UrlAccessSecurityLevelSetting.RegisterCustomCallback"/> method).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.UrlAccessSecurityLevel.FilesFromBaseDirectory">
-            <summary>
-                <para>Enables loading of images from an application's working directory (defined by the <a href="https://msdn.microsoft.com/en-us/library/system.appdomain.basedirectory%28v=vs.110%29.aspx">AppDomain.CurrentDomain.BaseDirectory</a> property).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.UrlAccessSecurityLevel.Unrestricted">
-            <summary>
-                <para>Enables loading of any image from any directory.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.UrlAccessSecurityLevel.WebUrlsOnly">
-            <summary>
-                <para>Forbids loading images using the "file://" protocol (only the "http://", "https://" and "ftp://" protocols are supported).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Utils.UrlAccessSecurityLevelSetting">
-
-            <summary>
-                <para>Specifies the security settings for resolving URL's in a web application.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Utils.UrlAccessSecurityLevelSetting.RegisterCustomBaseDirectories(System.String[])">
-            <summary>
-                <para>Enables using the "file://" protocol for loading images to the specified directories.
-</para>
-            </summary>
-            <param name="baseDirectories">
-		An array of <see cref="T:System.String"/> values, specifying the custom directories.
-
-            </param>
-            <returns><b>true</b>, if loading images to custom directories is enabled; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.UrlAccessSecurityLevelSetting.RegisterCustomCallback(System.Func`2)">
-            <summary>
-                <para>Enables loading images to the protocols defined in the specified callback.
-</para>
-            </summary>
-            <param name="customCallback">
-		A function, specifying a custom callback.
-
-            </param>
-            <returns><b>true</b>, if loading images to custom directories is enabled; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.UrlAccessSecurityLevelSetting.SafeSetSecurityLevel(DevExpress.Utils.UrlAccessSecurityLevel)">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <param name="value">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.UrlAccessSecurityLevelSetting.SecurityLevel">
-            <summary>
-                <para>Specifies whether a report control allows loading images using the "file://" protocol.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.UrlAccessSecurityLevel"/> enumeration value.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Data.IBoundProperty">
 
             <summary>
-                <para>If implemented, provides an abstraction for an object's bindable property.
-</para>
+                <para> </para>
             </summary>
 
         </member>
         <member name="P:DevExpress.Data.IBoundProperty.Children">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
-            <value> 
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Data.IBoundProperty.DisplayName">
             <summary>
-                <para>Provides access to the property display name.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Data.IBoundProperty.HasChildren">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
-            <value> 
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Data.IBoundProperty.IsAggregate">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
-            <value> 
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Data.IBoundProperty.IsList">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
-            <value> 
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Data.IBoundProperty.Name">
             <summary>
-                <para>Provides access to the property name.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Data.IBoundProperty.Parent">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
-            <value> 
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Data.IBoundProperty.Type">
             <summary>
-                <para>Provides access to the property type.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:System.Type"/> object.
-</value>
+            <value> </value>
 
 
         </member>
@@ -13133,11 +12158,9 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="P:DevExpress.Data.Filtering.Helpers.CriteriaValidatorError.Text">
             <summary>
-                <para>Returns the error message.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the error text.
-</value>
+            <value> </value>
 
 
         </member>
@@ -13528,20 +12551,6 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
 
 
         </member>
-        <member name="T:DevExpress.Utils.Filtering.Internal.FilterUIElementResXLocalizer">
-
-            <summary>
-                <para> </para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Utils.Filtering.Internal.FilterUIElementResXLocalizer.#ctor">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.Data.Controls.ExpressionEditor.AutoCompleteItemKind">
 
             <summary>
@@ -13722,12 +12731,9 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="P:DevExpress.Data.Controls.ExpressionEditor.FunctionInfo.CaretOffset">
             <summary>
-                <para>Specifies the caret position after adding a function to an expression.
-</para>
+                <para> </para>
             </summary>
-            <value>An integer value, specifying the number of symbols to the right of the caret position until the end of the function body.
-
-</value>
+            <value> </value>
 
 
         </member>
@@ -13743,11 +12749,9 @@ To create the <b>logical OR</b> operator using the <see cref="M:DevExpress.Data.
         </member>
         <member name="P:DevExpress.Data.Controls.ExpressionEditor.FunctionInfo.DisplayName">
             <summary>
-                <para>Specifies the full name of a function in the Expression Editor (including the function syntax).
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
+            <value> </value>
 
 
         </member>
@@ -17383,1042 +16387,6 @@ The <see cref="E:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetError
 
 
         </member>
-        <member name="T:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId">
-
-            <summary>
-                <para> </para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterAboveAverageDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterAboveAverageName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterAfterDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterAfterName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterAllDatesInThePeriodDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterAllDatesInThePeriodName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterAprilDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterAprilName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterAugustDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterAugustName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterBeforeDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterBeforeName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterBeginsWithDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterBeginsWithName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterBelowAverageDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterBelowAverageName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterBetweenDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterBetweenName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterBottomNDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterBottomNName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterContainsDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterContainsName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterCustomDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterCustomName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterDatePeriodsDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterDatePeriodsName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterDecemberDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterDecemberName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterDoesNotBeginsWithDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterDoesNotBeginsWithName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterDoesNotContainDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterDoesNotContainName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterDoesNotEndsWithDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterDoesNotEndsWithName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterDoesNotEqualDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterDoesNotEqualName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterEndsWithDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterEndsWithName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterEqualsDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterEqualsName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterFebruaryDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterFebruaryName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterGreaterThanDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterGreaterThanName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterGreaterThanOrEqualToDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterGreaterThanOrEqualToName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterIsBlankDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterIsBlankName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterIsNotBlankDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterIsNotBlankName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterIsNotNullDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterIsNotNullName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterIsNullDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterIsNullName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterJanuaryDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterJanuaryName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterJulyDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterJulyName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterJuneDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterJuneName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterLastMonthDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterLastMonthName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterLastQuarterDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterLastQuarterName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterLastWeekDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterLastWeekName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterLastYearDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterLastYearName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterLessThanDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterLessThanName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterLessThanOrEqualToDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterLessThanOrEqualToName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterMarchDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterMarchName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterMayDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterMayName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterNextMonthDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterNextMonthName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterNextQuarterDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterNextQuarterName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterNextWeekDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterNextWeekName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterNextYearDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterNextYearName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterNoneDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterNoneName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterNovemberDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterNovemberName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterOctoberDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterOctoberName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterQuarter1Description">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterQuarter1Name">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterQuarter2Description">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterQuarter2Name">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterQuarter3Description">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterQuarter3Name">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterQuarter4Description">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterQuarter4Name">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFiltersBooleanDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFiltersBooleanName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFiltersDateTimeDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFiltersDateTimeName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFiltersEnumDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFiltersEnumName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterSeptemberDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterSeptemberName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterSequenceQualifierItemsDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterSequenceQualifierItemsName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterSequenceQualifierPercentsDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterSequenceQualifierPercentsName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFiltersNumericDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFiltersNumericName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFiltersTextDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFiltersTextName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterThisMonthDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterThisMonthName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterThisQuarterDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterThisQuarterName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterThisWeekDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterThisWeekName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterThisYearDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterThisYearName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterTodayDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterTodayName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterTomorrowDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterTomorrowName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterTopNDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterTopNName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterUserDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterUserName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterYearToDateDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterYearToDateName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterYesterdayDescription">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFilterYesterdayName">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIFirstLabel">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUINullValuePromptChooseOne">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUINullValuePromptEnterADate">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUINullValuePromptEnterAValue">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUINullValuePromptSearchControl">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUINullValuePromptSelectADate">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUINullValuePromptSelectAValue">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUISecondLabel">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUITypeLabel">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.CustomUIValueLabel">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.FilteringUIClearFilter">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.FilteringUIClose">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Filtering.Internal.FilterUIElementLocalizerStringId.FilteringUITabValues">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.Data.Filtering.IClientCriteriaVisitor">
 
             <summary>
@@ -20029,11 +17997,11 @@ The operands are specified by the <see cref="P:DevExpress.Data.Filtering.Functio
 </para>
             </summary>
             <param name="opLeft">
-		A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> descendant which represents the expression for the first operand. This value is assigned to the <see cref="F:DevExpress.Data.Filtering.BinaryOperator.LeftOperand"/> property.
+		A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> descendant which represents the expression for the first operand. This value is assigned to the <see cref="P:DevExpress.Data.Filtering.BinaryOperator.LeftOperand"/> property.
 
             </param>
             <param name="opRight">
-		A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> descendant which represents the expression for the second operand. This value is assigned to the <see cref="F:DevExpress.Data.Filtering.BinaryOperator.RightOperand"/> property.
+		A <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> descendant which represents the expression for the second operand. This value is assigned to the <see cref="P:DevExpress.Data.Filtering.BinaryOperator.RightOperand"/> property.
 
             </param>
             <param name="type">
@@ -21572,15 +19540,14 @@ To create the <b>logical NOT</b> operator using the <see cref="M:DevExpress.Data
 
 <para>The operands should be defined as follows:</para>
 
-<para>1 - a substring to search for;</para>
-<para>2 - a string to be searched in;</para>
+<para>1 - a substring to search;</para>
+<para>2 - a string to be searched;</para>
 <para>3 - (optional) an integer that specifies the zero-based index at which the search starts. If this operand is not specified, the search begins from the start of the string;</para>
 <para>4 - (optional) an integer that specifies the number of characters to examine, starting from the specified position. If this operand is not specified, the search continues until the end of the string.</para>
 
 <para>This function performs a word (case-sensitive and culture-sensitive) search using the current culture. If a specified substring is found, the function returns its index. Otherwise, -1 is returned.</para>
 
-<para>To create the <b>CharIndex</b> operator using the <see cref="M:DevExpress.Data.Filtering.CriteriaOperator.Parse"/> method, use the following syntax: <b>CriteriaOperator.Parse("CharIndex(Field1, Field2)")</b>, <b>CriteriaOperator.Parse("CharIndex(Field1, Field2, Field3)")</b>, or <b>CriteriaOperator.Parse("CharIndex(Field1, Field2, Field3, Field4)")</b>.</para>
-
+<para>To create the <b>CharIndex</b> operator using the <see cref="M:DevExpress.Data.Filtering.CriteriaOperator.Parse"/> method use the following syntax: <b>CriteriaOperator.Parse("CharIndex(Field1, Field2)")</b>, <b>CriteriaOperator.Parse("CharIndex(Field1, Field2, Field3)")</b>, or <b>CriteriaOperator.Parse("CharIndex(Field1, Field2, Field3, Field4)")</b>.</para>
 </para>
             </summary>
 
@@ -23412,251 +21379,199 @@ To create the addition operator using the <see cref="M:DevExpress.Data.Filtering
         <member name="T:DevExpress.Data.Browsing.Design.PickManagerBase">
 
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
 
         </member>
         <member name="M:DevExpress.Data.Browsing.Design.PickManagerBase.AreContainDummyNode(System.Collections.IList)">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
             <param name="nodes">
 		 
-
             </param>
-            <returns> 
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.Data.Browsing.Design.PickManagerBase.ContainsDummyNode(System.Collections.IList)">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
             <param name="list">
 		 
-
             </param>
-            <returns> 
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="P:DevExpress.Data.Browsing.Design.PickManagerBase.Executor">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
-            <value> 
-</value>
+            <value> </value>
 
 
         </member>
         <member name="M:DevExpress.Data.Browsing.Design.PickManagerBase.FillContent(System.Collections.IList,System.Collections.ObjectModel.Collection`1,System.Boolean)">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
             <param name="nodes">
 		 
-
             </param>
             <param name="dataSources">
 		 
-
             </param>
             <param name="addNoneNode">
 		 
-
             </param>
 
 
         </member>
         <member name="M:DevExpress.Data.Browsing.Design.PickManagerBase.FillContent(System.Collections.IList,System.Collections.IList,System.Boolean)">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
             <param name="nodes">
 		 
-
             </param>
             <param name="dataSources">
 		 
-
             </param>
             <param name="addNoneNode">
 		 
-
             </param>
 
 
         </member>
         <member name="M:DevExpress.Data.Browsing.Design.PickManagerBase.FillNodes(System.Object,System.String,System.Collections.IList)">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
             <param name="dataSource">
 		 
-
             </param>
             <param name="dataMember">
 		 
-
             </param>
             <param name="nodes">
 		 
-
             </param>
 
 
         </member>
         <member name="M:DevExpress.Data.Browsing.Design.PickManagerBase.FindDataMemberNode(System.Collections.IList,System.Object,System.String)">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
             <param name="nodes">
 		 
-
             </param>
             <param name="dataSource">
 		 
-
             </param>
             <param name="dataMember">
 		 
-
             </param>
-            <returns> 
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.Data.Browsing.Design.PickManagerBase.FindDataMemberNode(System.Collections.IList,System.String)">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
             <param name="nodes">
 		 
-
             </param>
             <param name="dataMember">
 		 
-
             </param>
-            <returns> 
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.Data.Browsing.Design.PickManagerBase.FindDataMemberNode(System.Collections.IList,System.String,System.Action`1)">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
             <param name="nodes">
 		 
-
             </param>
             <param name="dataMember">
 		 
-
             </param>
             <param name="callback">
 		 
-
             </param>
 
 
         </member>
         <member name="M:DevExpress.Data.Browsing.Design.PickManagerBase.FindNoneNode(System.Collections.IList)">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
             <param name="nodes">
 		 
-
             </param>
-            <returns> 
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.Data.Browsing.Design.PickManagerBase.FindSourceNode(System.Collections.IList,System.Object)">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
             <param name="nodes">
 		 
-
             </param>
             <param name="dataSource">
 		 
-
             </param>
-            <returns> 
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.Data.Browsing.Design.PickManagerBase.GetDataSourceName(System.Object,System.String,DevExpress.Data.Browsing.Design.IPropertiesProvider,System.EventHandler`1)">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
             <param name="dataSource">
 		 
-
             </param>
             <param name="dataMember">
 		 
-
             </param>
             <param name="provider">
 		 
-
             </param>
             <param name="callback">
 		 
-
             </param>
 
 
         </member>
         <member name="M:DevExpress.Data.Browsing.Design.PickManagerBase.GetDataSourceNode(DevExpress.Data.Browsing.Design.INode)">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
             <param name="node">
 		 
-
             </param>
-            <returns> 
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.Data.Browsing.Design.PickManagerBase.OnNodeExpand(System.Object,DevExpress.Data.Browsing.Design.INode)">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
             <param name="dataSource">
 		 
-
             </param>
             <param name="node">
 		 
-
             </param>
 
 
@@ -29001,56 +26916,49 @@ Otherwise, the closest matching image side (height or width) will be sized to th
         </member>
         <member name="F:DevExpress.Data.Browsing.Design.TypeSpecifics.SumBool">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.Data.Browsing.Design.TypeSpecifics.SumDate">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.Data.Browsing.Design.TypeSpecifics.SumDefault">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.Data.Browsing.Design.TypeSpecifics.SumFloat">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.Data.Browsing.Design.TypeSpecifics.SumGuid">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.Data.Browsing.Design.TypeSpecifics.SumInteger">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.Data.Browsing.Design.TypeSpecifics.SumString">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
 
 
@@ -29521,7 +27429,7 @@ Otherwise, the closest matching image side (height or width) will be sized to th
                 <para>Specifies the grouping levels available in a report.
 </para>
             </summary>
-            <value>An array of <see cref="T:System.Collections.Generic.HashSet`1"/> values.
+            <value>An array of <see cref="T:System.Collections.Generic.HashSet"/> values.
 </value>
 
 

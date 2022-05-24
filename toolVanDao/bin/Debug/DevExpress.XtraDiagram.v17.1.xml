@@ -36,11 +36,9 @@
         </member>
         <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsConnector.LineJumpSize">
             <summary>
-                <para>Gets or sets the size of line jumps.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.SizeF"/> value that is the size of line jumps.
-</value>
+            <value> </value>
 
 
         </member>
@@ -170,11 +168,9 @@
         </member>
         <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsTipOverTreeLayout.ConnectorsRouting">
             <summary>
-                <para>Gets or sets whether applying the Tip-over tree layout affects connector routing. This is a dependency property.
-</para>
+                <para> </para>
             </summary>
-            <value>A <b>TreeConnectorsRouting</b> enumeration value.
-</value>
+            <value> </value>
 
 
         </member>
@@ -342,11 +338,9 @@
         </member>
         <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsView.MaxZoomFactor">
             <summary>
-                <para>Specifies the maximum diagram zoom factor.
-</para>
+                <para> </para>
             </summary>
-            <value>A System.Single value that represents the maximum diagram zoom factor.
-</value>
+            <value> </value>
 
 
         </member>
@@ -362,11 +356,9 @@
         </member>
         <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsView.MinZoomFactor">
             <summary>
-                <para>Specifies the minimum diagram zoom factor.
-</para>
+                <para> </para>
             </summary>
-            <value>A System.Single value that represents the minimum diagram zoom factor.
-</value>
+            <value> </value>
 
 
         </member>
@@ -657,21 +649,9 @@
         </member>
         <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsBehavior.PanTool">
             <summary>
-                <para>Gets or sets an object that is the <see cref="T:DevExpress.XtraDiagram.DiagramControl"/>'s pan tool.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:DevExpress.Diagram.Core.DiagramTool"/> descendant that is the custom pan tool.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsBehavior.PointerTool">
-            <summary>
-                <para>Specifies the tool that is used when the end-user selects the Pointer tool in the Ribbon.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Diagram.Core.DiagramTool"/> object that represents the pointer tool.
-</value>
+            <value> </value>
 
 
         </member>
@@ -981,7 +961,7 @@
         </member>
         <member name="E:DevExpress.XtraDiagram.DiagramShape.ContentChanged">
             <summary>
-                <para>Occurs when the current diagram shape's content changes.
+                <para>Occurs when the diagram shape's content changes.
 </para>
             </summary>
 
@@ -1029,7 +1009,7 @@
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramShape.ShapeGeometry">
             <summary>
-                <para>Gets an object that identifies the geometry of the shape.
+                <para>Gets the object that identifies the geometry of the shape.
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.Diagram.Core.ShapeGeometry"/> object.
@@ -1820,7 +1800,7 @@
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramItem.Angle">
             <summary>
-                <para>Specifies the angle by which the diagram item is rotated counterclockwise around its anchor point. This is a dependency property.
+                <para>Specifies the angle by which the diagram item is rotated around its anchor point. This is a dependency property.
 </para>
             </summary>
             <value>A <see cref="T:System.Single"/> value specifying an angle in degrees.
@@ -2163,11 +2143,9 @@
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramItem.IsDisposed">
             <summary>
-                <para>Gets whether the current diagram item is disposed.
-</para>
+                <para> </para>
             </summary>
-            <value><b>true</b>, if the current diagram item is disposed; otherwise, <b>false</b>.
-</value>
+            <value> </value>
 
 
         </member>
@@ -2183,11 +2161,9 @@
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramItem.IsVisible">
             <summary>
-                <para>Gets whether the current diagram item is visible.
-</para>
+                <para> </para>
             </summary>
-            <value><b>true</b>, if the item is visible; otherwise, <b>false</b>.
-</value>
+            <value> </value>
 
 
         </member>
@@ -2203,11 +2179,9 @@
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramItem.MinSize">
             <summary>
-                <para>Gets or sets the minimum item size.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.SizeF"/> value that is the item's minimum size.
-</value>
+            <value> </value>
 
 
         </member>
@@ -2243,11 +2217,9 @@
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramItem.Owner">
             <summary>
-                <para>Gets the owner of the current diagram item.
-</para>
+                <para> </para>
             </summary>
-            <value>An <b>IDiagramItem</b> implementation.
-</value>
+            <value> </value>
 
 
         </member>
@@ -2523,16 +2495,13 @@
         </member>
         <member name="M:DevExpress.XtraDiagram.DiagramControl.AlignCanvas(System.Nullable`1,System.Nullable`1)">
             <summary>
-                <para>Applies the specified alignment to the canvas.
-</para>
+                <para> </para>
             </summary>
             <param name="horizontalAlignment">
-		A <see cref="T:DevExpress.Utils.HorzAlignment"/> enumeration value that is the horizontal alignment of the canvas.
-
+		 
             </param>
             <param name="verticalAlignment">
-		A <see cref="T:DevExpress.Utils.VertAlignment"/> enumeration value that is the vertical alignment of the canvas.
-
+		 
             </param>
 
 
@@ -2555,11 +2524,9 @@
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramControl.Appearance">
             <summary>
-                <para>Provides access to the properties that control the appearance of the <see cref="T:DevExpress.XtraBars.Navigation.AccordionControl"/>'s elements.
-</para>
+                <para> </para>
             </summary>
-            <value>A <b>DiagramAppearance</b> object.
-</value>
+            <value> </value>
 
 
         </member>
@@ -3156,8 +3123,7 @@
         </member>
         <member name="E:DevExpress.XtraDiagram.DiagramControl.CustomGetEditableItemPropertiesCacheKey">
             <summary>
-                <para>Allows you to update the set of properties displayed by the property grid.
-</para>
+                <para> </para>
             </summary>
 
 
@@ -3203,8 +3169,7 @@
         </member>
         <member name="E:DevExpress.XtraDiagram.DiagramControl.CustomItemQueryContinueDrag">
             <summary>
-                <para>Occurs during a drag-and-drop operation.
-</para>
+                <para> </para>
             </summary>
 
 
@@ -4352,31 +4317,28 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         </member>
         <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsTreeLayout.BreadthAlignment">
             <summary>
-                <para>Gets or sets the tree diagram horizontal alignment relative to the layout direction axis.
+                <para>Gets or sets the alignment of the diagram depending on its direction. This is a dependency property.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.Diagram.Core.Alignment"/> enumeration value that specifies the horizontal alignment of the tree diagram.
+            <value>A <see cref="T:DevExpress.Diagram.Core.Alignment"/> enumeration value that specifies the diagram alignment.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsTreeLayout.ConnectorsRouting">
             <summary>
-                <para>Gets or sets whether applying the Tree layout affects connector routing. This is a dependency property.
-
-</para>
+                <para> </para>
             </summary>
-            <value>A <b>TreeConnectorsRouting</b> enumeration value.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsTreeLayout.DepthAlignment">
             <summary>
-                <para>Gets or sets the tree diagram vertical alignment relative to the layout direction axis.
+                <para>Gets or sets the alignment of the diagram depending on its direction. This is a dependency property.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.Diagram.Core.Alignment"/> enumeration value that specifies the vertical alignment of the tree diagram.
+            <value>A <see cref="T:DevExpress.Diagram.Core.Alignment"/> enumeration value that specifies the diagram alignment.
 </value>
 
 
@@ -4431,526 +4393,6 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
 
 
         </member>
-        <member name="T:DevExpress.XtraDiagram.DiagramClosedEditorEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.ClosedEditor"/> and <see cref="E:DevExpress.Xpf.Diagram.DiagramControl.ClosedEditor"/> events.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraDiagram.DiagramClosedEditorEventArgs.#ctor(DevExpress.XtraDiagram.DiagramItem,System.Boolean,System.String,System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="item">
-		 
-            </param>
-            <param name="valueChanged">
-		 
-            </param>
-            <param name="oldValue">
-		 
-            </param>
-            <param name="newValue">
-		 
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramClosedEditorEventArgs.Item">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramClosedEditorEventArgs.NewValue">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramClosedEditorEventArgs.OldValue">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramClosedEditorEventArgs.ValueChanged">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraDiagram.DiagramShowingSaveDialogEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.ShowingSaveDialog"/> and <see cref="E:DevExpress.Xpf.Diagram.DiagramControl.ShowingSaveDialog"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraDiagram.DiagramShowingSaveDialogEventArgs.#ctor(System.String,System.String,System.String,System.String,System.Object,System.Int32)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="filter">
-		 
-            </param>
-            <param name="title">
-		 
-            </param>
-            <param name="initialDirectory">
-		 
-            </param>
-            <param name="defaultFileName">
-		 
-            </param>
-            <param name="documentSourceToSave">
-		 
-            </param>
-            <param name="filterIndex">
-		 
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramShowingSaveDialogEventArgs.DefaultFileName">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramShowingSaveDialogEventArgs.DocumentSourceToSave">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramShowingSaveDialogEventArgs.Filter">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramShowingSaveDialogEventArgs.FilterIndex">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramShowingSaveDialogEventArgs.InitialDirectory">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramShowingSaveDialogEventArgs.Title">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraDiagram.DiagramShowingOpenImageDialogEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.ShowingOpenImageDialog"/> and <see cref="E:DevExpress.Xpf.Diagram.DiagramControl.ShowingOpenImageDialog"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraDiagram.DiagramShowingOpenImageDialogEventArgs.#ctor(System.String,System.String,System.String,System.Object)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="filter">
-		 
-            </param>
-            <param name="title">
-		 
-            </param>
-            <param name="initialDirectory">
-		 
-            </param>
-            <param name="imageSourceToOpen">
-		 
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramShowingOpenImageDialogEventArgs.Filter">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramShowingOpenImageDialogEventArgs.ImageSourceToOpen">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramShowingOpenImageDialogEventArgs.InitialDirectory">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramShowingOpenImageDialogEventArgs.Title">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraDiagram.DiagramShowingOpenDialogEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.ShowingOpenDialog"/> and <see cref="E:DevExpress.Xpf.Diagram.DiagramControl.ShowingOpenDialog"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraDiagram.DiagramShowingOpenDialogEventArgs.#ctor(System.String,System.String,System.String,System.Object)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="filter">
-		 
-            </param>
-            <param name="title">
-		 
-            </param>
-            <param name="initialDirectory">
-		 
-            </param>
-            <param name="documentSourceToOpen">
-		 
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramShowingOpenDialogEventArgs.DocumentSourceToOpen">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramShowingOpenDialogEventArgs.Filter">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramShowingOpenDialogEventArgs.InitialDirectory">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramShowingOpenDialogEventArgs.Title">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraDiagram.DiagramItemCreatingEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.ItemCreating"/> and <see cref="E:DevExpress.Xpf.Diagram.DiagramControl.ItemCreating"/> events.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraDiagram.DiagramItemCreatingEventArgs.#ctor(System.Type,DevExpress.Diagram.Core.ItemUsage,DevExpress.XtraDiagram.DiagramItem)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="itemType">
-		 
-            </param>
-            <param name="itemUsage">
-		 
-            </param>
-            <param name="item">
-		 
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramItemCreatingEventArgs.Item">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramItemCreatingEventArgs.ItemType">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.DiagramItemCreatingEventArgs.ItemUsage">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraDiagram.CustomDrawBackgroundEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.CustomDrawBackground"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraDiagram.CustomDrawBackgroundEventArgs.#ctor(System.Drawing.Graphics,DevExpress.XtraDiagram.DiagramDrawingContext,System.Drawing.RectangleF,System.Drawing.RectangleF,System.Collections.Generic.IEnumerable`1,System.Drawing.RectangleF,System.Nullable`1,System.Nullable`1,System.Nullable`1)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="graphics">
-		 
-            </param>
-            <param name="context">
-		 
-            </param>
-            <param name="contentBounds">
-		 
-            </param>
-            <param name="totalBounds">
-		 
-            </param>
-            <param name="pages">
-		 
-            </param>
-            <param name="viewportBounds">
-		 
-            </param>
-            <param name="printBounds">
-		 
-            </param>
-            <param name="printClientBounds">
-		 
-            </param>
-            <param name="printIndex">
-		 
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.CustomDrawBackgroundEventArgs.ContentBounds">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.CustomDrawBackgroundEventArgs.Context">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.CustomDrawBackgroundEventArgs.Graphics">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.CustomDrawBackgroundEventArgs.PagesInfo">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.CustomDrawBackgroundEventArgs.PrintBounds">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.CustomDrawBackgroundEventArgs.PrintClientBounds">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.CustomDrawBackgroundEventArgs.PrintIndex">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.CustomDrawBackgroundEventArgs.TotalBounds">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.CustomDrawBackgroundEventArgs.ViewportBounds">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraDiagram.CustomHitTestEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraDiagram.DiagramControl.CustomHitTest"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraDiagram.CustomHitTestEventArgs.#ctor(DevExpress.XtraDiagram.DiagramItem,System.Drawing.PointF,System.Drawing.RectangleF,System.Single)">
-            <summary>
-                <para>Initializes a new instance of the CustomHitTestEventArgs class with the specified settings.
-</para>
-            </summary>
-            <param name="item">
-		A <see cref="T:DevExpress.XtraDiagram.DiagramItem"/> to which the test point belongs to.
-
-            </param>
-            <param name="point">
-		A <see cref="T:System.Drawing.PointF"/> value that is the current test point position within the item.
-
-            </param>
-            <param name="bounds">
-		A A <see cref="T:System.Drawing.RectangleF"/> object that represents the bounds of the item to which the test point belongs to.
-
-            </param>
-            <param name="angle">
-		A <see cref="T:System.Single"/> value that is the angle in degrees by which the item is rotated around its anchor point.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.CustomHitTestEventArgs.Angle">
-            <summary>
-                <para>Gets the angle by which the diagram item is rotated counterclockwise around its anchor point relative to the diagram canvas.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Single"/> value specifying an angle in degrees relative to the diagram canvas.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.CustomHitTestEventArgs.Bounds">
-            <summary>
-                <para>Gets the bounds of the item to which the test points belongs.
-
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.RectangleF"/> object that represents the item bounds.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.CustomHitTestEventArgs.Item">
-            <summary>
-                <para>Gets the item to which the test point belongs.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraDiagram.DiagramItem"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.CustomHitTestEventArgs.ItemHeight">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.CustomHitTestEventArgs.ItemWidth">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.CustomHitTestEventArgs.Point">
-            <summary>
-                <para>Gets the object that represents the position of the test point relative to the item it belongs to.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.PointF"/> value that is the current test point position relative to the item it belongs to.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraDiagram.CustomHitTestEventArgs.Result">
-            <summary>
-                <para>Gets or sets whether the test point belongs to a diagram item.
-</para>
-            </summary>
-            <value><b>true</b>, if the test point belongs to a diagram item; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraDiagram.DiagramOrgChartController">
 
             <summary>
@@ -4994,17 +4436,17 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
                 <para>Gets or sets an object that chooses an item's subordinates based on custom logic. This is a dependency property.
 </para>
             </summary>
-            <value>An <b>IChildrenSelector</b> implementation that chooses a diagram item's subordinates based on custom logic.
+            <value>An <b>IChildrenSelector</b> implementation that chooses an item's subordinates based on custom logic.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramOrgChartController.ExpandSubordinatesButtonMode">
             <summary>
-                <para>Gets or sets the display mode of the expand/collapse buttons. This is a dependency property.
+                <para>Gets or sets the display mode of the expand/collapse button. This is a dependency property.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.Diagram.Core.ExpandSubordinatesButtonMode"/> enumeration value that is the display mode of the expand/collapse buttons.
+            <value>A <see cref="T:DevExpress.Diagram.Core.ExpandSubordinatesButtonMode"/> enumeration value that is the display mode of the expand/collapse button.
 </value>
 
 
@@ -5232,8 +4674,7 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         </member>
         <member name="E:DevExpress.XtraDiagram.DiagramDataBindingControllerBase.CanRefreshChanged">
             <summary>
-                <para>Fires each time the value of the <see cref="P:DevExpress.XtraDiagram.DiagramDataBindingControllerBase.CanRefresh"/> property is changed.
-</para>
+                <para> </para>
             </summary>
 
 
@@ -5278,11 +4719,9 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         </member>
         <member name="P:DevExpress.XtraDiagram.DiagramDataBindingControllerBase.Diagram">
             <summary>
-                <para>Gets or sets the <see cref="T:DevExpress.XtraDiagram.DiagramControl"/> associated with the current DiagramDataBindingControllerBase.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraDiagram.DiagramControl"/> object.
-</value>
+            <value> </value>
 
 
         </member>
@@ -5744,11 +5183,9 @@ The DocumentSource can be a file full path, Uri object, stream and array of byte
         </member>
         <member name="P:DevExpress.XtraDiagram.Options.DiagramOptionsSugiyamaLayout.ConnectorsRouting">
             <summary>
-                <para>Gets or sets whether applying the Sugiyama layout affects connector routing. This is a dependency property.
-</para>
+                <para> </para>
             </summary>
-            <value>A <b>SugiyamaConnectorsRouting</b> enumeration value.
-</value>
+            <value> </value>
 
 
         </member>

@@ -1216,14 +1216,6 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
 
 
         </member>
-        <member name="P:DevExpress.XtraVerticalGrid.VGridAppearanceCollection.SelectedCategory">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.XtraVerticalGrid.VGridAppearanceCollection.SelectedCell">
             <summary>
                 <para>Contains appearance settings used to paint selected cells in multiple cell selection mode (<see cref="F:DevExpress.XtraVerticalGrid.MultiSelectMode.CellSelect"/>).
@@ -1588,19 +1580,6 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
             <param name="childID">
 		A child System.Windows.Forms.Control which fires the event.
 
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.AccessibleNotifyClients(System.Windows.Forms.AccessibleEvents,DevExpress.Accessibility.BaseAccessible)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="accEvents">
-		 
-            </param>
-            <param name="acc">
-		 
             </param>
 
 
@@ -2239,38 +2218,6 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
             <param name="stream">
 		A <see cref="T:System.IO.Stream"/> object to which the created document is exported .
 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.ExportToRtf(System.String,DevExpress.XtraPrinting.RtfExportOptions)">
-            <summary>
-                <para>Exports the control's data in the Rich Text Format and saves it to the specified RTF file.
-</para>
-            </summary>
-            <param name="filePath">
-		A <see cref="T:System.String"/> value which specifies the full path (including the file name and extension) where the RTF file should be created.
-
-            </param>
-            <param name="options">
-		A <see cref="T:DevExpress.XtraPrinting.RtfExportOptions"/> object specifying how the data should be exported to the Rich Text Format.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraVerticalGrid.VGridControlBase.ExportToRtf(System.IO.Stream,DevExpress.XtraPrinting.RtfExportOptions)">
-            <summary>
-                <para>Exports the control's data in the Rich Text Format (RTF file) and sends it to the specified stream.
-</para>
-            </summary>
-            <param name="stream">
-		A <see cref="T:System.IO.Stream"/> object to which the created document should be exported.
-
-            </param>
-            <param name="options">
-		A <see cref="T:DevExpress.XtraPrinting.RtfExportOptions"/> object specifying how the data should be exported to the Rich Text Format.
 
             </param>
 

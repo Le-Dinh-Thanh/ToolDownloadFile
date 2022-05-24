@@ -2308,7 +2308,6 @@
 </para>
             </summary>
             <value>One of the <see cref="T:DevExpress.XtraRichEdit.DocumentLayoutUnit"/> enumeration values.
-The default is <b>DocumentLayoutUnit.Pixel</b>.
 </value>
 
 

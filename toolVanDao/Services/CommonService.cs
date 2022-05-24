@@ -39,7 +39,9 @@ namespace toolVanDao.Services
                     Properties.Settings.Default.Folder = value; break;
                 case "UrlDownloadXML":
                     Properties.Settings.Default.UrlDownloadXML = value; break;
-                    ///78
+                case "UrlDownloadPDF":
+                    Properties.Settings.Default.UrlDownloadPDF = value; break;
+                ///78
                 case "UrlRef78":
                     Properties.Settings.Default.UrlRef78 = value; break;
                 case "UrlDownloadXml78":
@@ -90,6 +92,7 @@ namespace toolVanDao.Services
         }
         public static List<MauHoaDon78> GetInforhoadon78(string mst)
         {
+
             List<MauHoaDon78> mauHoaDons78 = new List<MauHoaDon78>();
             var webClient = MinvoiceService.SetupWebClient();
             var url = BaseConfig.UrlRef78;
@@ -108,7 +111,6 @@ namespace toolVanDao.Services
                         {
                             MauHoaDon78 mauHoaDon78 = new MauHoaDon78
                             {
-                              
                                 ky_hieu = jToken["khhdon"].ToString(),
                                 ngay_bd_sd = Convert.ToDateTime(jToken["date_new"]),
                                 id = jToken["id"].ToString()

@@ -1952,14 +1952,6 @@
 
 
         </member>
-        <member name="P:DevExpress.Persistent.Validation.RuleCombinationOfPropertiesIsUniqueAttribute.IncludeCurrentObject">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.Persistent.Validation.RuleCombinationOfPropertiesIsUniqueAttribute.MessageTemplateCombinationOfPropertiesMustBeUnique">
             <summary>
                 <para>Specifies the text to be written in the Validation Error window when the current rule is broken.
@@ -1967,14 +1959,6 @@
             </summary>
             <value>A string value representing the text to be written to the Validation Error window when a rule is broken.
 </value>
-
-
-        </member>
-        <member name="P:DevExpress.Persistent.Validation.RuleCombinationOfPropertiesIsUniqueAttribute.MessageTemplateFoundObjects">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>
@@ -2435,14 +2419,6 @@
 
 
         </member>
-        <member name="P:DevExpress.Persistent.Validation.RuleIsReferencedAttribute.IncludeCurrentObject">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.Persistent.Validation.RuleIsReferencedAttribute.LooksFor">
             <summary>
                 <para>Specifies the type of objects to be looked for.
@@ -2450,14 +2426,6 @@
             </summary>
             <value>A type of the objects to be tested.
 </value>
-
-
-        </member>
-        <member name="P:DevExpress.Persistent.Validation.RuleIsReferencedAttribute.MessageTemplateFoundObjects">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>
@@ -2598,30 +2566,6 @@
             </summary>
             <value>A string value that represents a separator.
 </value>
-
-
-        </member>
-        <member name="P:DevExpress.Persistent.Validation.RuleUniqueValueAttribute.IncludeCurrentObject">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Persistent.Validation.RuleUniqueValueAttribute.MessageTemplateFoundObjects">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Persistent.Validation.RuleUniqueValueAttribute.MessageTemplateMustBeUnique">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>
@@ -2806,14 +2750,6 @@
             </summary>
             <value>A type of the objects to be tested.
 </value>
-
-
-        </member>
-        <member name="P:DevExpress.Persistent.Validation.RuleObjectExistsAttribute.MessageTemplateFoundObjects">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>
@@ -4232,24 +4168,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Persistent.Base.ISupportFullName">
-
-            <summary>
-                <para>Declares the property used to store a full path to the file specified by the object which implements the <see cref="T:DevExpress.Persistent.Base.IFileData"/> interface.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.Persistent.Base.ISupportFullName.FullName">
-            <summary>
-                <para>Gets or sets a full path to the file specified by the object which implements the <see cref="T:DevExpress.Persistent.Base.IFileData"/> interface.
-</para>
-            </summary>
-            <value>A string that is a full path to the file.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Persistent.Base.General.INotificationsProvider">
 
             <summary>
@@ -5254,7 +5172,7 @@
         <member name="T:DevExpress.Persistent.Base.IFileData">
 
             <summary>
-                <para>Declares members implemented by the classes that can be represented in a UI using the <b>FileDataPropertyEditor</b>.
+                <para>Declares members implemented by the classes that can be represented in a UI via the <b>FileDataPropertyEditor</b>.
 </para>
             </summary>
 
@@ -6461,39 +6379,6 @@
 </para>
             </summary>
             <value><b>true</b>, if end-user customizations are allowed in Windows Forms applications; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Persistent.Base.General.NotificationItemsEventArgs">
-
-            <summary>
-                <para>Arguments passed to the <see cref="E:DevExpress.ExpressApp.Notifications.NotificationsController.CustomProcessNotifications"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Persistent.Base.General.NotificationItemsEventArgs.#ctor(System.Collections.Generic.IList`1)">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.Persistent.Base.General.NotificationItemsEventArgs"/> class.
-</para>
-            </summary>
-            <param name="notificationItems">
-		A collection of <see cref="T:DevExpress.Persistent.Base.General.INotificationItem"/> objects.
-
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Persistent.Base.General.NotificationItemsEventArgs.NotificationItems">
-            <summary>
-                <para>Gets the list of <see cref="T:DevExpress.Persistent.Base.General.INotificationItem"/> objects to be processed.
-
-</para>
-            </summary>
-            <value>A collection of <see cref="T:DevExpress.Persistent.Base.General.INotificationItem"/> objects.
-
 </value>
 
 

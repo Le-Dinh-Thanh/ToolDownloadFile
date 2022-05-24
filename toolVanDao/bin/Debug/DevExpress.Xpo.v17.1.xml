@@ -7283,14 +7283,6 @@
 
 
         </member>
-        <member name="F:DevExpress.Xpo.XPQueryBase.SuppressNonPersistentPropertiesCheck">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
         <member name="T:DevExpress.Xpo.IdentityMapBehavior">
 
             <summary>
@@ -7301,7 +7293,7 @@
         </member>
         <member name="F:DevExpress.Xpo.IdentityMapBehavior.Default">
             <summary>
-                <para>The behavior is determined by XPO. Curently, this is equal to <b>IdentityMapBehavior.Weak</b>.
+                <para>The behavior is determined by XPO. For instance, in XPO version 8.3 this is equal to <b>IdentityMapBehavior.Weak</b>.
 </para>
             </summary>
 
@@ -7317,7 +7309,7 @@
         </member>
         <member name="F:DevExpress.Xpo.IdentityMapBehavior.Weak">
             <summary>
-                <para>Weak references are used, which allows the garbage collector to reclaim unused objects.
+                <para>Instances of the <b>System.WeakReference</b> class are used.
 </para>
             </summary>
 
@@ -8155,7 +8147,7 @@
         </member>
         <member name="F:DevExpress.Xpo.OptimisticLockingReadMergeBehavior.Default">
             <summary>
-                <para>The changed objects are automatically reloaded. The default behavior can be changed by setting the <see cref="P:DevExpress.Xpo.XpoDefault.OptimisticLockingReadBehavior"/> property.
+                <para>The changed objects are automatically reloaded. The default behavior can be changed by setting the <see cref="F:DevExpress.Xpo.XpoDefault.DefaultOptimisticLockingReadBehavior"/> field.
 </para>
             </summary>
 
@@ -9930,14 +9922,6 @@
             </summary>
             <value>An object that implements the <b>IEnumerable</b> interface.
 </value>
-
-
-        </member>
-        <member name="P:DevExpress.Xpo.XPBaseCollection.IsAsyncLoading">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>
@@ -15493,7 +15477,7 @@
         </member>
         <member name="F:DevExpress.Xpo.XpoDefault.DefaultIdentityMapBehavior">
             <summary>
-                <para>Returns the default Identity Map behavior. See <see cref="T:DevExpress.Xpo.IdentityMapBehavior"/> for details.
+                <para>Returns the default Identity Map behavior.
 </para>
             </summary>
             <returns>An <see cref="T:DevExpress.Xpo.IdentityMapBehavior"/> enumeration value that specifies the default Identity Map behavior.
@@ -15503,7 +15487,7 @@
         </member>
         <member name="F:DevExpress.Xpo.XpoDefault.DefaultOptimisticLockingReadBehavior">
             <summary>
-                <para>Specifies the value which is assigned to the <see cref="P:DevExpress.Xpo.XpoDefault.OptimisticLockingReadBehavior"/> property when it is set to the <see cref="F:DevExpress.Xpo.OptimisticLockingReadBehavior.Default"/> value. By default, this field returns the <see cref="F:DevExpress.Xpo.OptimisticLockingReadBehavior.Mixed"/> value.
+                <para>Specifies the value which is assigned to the <see cref="P:DevExpress.Xpo.XpoDefault.OptimisticLockingReadBehavior"/> property when it is set to the <see cref="F:DevExpress.Xpo.OptimisticLockingReadBehavior.Default"/> value. By default, this field returns the <see cref="F:DevExpress.Xpo.OptimisticLockingReadBehavior.ReloadObject"/> value.
 </para>
             </summary>
             <returns> </returns>
@@ -15886,7 +15870,7 @@
         </member>
         <member name="P:DevExpress.Xpo.XpoDefault.IdentityMapBehavior">
             <summary>
-                <para>Gets or sets the Identity Map behavior used by Sessions by default.
+                <para>Gets or sets the Identity Map behavior.
 </para>
             </summary>
             <value>An <see cref="T:DevExpress.Xpo.IdentityMapBehavior"/> enumeration value that specifies the Identity Map behavior.
@@ -18558,11 +18542,11 @@ To learn more, refer to How to: Control Automatic Saving of Objects when Editing
         </member>
         <member name="M:DevExpress.Xpo.Session.BulkLoad(DevExpress.Xpo.XPBaseCollection[])">
             <summary>
-                <para>This method loads <see cref="T:DevExpress.Xpo.XPBaseCollection"/> objects passed as parameters.
+                <para>Populates the specified collections.
 </para>
             </summary>
             <param name="collections">
-		An array of collections to be populated.
+		An array of <see cref="T:DevExpress.Xpo.XPBaseCollection"/> objects to be populated.
 
             </param>
 
@@ -18570,11 +18554,11 @@ To learn more, refer to How to: Control Automatic Saving of Objects when Editing
         </member>
         <member name="M:DevExpress.Xpo.Session.BulkLoad(DevExpress.Xpo.Helpers.IXPBulkLoadableCollection[])">
             <summary>
-                <para>This method loads IXPBulkLoadableCollection objects passed as parameters.
+                <para>Populates the specified collections.
 </para>
             </summary>
             <param name="collections">
-		An array of collections to be populated.
+		An array of objects to be populated.
 
             </param>
 
@@ -19195,7 +19179,7 @@ To learn more, refer to How to: Control Automatic Saving of Objects when Editing
 		A <see cref="T:System.String"/> value that specifies an SQL query.
 
             </param>
-            <returns>The first column of the first row in the query's result set. If the column is not found in the result set, a <b>null</b> reference (<b>Nothing</b> in Visual Basic) is returned. If the value in the database is null, <a href="https://msdn.microsoft.com/en-us/library/system.dbnull.value.aspx">DBNull.Value</a> is returned.
+            <returns>The first column of the first row in the query's result set. If the column is not found in the result set, a <b>null</b> reference (<b>Nothing</b> in Visual Basic) is returned. If the value in the database is null, <see cref="T:System.DBNull.Value"/> is returned.
 </returns>
 
 
@@ -19213,7 +19197,7 @@ To learn more, refer to How to: Control Automatic Saving of Objects when Editing
 		An array of objects specifying parameters to pass to the database server along with the query.
 
             </param>
-            <returns>The first column of the first row in the query's result set. If the column is not found in the result set, a <b>null</b> reference (<b>Nothing</b> in Visual Basic) is returned. If the value in the database is null, <a href="https://msdn.microsoft.com/en-us/library/system.dbnull.value.aspx">DBNull.Value</a> is returned.
+            <returns>The first column of the first row in the query's result set. If the column is not found in the result set, a <b>null</b> reference (<b>Nothing</b> in Visual Basic) is returned. If the value in the database is null, <see cref="T:System.DBNull.Value"/> is returned.
 </returns>
 
 
@@ -19236,7 +19220,7 @@ To learn more, refer to How to: Control Automatic Saving of Objects when Editing
 		An array of objects specifying parameters to pass to the database server along with the query.
 
             </param>
-            <returns>The first column of the first row in the query's result set. If the column is not found in the result set, a <b>null</b> reference (<b>Nothing</b> in Visual Basic) is returned. If the value in the database is null, <a href="https://msdn.microsoft.com/en-us/library/system.dbnull.value.aspx">DBNull.Value</a> is returned.
+            <returns>The first column of the first row in the query's result set. If the column is not found in the result set, a <b>null</b> reference (<b>Nothing</b> in Visual Basic) is returned. If the value in the database is null, <see cref="T:System.DBNull.Value"/> is returned.
 </returns>
 
 
@@ -20743,7 +20727,7 @@ To learn more, refer to How to: Control Automatic Saving of Objects when Editing
 		An array of objects specifying parameters to pass to the database server along with the query.
 
             </param>
-            <returns>An <see cref="T:System.Collections.Generic.ICollection`1"/> collection of persistent objects.
+            <returns>An <see cref="T:System.Collections.Generic.ICollection`1[[]]"/> collection of persistent objects.
 </returns>
 
 
@@ -21926,8 +21910,7 @@ To learn more, refer to How to: Control Automatic Saving of Objects when Editing
 
             </param>
             <param name="collectionsContent">
-		<see cref="T:System.Collections.IEnumerable"/> list of the collection's content.  If a certain part of the <i>collectionInObjects</i> data was previously loaded, you can avoid reloading it by passing the loaded data to the <i>collectionsContent</i> parameter.
-
+		<see cref="T:System.Collections.IEnumerable"/> list of the collection's content.
 
 
             </param>
@@ -21966,9 +21949,8 @@ To learn more, refer to How to: Control Automatic Saving of Objects when Editing
 
             </param>
             <param name="collectionsContent">
-		<see cref="T:System.Collections.IEnumerable"/> list of the collection's content. If a certain part of the <i>collectionInObjects</i> data was previously loaded, you can avoid reloading it by passing the loaded data to the <i>collectionsContent</i> parameter.
+		<see cref="T:System.Collections.IEnumerable"/> list of the collection's content.
  
-
 
 
             </param>
@@ -24090,7 +24072,7 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
         </member>
         <member name="F:DevExpress.Xpo.OptimisticLockingReadBehavior.Default">
             <summary>
-                <para>The default behavior can be changed by setting the <see cref="P:DevExpress.Xpo.XpoDefault.OptimisticLockingReadBehavior"/> property.
+                <para>The default behavior can be changed by setting the <see cref="F:DevExpress.Xpo.XpoDefault.DefaultOptimisticLockingReadBehavior"/> field.
 </para>
             </summary>
 

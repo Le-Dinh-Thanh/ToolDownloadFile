@@ -35,6 +35,7 @@ namespace toolVanDao.Config
         public static string UrlRef78 = Properties.Settings.Default.UrlRef78.Trim();
         public static string UrlSBM = Properties.Settings.Default.UrlSBM.Trim();
         public static string UrlDownloadXML = Properties.Settings.Default.UrlDownloadXML.Trim();
+        public static string UrlDownloadPDF = Properties.Settings.Default.UrlDownloadPDF.Trim();
         public static string UrlDownloadXml78 = Properties.Settings.Default.UrlDownloadXml78.Trim();
         public static string UrlDownloadpdf78 = Properties.Settings.Default.UrlDownloadpdf78.Trim();
 

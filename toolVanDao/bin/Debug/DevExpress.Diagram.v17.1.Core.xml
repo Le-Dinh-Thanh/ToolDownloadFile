@@ -508,12 +508,10 @@
         </member>
         <member name="M:DevExpress.Diagram.Core.DiagramCommandsBase.RegisterHandlers(System.Action`1,System.Boolean)">
             <summary>
-                <para>Allows you to override the default commands.
-</para>
+                <para> </para>
             </summary>
             <param name="registerHandlers">
-		An action delegate that registers a custom method to be called when executing the specified command.
-
+		 
             </param>
             <param name="updateCommandsOnRequerySuggested">
 		 
@@ -1368,105 +1366,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Diagram.Core.Shapes.Parameter">
-
-            <summary>
-                <para>Represents a shape's parameter.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Diagram.Core.Shapes.Parameter.#ctor">
-            <summary>
-                <para>Initializes a new instance of the Parameter class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Parameter.___Max">
-            <summary>
-                <para>For internal use.</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Parameter.___Min">
-            <summary>
-                <para>For internal use.</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Parameter.___Point">
-            <summary>
-                <para>For internal use.</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Parameter.__Value">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="M:DevExpress.Diagram.Core.Shapes.Parameter.CreateParameterDescription(System.Func`3)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="normalizeParameters">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Parameter.DefaultValue">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Parameter.Max">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Parameter.Min">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Parameter.Point">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Parameter.Value">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="T:DevExpress.Diagram.Core.ImageFlipMode">
 
             <summary>
@@ -1539,175 +1438,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Diagram.Core.Shapes.Arc">
-
-            <summary>
-                <para>Represents an arc segment of a shape's geometry.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Diagram.Core.Shapes.Arc.#ctor">
-            <summary>
-                <para>Initializes a new instance of the Arc class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Arc.___Size">
-            <summary>
-                <para>For internal use.</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Arc.Direction">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Arc.Size">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="T:DevExpress.Diagram.Core.Shapes.Start">
-
-            <summary>
-                <para>Represents the start of a shape's geometry.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Diagram.Core.Shapes.Start.#ctor">
-            <summary>
-                <para>Initializes a new instance of the Start class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Start.___FillColor">
-            <summary>
-                <para>For internal use.</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Start.___StrokeColor">
-            <summary>
-                <para>For internal use.</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Start.___StrokeDashArray">
-            <summary>
-                <para>For internal use.</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Start.___StrokeThickness">
-            <summary>
-                <para>For internal use.</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Start.FillBrightness">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Start.FillColor">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Start.IsNewShape">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Start.IsSmoothJoin">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Start.Kind">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Start.StrokeColor">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Start.StrokeDashArray">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Diagram.Core.Shapes.Start.StrokeThickness">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="T:DevExpress.Diagram.Core.Shapes.Line">
-
-            <summary>
-                <para>Represents a line segment of a shape's geometry.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Diagram.Core.Shapes.Line.#ctor">
-            <summary>
-                <para>Initializes a new instance of the Line class with default settings.
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.Diagram.Core.Direction">
 
             <summary>
@@ -1751,25 +1481,20 @@
         <member name="T:DevExpress.Diagram.Core.OrientationKind">
 
             <summary>
-                <para>Lists values that specify the orientation of a diagram.
-</para>
+                <para> </para>
             </summary>
 
         </member>
         <member name="F:DevExpress.Diagram.Core.OrientationKind.Horizontal">
             <summary>
-                <para>The diagram has a horizontal orientation.
-
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.Diagram.Core.OrientationKind.Vertical">
             <summary>
-                <para>The diagram has a vertical orientation.
-
-</para>
+                <para> </para>
             </summary>
 
 
@@ -1856,33 +1581,28 @@
         </member>
         <member name="F:DevExpress.Diagram.Core.ExpandSubordinatesButtonMode.AlwaysVisible">
             <summary>
-                <para>The expand button is always visible.
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.Diagram.Core.ExpandSubordinatesButtonMode.Default">
             <summary>
-                <para>If the entire diagram is generated, the expand/collapse buttons are hidden.
-If the generation and/or expansion depth is set to a non-default value, expand/collapse buttons are displayed.
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.Diagram.Core.ExpandSubordinatesButtonMode.LookupChildrenInSource">
             <summary>
-                <para>A shape displays the expand/collapse button if it has hidden children shapes.
-</para>
+                <para> </para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.Diagram.Core.ExpandSubordinatesButtonMode.None">
             <summary>
-                <para>Expand/collapse buttons are hidden
-</para>
+                <para> </para>
             </summary>
 
 
@@ -2188,8 +1908,7 @@ If the generation and/or expansion depth is set to a non-default value, expand/c
         <member name="T:DevExpress.Diagram.Core.TextAlignmentKind">
 
             <summary>
-                <para>Specifies the horizontal text alignment.
-</para>
+                <para> </para>
             </summary>
 
         </member>
@@ -2228,8 +1947,7 @@ If the generation and/or expansion depth is set to a non-default value, expand/c
         <member name="T:DevExpress.Diagram.Core.VerticalAlignmentKind">
 
             <summary>
-                <para>Specifies the vertical text alignment.
-</para>
+                <para> </para>
             </summary>
 
         </member>

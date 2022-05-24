@@ -1013,12 +1013,10 @@
         </member>
         <member name="P:DevExpress.XtraTreeList.TreeListOptionsFilter.FilterMode">
             <summary>
-                <para>Gets or sets the filter mode used within the current <see cref="T:DevExpress.XtraTreeList.TreeList"/>.
-
+                <para>Gets or sets a filter mode used within the current <see cref="T:DevExpress.XtraTreeList.TreeList"/>.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraTreeList.FilterMode"/> enumerator value that specifies the filter mode used in the current <see cref="T:DevExpress.XtraTreeList.TreeList"/>.
-
+            <value>A <see cref="T:DevExpress.XtraTreeList.FilterMode"/> enumerator value that specifies a filter mode used within the current <see cref="T:DevExpress.XtraTreeList.TreeList"/>.
 </value>
 
 
@@ -1718,8 +1716,7 @@
         <member name="T:DevExpress.XtraTreeList.FilterConditionCollection">
 
             <summary>
-                <para>A collection of filter conditions.  This class is supported in version 16.2 and older. 
-
+                <para>Represents a collection of filter conditions for the Tree List control.
 </para>
             </summary>
 
@@ -1757,14 +1754,6 @@
 		An array of <see cref="T:DevExpress.XtraTreeList.FilterCondition"/> objects to be added to the collection.
 
             </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraTreeList.FilterConditionCollection.GetCriteria">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
 
 
         </member>
@@ -2023,8 +2012,7 @@
         <member name="T:DevExpress.XtraTreeList.FilterCondition">
 
             <summary>
-                <para>A filter condition for the Tree List control. This class is supported in version 16.2 and older.
-
+                <para>Represents a filter condition for the Tree List control.
 </para>
             </summary>
 
@@ -4490,10 +4478,10 @@ This constant is used to initialize the <see cref="P:DevExpress.XtraEditors.Repo
         </member>
         <member name="P:DevExpress.XtraTreeList.TreeListOptionsBehavior.EnableFiltering">
             <summary>
-                <para>Gets or sets whether nodes can be filtered using the <see cref="P:DevExpress.XtraTreeList.TreeList.FilterConditions"/> property.
+                <para>Gets or sets a value which specifies whether nodes can be filtered.
 </para>
             </summary>
-            <value><b>true</b>, to allow nodes to be filtered using the <see cref="P:DevExpress.XtraTreeList.TreeList.FilterConditions"/> property; otherwise, <b>false</b>. The property's default value is <b>false</b> in version 16.2 and older.  The property's default value is <b>true</b> in version 17.1 and newer. See Version Compatibility: Default Property Values to learn more.
+            <value><b>true</b> to allow nodes to be filtered; otherwise, <b>false</b>.
 
 </value>
 
@@ -4551,7 +4539,7 @@ This constant is used to initialize the <see cref="P:DevExpress.XtraEditors.Repo
         </member>
         <member name="P:DevExpress.XtraTreeList.TreeListOptionsBehavior.KeepSelectedOnClick">
             <summary>
-                <para>Gets or sets whether the selected nodes remain selected when their values are being edited. This setting is in effect only for DevExpress versions 16.2 and older.
+                <para>Gets or sets whether the selected nodes remain selected when their values are being edited.
 </para>
             </summary>
             <value><b>true</b> if the selected nodes remain selected when their values are being edited; <b>false</b> if the nodes are automatically deselected after the selected cell's editor has been invoked.
@@ -5198,70 +5186,6 @@ For example, from a list with month names the <i>[Name] Like 'J%y'</i> filter ex
 
 
         </member>
-        <member name="T:DevExpress.XtraTreeList.Data.UnboundColumnType">
-
-            <summary>
-                <para>Enumerates data types that columns can have in unbound mode.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Boolean">
-            <summary>
-                <para>Indicates that the column contains Boolean values (the <see cref="T:System.Boolean"/> type).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Bound">
-            <summary>
-                <para>Indicates that the column is bound to a field in the control's underlying data source. The type of data this column contains is determined by the bound field.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.DateTime">
-            <summary>
-                <para>Indicates that the column contains date-time values (the <see cref="T:System.DateTime"/> type).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Decimal">
-            <summary>
-                <para>Indicates that the column contains decimal values (the <see cref="T:System.Decimal"/> type).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Integer">
-            <summary>
-                <para>Indicates that the column contains integer values (the <see cref="T:System.Int32"/> type).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Object">
-            <summary>
-                <para>Indicates that the column contains values of any type.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.String">
-            <summary>
-                <para>Indicates that the column contains string values (the <see cref="T:System.String"/> type).
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.XtraTreeList.FilterPopupMode">
 
             <summary>
@@ -5289,37 +5213,7 @@ If there is no underlying data that would fall into a specific date range, the c
         </member>
         <member name="F:DevExpress.XtraTreeList.FilterPopupMode.Default">
             <summary>
-                <para>The actual display mode is determined by the TreeList's <b>OptionsFilter.ColumnFilterPopupMode</b> (<see cref="P:DevExpress.XtraTreeList.TreeListOptionsFilter.ColumnFilterPopupMode"/>) property. 
-
-<para>
-If the TreeList's <b>OptionsFilter.ColumnFilterPopupMode</b> property is set to <b>Classic</b>:
-</para>
-<list>
-<item><term> for columns displaying date-time values, this option is equivalent to the <b>Date</b> option;
-</term></item>
-<item><term>for other columns, this option is equivalent to the <b>List</b> option.
-</term></item>
-</list>
-
-
-<para>
-If the TreeList's <b>OptionsFilter.ColumnFilterPopupMode</b> property is set to <b>Default</b> (which is the initial value):
-</para>
-<list>
-<item><term>the column filter dropdown style is determined by the <see cref="P:DevExpress.XtraEditors.WindowsFormsSettings.ColumnFilterPopupMode"/> global setting.
-</term></item>
-</list>
-
-
-<para>
-If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to <b>Default</b> (which is the initial value):
-</para>
-<list>
-<item><term>the <b>Excel</b> filter dropdown style is applied.
-</term></item>
-</list>
-
-
+                <para>For columns displaying date-time values, this option is equivalent to the Date option. For other columns, this option is equivalent to the List option. 
 </para>
             </summary>
 
@@ -5552,6 +5446,70 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
 
 
         </member>
+        <member name="T:DevExpress.XtraTreeList.Data.UnboundColumnType">
+
+            <summary>
+                <para>Enumerates data types that columns can have in unbound mode.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Boolean">
+            <summary>
+                <para>Indicates that the column contains Boolean values (the <see cref="T:System.Boolean"/> type).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Bound">
+            <summary>
+                <para>Indicates that the column is bound to a field in the control's underlying data source. The type of data this column contains is determined by the bound field.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.DateTime">
+            <summary>
+                <para>Indicates that the column contains date-time values (the <see cref="T:System.DateTime"/> type).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Decimal">
+            <summary>
+                <para>Indicates that the column contains decimal values (the <see cref="T:System.Decimal"/> type).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Integer">
+            <summary>
+                <para>Indicates that the column contains integer values (the <see cref="T:System.Int32"/> type).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.Object">
+            <summary>
+                <para>Indicates that the column contains values of any type.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraTreeList.Data.UnboundColumnType.String">
+            <summary>
+                <para>Indicates that the column contains string values (the <see cref="T:System.String"/> type).
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraTreeList.Columns.TreeListOptionsColumnFilter">
 
             <summary>
@@ -5560,13 +5518,11 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraTreeList.Columns.TreeListOptionsColumnFilter.#ctor(DevExpress.XtraTreeList.Columns.TreeListColumn)">
+        <member name="M:DevExpress.XtraTreeList.Columns.TreeListOptionsColumnFilter.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the TreeListOptionsColumnFilter class.
+</para>
             </summary>
-            <param name="column">
-		 
-            </param>
 
 
         </member>
@@ -5587,7 +5543,7 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
 
 </para>
             </summary>
-            <value><b>true</b>, if  an end-user can filter against the current column using the filter dropdown; otherwise, <b>false</b>.
+            <value><b>true</b> if  an end-user can filter against the current column using the filter dropdown; otherwise, <b>false</b>.
 </value>
 
 
@@ -5658,7 +5614,7 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
         </member>
         <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsColumnFilter.ImmediateUpdatePopupExcelFilter">
             <summary>
-                <para>Gets or sets whether filter conditions immediately apply to data, or only when the filter dropdown closes. This property is in effect for the Excel-inspired Filter Dropdown.
+                <para>Gets or sets whether filter conditions immediately apply to data, or only when the filter dropdown closes. This property is in effect for the Excel-inspired filter dropdown.
 
 </para>
             </summary>
@@ -5670,60 +5626,50 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
         </member>
         <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsColumnFilter.PopupExcelFilterDateTimeValuesTabFilterType">
             <summary>
-                <para>Gets or sets the type of filtering UI used to create filters in the Values tab in the Excel-inspired Filter Dropdown (if the current column contains date-time values).
+                <para>Gets or sets the type of filtering UI used to create filters in the Values tab in the Excel-inspired filter dropdown (if the current column is of the date-time data type).
 
 </para>
             </summary>
-            <value>The value that specifies the type of filtering UI in the Values tab in the Excel-inspired Filter Dropdown.
+            <value>The value that specifies the type of filtering UI in the Values tab in the Excel-inspired filter dropdown.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsColumnFilter.PopupExcelFilterDefaultTab">
             <summary>
-                <para>Gets or sets whether the Values or Filters tab opens by default in the Excel-inspired Filter Dropdown.
+                <para>Gets or sets whether the Values or Filters tab opens by default in the Excel-inspired filter dropdown.
 </para>
             </summary>
-            <value>An <see cref="ExcelFilterDefaultTab"/> enumeration value that specifies whether the Values or Filters tab opens by default in the Excel-inspired Filter Dropdown. By <b>Default</b>,  the opened tab depends on the column data type.
+            <value>An <see cref="ExcelFilterDefaultTab"/> enumeration value that specifies whether the Values or Filters tab opens by default in the Excel-inspired filter dropdown. By <b>Default</b>,  the opened tab depends on the column data type.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsColumnFilter.PopupExcelFilterEnumFilters">
             <summary>
-                <para>Gets or sets whether to show relational operators (equality and inequalities) in the Filters tab of the Excel-inspired Filter Dropdown (if the current column contains enumeration data).
+                <para>Gets or sets whether to show relational operators (equality and inequalities) in the Filters tab of the Excel-inspired filter dropdown (if the current column is of an enumeration data type).
 </para>
             </summary>
-            <value>An <see cref="ExcelFilterEnumFilters"/> enumeration value that specifies whether to show relational operators (equality and inequalities) used to create a filter condition in the Filters tab of the Excel-inspired Filter Dropdown. By <b>Default</b>, the Filters tab is hidden.
+            <value>An <see cref="ExcelFilterEnumFilters"/> enumeration value that specifies whether to show relational operators (equality and inequalities) used to create a filter condition in the Filters tab of the Excel-inspired filter dropdown. By <b>Default</b>, the Filters tab is hidden.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsColumnFilter.PopupExcelFilterNumericValuesTabFilterType">
             <summary>
-                <para>Gets or sets the type of filtering UI used to create filters in the Values tab in the Excel-inspired Filter Dropdown (if the current column contains numeric values).
+                <para>Gets or sets the type of filtering UI used to create filters in the Values tab in the Excel-inspired filter dropdown (if the current column is of a numeric data type).
 </para>
             </summary>
-            <value>The value that specifies the type of filtering UI in the Values tab in the Excel-inspired Filter Dropdown.
+            <value>The value that specifies the type of filtering UI in the Values tab in the Excel-inspired filter dropdown.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraTreeList.Columns.TreeListOptionsColumnFilter.PopupExcelFilterTextFilters">
             <summary>
-                <para>Gets or sets whether to show relational operators (equality and inequalities) in the Filters tab of the Excel-inspired Filter Dropdown (if the current column contains text data).
-</para>
+                <para> </para>
             </summary>
-            <value>An <see cref="ExcelFilterTextFilters"/> enumeration value that specifies whether to show relational operators (equality and inequalities) in the Excel-inspired Filter dropdown. By <b>Default</b>, the relational operators (equality and inequalities) are hidden.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraTreeList.Columns.TreeListOptionsColumnFilter.Reset">
-            <summary>
-                <para>Resets all options to their default values.
-</para>
-            </summary>
+            <value> </value>
 
 
         </member>
@@ -6367,7 +6313,7 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
         </member>
         <member name="F:DevExpress.XtraTreeList.FilterMode.Default">
             <summary>
-                <para>Specifies the same behavior as the <see cref="F:DevExpress.XtraTreeList.FilterMode.Smart"/> value if the <see cref="T:DevExpress.XtraTreeList.TreeList"/> is contained within a <see cref="T:DevExpress.XtraEditors.TreeListLookUpEdit"/>. Otherwise, specifies the behavior identical to the <see cref="F:DevExpress.XtraTreeList.FilterMode.Extended"/> mode. See also: Version Compatibility: Default Property Values.
+                <para>Specifies the same behavior as the <see cref="F:DevExpress.XtraTreeList.FilterMode.Smart"/> value if the <see cref="T:DevExpress.XtraTreeList.TreeList"/> is contained within a <see cref="T:DevExpress.XtraEditors.TreeListLookUpEdit"/>. Otherwise, specifies the behavior identical to the <see cref="F:DevExpress.XtraTreeList.FilterMode.Standard"/> mode.
 </para>
             </summary>
 
@@ -6375,7 +6321,7 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
         </member>
         <member name="F:DevExpress.XtraTreeList.FilterMode.Extended">
             <summary>
-                <para>The <see cref="T:DevExpress.XtraTreeList.TreeList"/> control displays nodes that match the filter criteria regardless of whether their parent nodes match these criteria. If a node matches the filter criteria, all its parent nodes are also displayed.
+                <para>The <see cref="T:DevExpress.XtraTreeList.TreeList"/> control displays nodes that match the filter criteria regardless of whether their parent nodes match this criteria. If a node matches the filter criteria, all its parent nodes are also displayed.
 </para>
             </summary>
 
@@ -9831,11 +9777,9 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
         </member>
         <member name="P:DevExpress.XtraTreeList.Nodes.TreeListNode.SelectImageList">
             <summary>
-                <para>Gets or sets the source of select images for nodes.
-</para>
+                <para> </para>
             </summary>
-            <value>An object which represents the source of select images.
-</value>
+            <value> </value>
 
 
         </member>
@@ -9867,11 +9811,9 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
         </member>
         <member name="P:DevExpress.XtraTreeList.Nodes.TreeListNode.StateImageList">
             <summary>
-                <para>Gets or sets the source of state images for nodes.
-</para>
+                <para> </para>
             </summary>
-            <value>An object which represents the source of state images.
-</value>
+            <value> </value>
 
 
         </member>
@@ -10158,16 +10100,6 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
 
 
         </member>
-        <member name="P:DevExpress.XtraTreeList.Columns.TreeListColumn.Image">
-            <summary>
-                <para>Gets or sets the image displayed in the column header.
-</para>
-            </summary>
-            <value>An Image object specifying the image displayed in the column header.
-</value>
-
-
-        </member>
         <member name="P:DevExpress.XtraTreeList.Columns.TreeListColumn.ImageAlignment">
             <summary>
                 <para>Gets or sets the alignment of the column header's image.
@@ -10180,10 +10112,10 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
         </member>
         <member name="P:DevExpress.XtraTreeList.Columns.TreeListColumn.ImageIndex">
             <summary>
-                <para>Gets or sets the index of the image from the <see cref="P:DevExpress.XtraTreeList.TreeList.ColumnsImageList"/> collection displayed in the column header.
+                <para>Gets or sets the index of the image displayed within the column header.
 </para>
             </summary>
-            <value>An integer value specifying the image by its zero-based index in the source collection. <b>-1</b> to not display an image.
+            <value>An integer value specifying the image by its zero-based index within the source collection. <b>-1</b> to not display an image.
 </value>
 
 
@@ -10509,13 +10441,11 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraTreeList.TreeListHitInfo.#ctor(DevExpress.XtraTreeList.TreeListHitTest)">
+        <member name="M:DevExpress.XtraTreeList.TreeListHitInfo.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new <see cref="T:DevExpress.XtraTreeList.TreeListHitInfo"/> class instance.
+</para>
             </summary>
-            <param name="ht">
-		 
-            </param>
 
 
         </member>
@@ -11512,7 +11442,7 @@ the tree structure due to adding, deleting and modifying nodes, until the <see c
         </member>
         <member name="E:DevExpress.XtraTreeList.TreeList.CompareNodeValues">
             <summary>
-                <para>Enables you to implement custom sorting for columns whose <see cref="P:DevExpress.XtraTreeList.Columns.TreeListColumn.SortMode"/> property is set to <b>Custom</b>. For versions 17.1 and higher, the <b>CompareNodeValues</b> event is deprecated and replaced with the <see cref="E:DevExpress.XtraTreeList.TreeList.CustomColumnSort"/> event.
+                <para>Enables you to implement custom sorting for columns whose <see cref="P:DevExpress.XtraTreeList.Columns.TreeListColumn.SortMode"/> property is set to <b>Custom</b>.
 </para>
             </summary>
 
@@ -11929,38 +11859,6 @@ the tree structure due to adding, deleting and modifying nodes, until the <see c
                 <para>Closes the Customization Form.
 </para>
             </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraTreeList.TreeList.DoDragDropNode(DevExpress.XtraTreeList.Nodes.TreeListNode,System.Windows.Forms.DragDropEffects)">
-            <summary>
-                <para>Allows you to implement drag-and-drop operations between controls on tree list nodes. Begins a drag-and-drop operation, and forces the tree list and target control to raise the events relative to the operation.
-</para>
-            </summary>
-            <param name="node">
-		The node to drag.
-
-            </param>
-            <param name="effects">
-		A <see cref="T:System.Windows.Forms.DragDropEffects"/> enumeration value that specifies the allowed drag effects.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraTreeList.TreeList.DoDragDropNodes(System.Collections.Generic.IEnumerable`1,System.Windows.Forms.DragDropEffects)">
-            <summary>
-                <para>Allows you to implement drag-and-drop operations between controls on tree list nodes. Begins a drag-and-drop operation, and forces the tree list and target control to raise the events relative to the operation.
-</para>
-            </summary>
-            <param name="nodes">
-		The collection of nodes to drag.
-
-            </param>
-            <param name="effects">
-		A <see cref="T:System.Windows.Forms.DragDropEffects"/> enumeration value that specifies the allowed drag effects.
-
-            </param>
 
 
         </member>
@@ -12622,8 +12520,7 @@ the tree structure due to adding, deleting and modifying nodes, until the <see c
         </member>
         <member name="P:DevExpress.XtraTreeList.TreeList.FilterConditions">
             <summary>
-                <para>Provides access to a filter condition collection. This property is in effect in version 16.2 and older if the <see cref="P:DevExpress.XtraTreeList.TreeListOptionsBehavior.EnableFiltering"/> option is <b>true</b>. 
-In versions 17.1 and newer, we suggest that you use the advanced in-code filtering mechanism as described in the Filtering topic.
+                <para>Gets the collection of <b>filter conditions</b> for a Tree List.
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraTreeList.FilterConditionCollection"/> object that represents the collection of filter conditions for a Tree List.
@@ -12679,7 +12576,7 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
         </member>
         <member name="E:DevExpress.XtraTreeList.TreeList.FilterPopupExcelData">
             <summary>
-                <para>Allows you to remove and modify items in the Excel-inspired Filter Dropdown, as well as add your own custom items that apply specific filtering conditions.
+                <para>Allows you to remove and modify items within Excel-styled filtering dropdowns, as well as add your own custom items that will apply specific filtering conditions.
 </para>
             </summary>
 
@@ -13661,18 +13558,12 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
         </member>
         <member name="M:DevExpress.XtraTreeList.TreeList.IsAutoFilterNode(DevExpress.XtraTreeList.Nodes.TreeListNode)">
             <summary>
-                <para>Gets whether the specified node is an Automatic Filtering Row. 
-
-</para>
+                <para> </para>
             </summary>
             <param name="node">
-		A <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> object for which to return whether it is an Automatic Filtering Row. 
-
-
+		 
             </param>
-            <returns><b>true</b>, if the specified node is an Automatic Filtering Row; otherwise, <b>false</b>.
-
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -13774,15 +13665,12 @@ In versions 17.1 and newer, we suggest that you use the advanced in-code filteri
         </member>
         <member name="M:DevExpress.XtraTreeList.TreeList.IsRootNode(DevExpress.XtraTreeList.Nodes.TreeListNode)">
             <summary>
-                <para>Returns whether the specified node is a root node.
-</para>
+                <para> </para>
             </summary>
             <param name="node">
-		A <see cref="T:DevExpress.XtraTreeList.Nodes.TreeListNode"/> object for which to return whether it is a root node.
-
+		 
             </param>
-            <returns><b>true</b>, if the specified node is a root node; otherwise, <b>false</b>.
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -14672,24 +14560,19 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
         </member>
         <member name="M:DevExpress.XtraTreeList.TreeList.SelectCells(System.Int32,System.String,System.Int32,System.String)">
             <summary>
-                <para>Selects cells in the specified range by data source IDs.
-</para>
+                <para> </para>
             </summary>
             <param name="startNodeId">
-		An ID of the node containing the cell that specifies the starting point of the range to select.
-
+		 
             </param>
             <param name="startColumn">
-		A column containing the cell that specifies the starting point of the range to select.
-
+		 
             </param>
             <param name="endNodeId">
-		An ID of the node containing the cell that specifies the end point of the range to select.
-
+		 
             </param>
             <param name="endColumn">
-		A column containing the cell that specifies the end point of the range to select.
-
+		 
             </param>
 
 
@@ -14746,32 +14629,26 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
         </member>
         <member name="M:DevExpress.XtraTreeList.TreeList.SelectNodes(System.Int32,System.Int32)">
             <summary>
-                <para>Selects nodes in the specified range by data source IDs.
-</para>
+                <para> </para>
             </summary>
             <param name="startNodeId">
-		An ID of the node that specifies the starting point of the range to select.
-
+		 
             </param>
             <param name="endNodeId">
-		An ID of the node that specifies the end point of the range to select.
-
+		 
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraTreeList.TreeList.SelectNodes(DevExpress.XtraTreeList.Nodes.TreeListNode,DevExpress.XtraTreeList.Nodes.TreeListNode)">
             <summary>
-                <para>Selects nodes in the specified range.
-</para>
+                <para> </para>
             </summary>
             <param name="startNode">
-		A node that specifies the starting point of the range to select.
-
+		 
             </param>
             <param name="endNode">
-		A node that specifies the end point of the range to select.
-
+		 
             </param>
 
 
@@ -15141,7 +15018,7 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
         </member>
         <member name="E:DevExpress.XtraTreeList.TreeList.ShowFilterPopupExcel">
             <summary>
-                <para>Allows you to hide specific filtering conditions from the <i>"Filters"</i> tab of the Excel-inspired Filter Dropdown.
+                <para>Allows you to hide specific filtering conditions from the <i>"Filters"</i> tab of an Excel-styled filter dropdown.
 </para>
             </summary>
 
@@ -15434,24 +15311,19 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
         </member>
         <member name="M:DevExpress.XtraTreeList.TreeList.UnselectCells(System.Int32,System.String,System.Int32,System.String)">
             <summary>
-                <para>Discards selection of the specified range of cells by data source IDs.
-</para>
+                <para> </para>
             </summary>
             <param name="startNodeId">
-		An ID of the node containing the cell that specifies the starting point of the range to unselect.
-
+		 
             </param>
             <param name="startColumn">
-		A column containing the cell that specifies the starting point of the range to unselect.
-
+		 
             </param>
             <param name="endNodeId">
-		An ID of the node containing the cell that specifies the end point of the range to unselect.
-
+		 
             </param>
             <param name="endColumn">
-		A column containing the cell that specifies the end point of the range to unselect.
-
+		 
             </param>
 
 
@@ -15470,32 +15342,26 @@ Or, a <see cref="P:DevExpress.Utils.OptionsLayoutBase.FullLayout"/> object, to s
         </member>
         <member name="M:DevExpress.XtraTreeList.TreeList.UnselectNodes(System.Int32,System.Int32)">
             <summary>
-                <para>Discards selection of nodes in the specified range by data source IDs.
-</para>
+                <para> </para>
             </summary>
             <param name="startNodeId">
-		An ID of the node that specifies the starting point of the range to unselect.
-
+		 
             </param>
             <param name="endNodeId">
-		An ID of the node that specifies the end point of the range to unselect.
-
+		 
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraTreeList.TreeList.UnselectNodes(DevExpress.XtraTreeList.Nodes.TreeListNode,DevExpress.XtraTreeList.Nodes.TreeListNode)">
             <summary>
-                <para>Discards selection of nodes in the specified range.
-</para>
+                <para> </para>
             </summary>
             <param name="startNode">
-		A node that specifies the starting point of the range to unselect.
-
+		 
             </param>
             <param name="endNode">
-		A node that specifies the end point of the range to unselect.
-
+		 
             </param>
 
 

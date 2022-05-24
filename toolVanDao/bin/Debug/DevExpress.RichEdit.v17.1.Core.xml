@@ -1812,10 +1812,10 @@
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.PreferredWidth">
             <summary>
-                <para>Gets the numerical value of the preferred width of a cell related to the current table cell border.
+                <para>Gets how RichEditControl interprets the width specified for the cell related to the current table cell border.
 </para>
             </summary>
-            <value>A <see cref="T:System.Single"/> value indicating the width or <b>null</b> if it's not set.
+            <value>A float value indicating the width or <b>null</b> if it's not set.
 </value>
 
 
@@ -1834,7 +1834,6 @@
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.PrefferedWidth">
             <summary>
                 <para>Gets the numerical value of the preferred width of a cell related to the current table cell border.
-
 </para>
             </summary>
             <value>A <see cref="T:System.Single"/> value indicating the table width or <b>null</b> if it's not set.
@@ -2352,32 +2351,33 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkStart">
+        <member name="T:DevExpress.XtraRichEdit.Commands.SetParagraphHeading3LevelCommand">
 
             <summary>
-                <para>Document element that is the bookmark's start accessed by DocumentIterator.
+                <para>Applies the <b>Heading 3</b> built-in style to the text so it is shown at the third level of the Table of Contents.
+
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkStart.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
+        <member name="M:DevExpress.XtraRichEdit.Commands.SetParagraphHeading3LevelCommand.#ctor(DevExpress.XtraRichEdit.IRichEditControl)">
             <summary>
-                <para>Accepts a visitor.
+                <para>Initializes a new instance of the SetParagraphHeading3LevelCommand class with the specified owner.
 </para>
             </summary>
-            <param name="visitor">
-		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+            <param name="control">
+		An object exposing the <see cref="T:DevExpress.XtraRichEdit.IRichEditControl"/> interface specifying the owner of the command.
 
             </param>
 
 
         </member>
-        <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkStart.Type">
+        <member name="P:DevExpress.XtraRichEdit.Commands.SetParagraphHeading3LevelCommand.Id">
             <summary>
-                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkStart"/> object.
+                <para>Gets the ID of the SetParagraphHeading3LevelCommand.
 </para>
             </summary>
-            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkStart"/> object.
+            <value>A <see cref="T:DevExpress.XtraRichEdit.Commands.RichEditCommandId"/> member, identifying the command.
 </value>
 
 
@@ -9650,7 +9650,7 @@ context.
         <member name="T:DevExpress.XtraRichEdit.DataFormatOptions">
 
             <summary>
-                <para>Contains settings related to the Clipboard operations with different document formats.
+                <para>Represents settings related to the Clipboard operations with different document formats.
 
 </para>
             </summary>
@@ -13070,10 +13070,10 @@ context.
         </member>
         <member name="P:DevExpress.XtraRichEdit.Import.DocDocumentImporterOptions.KeepPermissionsForRemovedRanges">
             <summary>
-                <para>Gets or sets whether to keep the permissions applied to the ranges marked as deleted under revision.
+                <para>Gets or sets whether to keep the permissions applied to the deleted ranges.
 </para>
             </summary>
-            <value><b>true</b>, to retain the permissions; otherwise, <b>false</b>.
+            <value><b>true</b>, to leave the permissions ; otherwise, <b>false</b>.
 </value>
 
 
@@ -18252,18 +18252,6 @@ context.
 
 
         </member>
-        <member name="M:DevExpress.XtraRichEdit.Commands.CreateBookmarkCommand.#ctor(DevExpress.XtraRichEdit.IRichEditControl)">
-            <summary>
-                <para>Initializes a new instance of the CreateBookmarkCommand class with the specified owner.
-</para>
-            </summary>
-            <param name="control">
-		An object implementing the <b>DevExpress.XtraRichEdit.IRichEditControl</b> interface, specifying the command owner.
-
-            </param>
-
-
-        </member>
         <member name="P:DevExpress.XtraRichEdit.Commands.CreateBookmarkCommand.BookmarkName">
             <summary>
                 <para>Gets the name of the bookmark created by the command.
@@ -18280,16 +18268,6 @@ context.
 </para>
             </summary>
             <value>An <b>XtraRichEditStringId</b> enumeration value, identifying the resource string.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.Commands.CreateBookmarkCommand.Id">
-            <summary>
-                <para>Gets the ID of the CreateBookmarkCommand.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraRichEdit.Commands.RichEditCommandId"/> member, identifying the command.
 </value>
 
 
@@ -21663,14 +21641,6 @@ context.
 
 
         </member>
-        <member name="P:DevExpress.XtraRichEdit.FieldOptions.UpdateHyperlinksOnLoad">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.XtraRichEdit.FieldOptions.UpdateLockedFields">
             <summary>
                 <para>Gets or sets whether locked fields can be updated with the Rich Text Editor.
@@ -22676,16 +22646,6 @@ context.
             </summary>
             <value><b>True</b>, to retain the former behavior and not remove the last paragraph when the last range is deleted; otherwise, <b>false</b>.
 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.RichEditControlCompatibility.LoadHyperlinkAsField">
-            <summary>
-                <para>Gets or sets whether to keep importing document hyperlinks when importing document fields is forbidden. 
-</para>
-            </summary>
-            <value><b>true</b>, to import hyperlinks; otherwise, <b>false</b>.
 </value>
 
 
@@ -26187,16 +26147,6 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 
 
         </member>
-        <member name="M:DevExpress.XtraRichEdit.Commands.DeleteCommand.UpdateUIState(DevExpress.Utils.Commands.ICommandUIState)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="state">
-		 
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.XtraRichEdit.Commands.DecrementNumerationParagraphIndentCommand">
 
             <summary>
@@ -27308,33 +27258,6 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DeselectAll">
             <summary>
                 <para><see cref="T:DevExpress.XtraRichEdit.Commands.DeselectAllCommand"/> ID.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DragCopyContent">
-            <summary>
-                <para><b>DragCopyContentCommand</b> ID. 
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DragCopyExternalContent">
-            <summary>
-                <para><b>DragCopyExternatContentCommand</b> ID. 
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.Commands.RichEditCommandId.DragMoveContent">
-            <summary>
-                <para><b>DragMoveContentCommand</b> ID. 
 </para>
             </summary>
             <returns> </returns>
@@ -34777,7 +34700,7 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="P:DevExpress.XtraRichEdit.RichEditView.AllowDisplayLineNumbers">
             <summary>
-                <para>Gets or sets whether line numbers can be displayed in the view.
+                <para>Gets or sets whether line numbers, when enabled, are displayed in the view.
 </para>
             </summary>
             <value><b>true</b> to show line numbers if they are enabled; otherwise, <b>false</b>.
@@ -40549,16 +40472,6 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 
 
         </member>
-        <member name="P:DevExpress.XtraRichEdit.Export.HtmlDocumentExporterOptions.ExportListItemStyle">
-            <summary>
-                <para>Gets or sets whether to disable writing font settings into <b><b>&lt;li&gt;</b></b> tags when exporting a document to the HTML format. 
-</para>
-            </summary>
-            <value><b>true</b>, to allow writing font style settings into <b><b>&lt;li&gt;</b></b> tags; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
         <member name="P:DevExpress.XtraRichEdit.Export.HtmlDocumentExporterOptions.ExportRootTag">
             <summary>
                 <para>Gets or sets the root tag of the HTML document to start the export.
@@ -40605,16 +40518,6 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraRichEdit.Export.Html.HtmlNumberingListExportFormat"/> enumeration value specifying how the lists are exported.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.Export.HtmlDocumentExporterOptions.IgnoreHangingIndentOnNumberingList">
-            <summary>
-                <para>Gets or sets whether to ignore the paragraph's hanging indent value when exporting the numbering and bulleted lists to HTML as plain text. 
-</para>
-            </summary>
-            <value><b>true</b>, to ignore the hanging parameter; otherwise, <b>false</b>.
 </value>
 
 
@@ -43860,14 +43763,14 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         <member name="T:DevExpress.XtraRichEdit.API.Native.CompatibilityMode">
 
             <summary>
-                <para>Lists modes that specify the compatibility of the document being exported with different Microsoft Word versions. 
+                <para>Lists modes that specify the compatibility of the exporting document with different word-processing application versions. 
 </para>
             </summary>
 
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.CompatibilityMode.Mode11">
             <summary>
-                <para>The resulting document is compatible with Microsoft Word&#174; 2003. 
+                <para>The resulting document is compatible with MS Word&#174; 2003. 
 </para>
             </summary>
 
@@ -43875,7 +43778,7 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.CompatibilityMode.Mode12">
             <summary>
-                <para>The resulting document is compatible with Microsoft Word&#174; 2007. 
+                <para>The resulting document is compatible with MS Word&#174; 2007. 
 </para>
             </summary>
 
@@ -43883,7 +43786,7 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.CompatibilityMode.Mode14">
             <summary>
-                <para>The resulting document is compatible with Microsoft Word&#174; 2010. 
+                <para>The resulting document is compatible with MS Word&#174; 2010. 
 </para>
             </summary>
 
@@ -43891,7 +43794,7 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.CompatibilityMode.Mode15">
             <summary>
-                <para>The resulting document is compatible with Microsoft Word&#174; 2013.
+                <para>The resulting document is compatible with MS Word&#174; 2013. Default mode. 
 </para>
             </summary>
 
@@ -43902,6 +43805,36 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
                 <para>Compatibility mode is not specified. 
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkStart">
+
+            <summary>
+                <para>Document element that is the bookmark's start accessed by DocumentIterator.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkStart.Accept(DevExpress.XtraRichEdit.API.Native.IDocumentVisitor)">
+            <summary>
+                <para>Accepts a visitor.
+</para>
+            </summary>
+            <param name="visitor">
+		A <see cref="T:DevExpress.XtraRichEdit.API.Native.IDocumentVisitor"/> object that is the visitor.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkStart.Type">
+            <summary>
+                <para>Gets the type of a <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkStart"/> object.
+</para>
+            </summary>
+            <value>A <see cref="DocumentElementType"/> enumeration value that corresponds to the <see cref="T:DevExpress.XtraRichEdit.API.Native.DocumentBookmarkStart"/> object.
+</value>
 
 
         </member>
@@ -43971,7 +43904,7 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         <member name="T:DevExpress.XtraRichEdit.API.Native.CompatibilitySettings">
 
             <summary>
-                <para>Enables you to specify application-wide settings to ensure compatibility with previous versions of rich text editors.
+                <para>Enables you to specify application-wide settings to ensure compatibility with previous RichEdit versions, different versions of MS Word and other word-processing applications.
 </para>
             </summary>
 
@@ -43989,7 +43922,7 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.CompatibilitySettings.CompatibilityMode">
             <summary>
-                <para>Specifies the document compatibility with different Microsoft Word versions. 
+                <para>Specifies the document compatibility with different word-processing application versions. 
 </para>
             </summary>
             <value>One of the <see cref="CompatibilityMode"/> enumeration values identifying the compatibility mode. 
@@ -45588,37 +45521,6 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
 </para>
             </summary>
             <value>A string that is the text displayed in the layout element.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraRichEdit.Commands.SetParagraphHeading3LevelCommand">
-
-            <summary>
-                <para>Applies the <b>Heading 3</b> built-in style to the text so it is shown at the third level of the Table of Contents.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraRichEdit.Commands.SetParagraphHeading3LevelCommand.#ctor(DevExpress.XtraRichEdit.IRichEditControl)">
-            <summary>
-                <para>Initializes a new instance of the SetParagraphHeading3LevelCommand class with the specified owner.
-</para>
-            </summary>
-            <param name="control">
-		An object exposing the <see cref="T:DevExpress.XtraRichEdit.IRichEditControl"/> interface specifying the owner of the command.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.Commands.SetParagraphHeading3LevelCommand.Id">
-            <summary>
-                <para>Gets the ID of the SetParagraphHeading3LevelCommand.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraRichEdit.Commands.RichEditCommandId"/> member, identifying the command.
 </value>
 
 
@@ -53813,7 +53715,7 @@ Currently not supported.
                 <para>Gets or sets the amount of space below the contents of a single cell in a table.
 </para>
             </summary>
-            <value>A <see cref="T:System.Single"/> value that is the distance in units of measurements that are currently in effect for the document (specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property).
+            <value>A <see cref="T:System.Single"/> value that is the distance in points.
 </value>
 
 
@@ -53882,7 +53784,7 @@ Currently not supported.
                 <para>Gets or sets the amount of space to the left of the contents of a single cell in a table.
 </para>
             </summary>
-            <value>A <see cref="T:System.Single"/> value that is the distance in units of measurements that are currently in effect for the document (specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property).
+            <value>A <see cref="T:System.Single"/> value that is the distance in points.
 </value>
 
 
@@ -53952,8 +53854,7 @@ Currently not supported.
                 <para>Gets or sets the amount of space to the right of the contents of a single cell in a table.
 </para>
             </summary>
-            <value>A <see cref="T:System.Single"/> value that is the distance in units of measurements that are currently in effect for the document (specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property).
-
+            <value>A <see cref="T:System.Single"/> value that is the distance in points.
 </value>
 
 
@@ -54009,7 +53910,7 @@ Currently not supported.
                 <para>Gets or sets the amount of space above the contents of a single cell in a table.
 </para>
             </summary>
-            <value>A <see cref="T:System.Single"/> value that is the distance in units of measurements that are currently in effect for the document (specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property).
+            <value>A <see cref="T:System.Single"/> value that is the distance in points.
 </value>
 
 
@@ -56737,14 +56638,6 @@ Currently not supported.
             </param>
             <value>An object associated with the document variable or calculated in the corresponding event.
 </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraRichEdit.DocumentVariableCollection.Names">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>

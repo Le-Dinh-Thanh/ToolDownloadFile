@@ -28,6 +28,7 @@ namespace toolVanDao.Config
         public static string MST = "MST";
         public static string Folder = "Folder";
         public static string UrlDownloadXML = "UrlDownloadXML";
+        public static string UrlDownloadPDF = "UrlDownloadPDF";
         public static string UrlRef78 = "UrlRef78";
         public static string UrlDownloadXml78 = "UrlDownloadXml78";
         public static string UrlDownloadpdf78 = "UrlDownloadpdf78";

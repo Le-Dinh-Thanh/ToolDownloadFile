@@ -262,26 +262,6 @@
 
 
         </member>
-        <member name="T:DevExpress.DataAccess.ObjectBinding.ValidationFailedException">
-
-            <summary>
-                <para>This exception is thrown when an object data source validation fails.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.DataAccess.ObjectBinding.ValidationFailedException.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the ValidationFailedException class with the specified message.
-</para>
-            </summary>
-            <param name="message">
-		A <see cref="T:System.String"/> value, specifying the message displayed when a data source validation fails.
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.DataAccess.Sql.ExpressionBase">
 
             <summary>
@@ -296,114 +276,6 @@
 </para>
             </summary>
             <value>An <see cref="T:DevExpress.DataAccess.Sql.AggregationType"/> enumeration value.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.DataAccess.ObjectBinding.BeforeFillEventHandler">
-
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.DataAccess.ObjectBinding.ObjectDataSource.BeforeFill"/> and <see cref="E:DevExpress.DataAccess.ObjectBinding.ObjectDataSource.BeforeFillGlobal"/> events.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.DataAccess.ObjectBinding.BeforeFillEventHandler.Invoke(System.Object,DevExpress.DataAccess.ObjectBinding.BeforeFillEventArgs)">
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.DataAccess.ObjectBinding.ObjectDataSource.BeforeFill"/> and <see cref="E:DevExpress.DataAccess.ObjectBinding.ObjectDataSource.BeforeFillGlobal"/> events.
-</para>
-            </summary>
-            <param name="sender">
-		The event sender.
-
-            </param>
-            <param name="args">
-		A <see cref="T:DevExpress.DataAccess.ObjectBinding.BeforeFillEventArgs"/> object that contains data related to the event.
-
-            </param>
-
-
-        </member>
-        <member name="T:DevExpress.DataAccess.ObjectBinding.BeforeFillEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.DataAccess.ObjectBinding.ObjectDataSource.BeforeFill"/> and <see cref="E:DevExpress.DataAccess.ObjectBinding.ObjectDataSource.BeforeFillGlobal"/> events.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.DataAccess.ObjectBinding.BeforeFillEventArgs.#ctor(System.Object,System.String,DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo,System.Collections.Generic.IEnumerable`1)">
-            <summary>
-                <para>Initializes a new instance of the BeforeFillEventArgs class with the specified settings.
-</para>
-            </summary>
-            <param name="dataSource">
-		A <see cref="T:System.Object"/> value, specifying the data source. This value is assigned to the <see cref="P:DevExpress.DataAccess.ObjectBinding.BeforeFillEventArgs.DataSource"/> property.
-
-            </param>
-            <param name="dataMember">
-		A <see cref="T:System.String"/> value, specifying the data member. This value is assigned to the <see cref="P:DevExpress.DataAccess.ObjectBinding.BeforeFillEventArgs.DataMember"/> property.
-
-            </param>
-            <param name="constructorInfo">
-		An <see cref="T:DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo"/> value. This value is assigned to the <see cref="P:DevExpress.DataAccess.ObjectBinding.BeforeFillEventArgs.ConstructorInfo"/> property.
-
-
-            </param>
-            <param name="parameters">
-		A collection of <see cref="T:DevExpress.DataAccess.ObjectBinding.Parameter"/> objects. This value is assigned to the <see cref="P:DevExpress.DataAccess.ObjectBinding.BeforeFillEventArgs.Parameters"/> property.
-
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.ObjectBinding.BeforeFillEventArgs.ConstructorInfo">
-            <summary>
-                <para>Returns an object providing access to constructor parameters of an <see cref="T:DevExpress.DataAccess.ObjectBinding.ObjectDataSource"/>.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.ObjectBinding.BeforeFillEventArgs.DataMember">
-            <summary>
-                <para>Returns the data member specified for an <see cref="T:DevExpress.DataAccess.ObjectBinding.ObjectDataSource"/>.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the data member.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.ObjectBinding.BeforeFillEventArgs.DataSource">
-            <summary>
-                <para>Returns the data source assigned to an <see cref="T:DevExpress.DataAccess.ObjectBinding.ObjectDataSource"/>.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Object"/> value, specifying the data source.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.ObjectBinding.BeforeFillEventArgs.IsValid">
-            <summary>
-                <para>Specifies whether or not the object data source is valid.
-</para>
-            </summary>
-            <value><b>true</b>, if the object data source is valid; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.ObjectBinding.BeforeFillEventArgs.Parameters">
-            <summary>
-                <para>Returns a collection of method and constructor parameters of an <see cref="T:DevExpress.DataAccess.ObjectBinding.ObjectDataSource"/>. 
-</para>
-            </summary>
-            <value>A collection of <see cref="T:DevExpress.DataAccess.ObjectBinding.Parameter"/> objects.
 </value>
 
 
@@ -564,25 +436,6 @@
                 <para>Initializes a new instance of the PartialAggregationValidationException class with the default settings.
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.DataAccess.Web.IConnectionProviderFactory">
-
-            <summary>
-                <para>Provides methods for creating a provider to restore a data connection on deserializing a report.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Web.IConnectionProviderFactory.Create">
-            <summary>
-                <para>Creates and returns an object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.IConnectionProviderService"/> interface.
-</para>
-            </summary>
-            <returns>An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.IConnectionProviderService"/> interface.
-</returns>
 
 
         </member>
@@ -1687,31 +1540,11 @@
 </para>
             </summary>
             <param name="actual">
-		A <see cref="T:System.String"/> value, specifying the actual parameter type. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.StoredProcParamTypeValidationException.Actual"/> property.
+		A <see cref="T:System.String"/> value, specifying the actual parameter type.
 
             </param>
             <param name="expected">
-		A <see cref="T:System.String"/> value, specifying the expected parameter type. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.StoredProcParamTypeValidationException.Expected"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.StoredProcParamTypeValidationException.#ctor(System.String,System.String,System.String)">
-            <summary>
-                <para>Initializes a new instance of the StoredProcParamTypeValidationException class with the specified settings.
-</para>
-            </summary>
-            <param name="actualType">
-		A <see cref="T:System.String"/> value, specifying the actual parameter type. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.StoredProcParamTypeValidationException.Actual"/> property.
-
-            </param>
-            <param name="expectedType">
-		A <see cref="T:System.String"/> value, specifying the expected parameter type. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.StoredProcParamTypeValidationException.Expected"/> property.
-
-            </param>
-            <param name="parameterName">
-		A <see cref="T:System.String"/> value, specifying the parameter name. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.StoredProcParamTypeValidationException.ParameterName"/> property.
+		A <see cref="T:System.String"/> value, specifying the expected parameter type.
 
             </param>
 
@@ -1733,16 +1566,6 @@
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value, specifying the expected parameter type.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.Sql.StoredProcParamTypeValidationException.ParameterName">
-            <summary>
-                <para>Indicates the parameter name.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the parameter name.
 </value>
 
 
@@ -3045,19 +2868,10 @@
         </member>
         <member name="P:DevExpress.DataAccess.Sql.ConnectionOptions.CommandTimeout">
             <summary>
-                <para>For internal use. Use the <see cref="P:DevExpress.DataAccess.Sql.ConnectionOptions.DbCommandTimeout"/> property instead.
-</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.Sql.ConnectionOptions.DbCommandTimeout">
-            <summary>
                 <para>Specifies the timeout to execute a query.
 </para>
             </summary>
-            <value>A nullable integer value, specifying the query timeout. The <b>null</b> value (<b>Nothing</b> in Visual Basic) indicates the use of the provider's default setting. A zero value indicates unlimited timeout. 
+            <value>An integer value, specifying the query timeout (in seconds).
 </value>
 
 
@@ -5790,8 +5604,7 @@
         <member name="T:DevExpress.DataAccess.ValidateCustomSqlQueryEventHandler">
 
             <summary>
-                <para>References a method that will handle the <see cref="E:DevExpress.DataAccess.Sql.SqlDataSource.ValidateCustomSqlQuery"/> event.
-</para>
+                <para> </para>
             </summary>
 
         </member>
@@ -6115,7 +5928,7 @@
                 <para>Gets or sets a path to the Microsoft Excel workbook or CSV file.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> that specifies the path to the Microsoft Excel workbook or CSV file.
+            <value>A <see cref="T:System.Sting"/> that specifies the path to the Microsoft Excel workbook or CSV file.
 </value>
 
 
@@ -6339,7 +6152,7 @@
                 <para>Gets or sets a path to the Microsoft Excel workbook or CSV file.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> that specifies the path to the Microsoft Excel workbook or CSV file.
+            <value>A <see cref="T:System.Sting"/> that specifies the path to the Microsoft Excel workbook or CSV file.
 </value>
 
 
@@ -7964,22 +7777,6 @@
 
 
         </member>
-        <member name="E:DevExpress.DataAccess.ObjectBinding.ObjectDataSource.BeforeFill">
-            <summary>
-                <para>Occurs before filling an object data source, enabling you to provide custom data source validation.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.DataAccess.ObjectBinding.ObjectDataSource.BeforeFillGlobal">
-            <summary>
-                <para>Occurs before filling an object data source, enabling you to provide custom validation for all object data sources in your application.
-</para>
-            </summary>
-
-
-        </member>
         <member name="M:DevExpress.DataAccess.ObjectBinding.ObjectDataSource.BeginInit">
             <summary>
                 <para>Signals the object data source that initialization is starting.
@@ -8909,154 +8706,6 @@
 
 
         </member>
-        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1">
-
-            <summary>
-                <para>Provides a presenter to the Create a Query or Select a Stored Procedure page of the Data Source Wizard.
-
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.SqlWizardOptions,DevExpress.DataAccess.Sql.IDBSchemaProviderEx,DevExpress.DataAccess.Wizard.Services.IParameterService,DevExpress.DataAccess.Wizard.Services.ICustomQueryValidator)">
-            <summary>
-                <para>Initializes a new instance of the ConfigureQueryPage&lt;TModel&gt; class with the specified settings.
-</para>
-            </summary>
-            <param name="view">
-		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView"/> interface that provides a view for a wizard page. 
-
-            </param>
-            <param name="context">
-		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard. 
-
-            </param>
-            <param name="options">
-		An object that specifies the wizard options. 
-
-            </param>
-            <param name="dbSchemaProviderEx">
-		An object implementing the <see cref="T:DevExpress.DataAccess.Sql.IDBSchemaProviderEx"/> interface that provides the capability to customize the data source schema. 
-
-            </param>
-            <param name="parameterService">
-		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.IParameterService"/> interface that provides a service functionality to manage query parameters. 
-
-            </param>
-            <param name="customQueryValidator">
-		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.ICustomQueryValidator"/> interface that provides custom validation logic for SQL queries. 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.SqlWizardOptions,DevExpress.DataAccess.Sql.IDBSchemaProviderEx,DevExpress.DataAccess.Sql.IResultSchemaProvider,DevExpress.DataAccess.Wizard.Services.IParameterService,DevExpress.DataAccess.Wizard.Services.ICustomQueryValidator)">
-            <summary>
-                <para>Initializes a new instance of the ConfigureQueryPage&lt;TModel&gt; class with the specified settings.
-</para>
-            </summary>
-            <param name="view">
-		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView"/> interface.
-
-            </param>
-            <param name="context">
-		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface.
-
-            </param>
-            <param name="options">
-		One or more <see cref="T:DevExpress.DataAccess.Wizard.SqlWizardOptions"/> enumeration values.
-
-            </param>
-            <param name="dbSchemaProviderEx">
-		An object implementing the <see cref="T:DevExpress.DataAccess.Sql.IDBSchemaProviderEx"/> interface.
-
-            </param>
-            <param name="resultSchemaProvider">
-		An object implementing the <see cref="T:DevExpress.DataAccess.Sql.IResultSchemaProvider"/> interface.
-
-            </param>
-            <param name="parameterService">
-		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.IParameterService"/> interface.
-
-            </param>
-            <param name="customQueryValidator">
-		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.ICustomQueryValidator"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.Begin">
-            <summary>
-                <para>Initializes controls of the current wizard page.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.Commit">
-            <summary>
-                <para>Saves settings specified by a wizard page to the report model.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.DBSchema">
-            <summary>
-                <para>Gets the schema of the connected SQL data source.
-</para>
-            </summary>
-            <value>An object specifying the database schema.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.FinishEnabled">
-            <summary>
-                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
-</para>
-            </summary>
-            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.GetNextPageType">
-            <summary>
-                <para>Returns the type of the next wizard page.
-</para>
-            </summary>
-            <returns>A <see cref="T:System.Type"/> enumeration value.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.MoveNextEnabled">
-            <summary>
-                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
-</para>
-            </summary>
-            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.Validate(System.String@)">
-            <summary>
-                <para>Validates the correctness of settings specified on the current wizard page.
-</para>
-            </summary>
-            <param name="errorMessage">
-		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
-
-            </param>
-            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
         <member name="T:DevExpress.DataAccess.EntityFramework.BeforeLoadCustomAssemblyEventHandler">
 
             <summary>
@@ -9593,8 +9242,7 @@
         </member>
         <member name="F:DevExpress.DataAccess.Localization.DataAccessStringId.ExpressionEditor_EmptyExpression">
             <summary>
-                <para><b>Default value</b>: "The expression string cannot be empty."
-</para>
+                <para> </para>
             </summary>
 
 
@@ -9963,28 +9611,6 @@
             <summary>
                 <para><b>Default value</b>: "The connection string contains no XpoProvider key or the specified key is invalid. \r\n\r\nException details:\r\n {0}"
 </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.DataAccess.Localization.DataAccessStringId.ObjectDataSourceLoadingWarningMessage">
-            <summary>
-                <para><b>Default value</b>: "Loading the data sources referenced in this file may harm your computer. Was this file obtained from a trusted source?\r\n\r\nClick 'Yes' to load the data source content as is.\r\nClick 'No' to load only trusted data source content."
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.DataAccess.Localization.DataAccessStringId.ObjectDataSourceWizard_CannotGetPropertiesForThisMethodReturnType">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.DataAccess.Localization.DataAccessStringId.ObjectDataSourceWizard_CannotGetTypeProperties">
-            <summary>
-                <para> </para>
             </summary>
 
 
@@ -10416,14 +10042,6 @@
         <member name="F:DevExpress.DataAccess.Localization.DataAccessStringId.SqlStringEmptyValidationException">
             <summary>
                 <para><b>Default value</b>: "The SQL string is null or empty."
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.DataAccess.Localization.DataAccessStringId.StoredProcedureParameterTypeValidationException">
-            <summary>
-                <para><b>Default value</b>: "Parameter '{2}' type mismatch: &lt;{0}&gt;, &lt;{1}&gt; is expected."
 </para>
             </summary>
 
@@ -12559,19 +12177,6 @@
 
 
         </member>
-        <member name="M:DevExpress.DataAccess.EntityFramework.EFDataSource.#ctor(DevExpress.DataAccess.EntityFramework.EFConnectionParameters,System.String)">
-            <summary>
-                <para>For internal use.</para>
-            </summary>
-            <param name="connectionParameters">
-		 
-            </param>
-            <param name="storedProcedureName">
-		 
-            </param>
-
-
-        </member>
         <member name="E:DevExpress.DataAccess.EntityFramework.EFDataSource.BeforeLoadCustomAssembly">
             <summary>
                 <para>Occurs on an attempt to load a custom assembly by EFDataSource.
@@ -12988,13 +12593,6 @@
             <summary>
                 <para>Deletes all data cached when filling the SqlDataSource.
 </para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Sql.SqlDataSource.Invalidate">
-            <summary>
-                <para>For internal use.</para>
             </summary>
 
 
@@ -13988,39 +13586,6 @@
 		A <see cref="T:DevExpress.DataAccess.CustomFilterExpressionEventArgs"/> object that contains event data.
 
             </param>
-
-
-        </member>
-        <member name="T:DevExpress.DataAccess.DocumentLoadingBehavior">
-
-            <summary>
-                <para>Lists the options that define whether to allow loading object data sources in end-user applications.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.DataAccess.DocumentLoadingBehavior.LoadAsIs">
-            <summary>
-                <para>Allow loading any object data sources.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.DataAccess.DocumentLoadingBehavior.LoadSafely">
-            <summary>
-                <para>Load object data sources in a safe mode (with their data member and data source settings cleared).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.DataAccess.DocumentLoadingBehavior.Prompt">
-            <summary>
-                <para>Ask for an end-user's permission on every attempt to load an object data source in an application.
-
-</para>
-            </summary>
 
 
         </member>
@@ -16622,17 +16187,13 @@
             </summary>
 
         </member>
-        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ObjectConstructorParametersPage`1.#ctor(DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Views.IObjectConstructorParametersPageView)">
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ObjectConstructorParametersPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IObjectConstructorParametersPageView)">
             <summary>
-                <para>Initializes a new instance of the ObjectConstructorParametersPage&lt;TModel&gt; class with the specified settings.
+                <para>Initializes a new instance of the ObjectConstructorParametersPage&lt;TModel&gt; class with the specified view.
 </para>
             </summary>
-            <param name="context">
-		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface.
-
-            </param>
             <param name="view">
-		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IObjectConstructorParametersPageView"/> interface.
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IObjectConstructorParametersPageView"/> interface that provides a view for a wizard page.
 
             </param>
 
@@ -16661,20 +16222,6 @@
             </summary>
             <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
 </value>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ObjectConstructorParametersPage`1.Validate(System.String@)">
-            <summary>
-                <para>Validates the correctness of settings specified on the current wizard page.
-</para>
-            </summary>
-            <param name="errorMessage">
-		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
-
-            </param>
-            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
-</returns>
 
 
         </member>
@@ -18147,6 +17694,16 @@
 
 
         </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Model.ObjectDataSourceModel.DataConnection">
+            <summary>
+                <para>Specifies the connection to an object data source.
+</para>
+            </summary>
+            <value>An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Model.IDataConnection"/> interface that specifies the connection to the object data source. 
+</value>
+
+
+        </member>
         <member name="M:DevExpress.DataAccess.Wizard.Model.ObjectDataSourceModel.Equals(System.Object)">
             <summary>
                 <para>Determines whether or not the specified object is equal to the current ObjectDataSourceModel instance.
@@ -18877,49 +18434,54 @@
             </summary>
 
         </member>
-        <member name="M:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.#ctor(System.Boolean,System.String,System.String,System.String,DevExpress.DataAccess.Wizard.Views.NodeType,System.Collections.Generic.IEnumerable`1)">
+        <member name="M:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.#ctor(System.Boolean,System.String,System.String,DevExpress.DataAccess.Wizard.Views.NodeType,System.Collections.Generic.IEnumerable`1)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the TypeViewInfo class with the specified settings.
+</para>
             </summary>
             <param name="highlighted">
-		 
+		Specifies whether a type is highlighted. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.Highlighted"/> property.
+
             </param>
             <param name="ns">
-		 
+		The name of the namespace containing the current type. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.Namespace"/> property.
+
             </param>
             <param name="typeName">
-		 
-            </param>
-            <param name="typeFullName">
-		 
+		The name of the current type. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.TypeName"/> property.
+
             </param>
             <param name="classType">
-		 
+		The type of the current object class. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.ClassType"/> property.
+
             </param>
             <param name="nested">
-		 
+		Nested types of the current type. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.Nested"/> property.
+
             </param>
 
 
         </member>
-        <member name="M:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.#ctor(System.Boolean,System.String,System.String,System.String,DevExpress.DataAccess.Wizard.Views.NodeType)">
+        <member name="M:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.#ctor(System.Boolean,System.String,System.String,DevExpress.DataAccess.Wizard.Views.NodeType)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the TypeViewInfo class with the specified settings.
+</para>
             </summary>
             <param name="highlighted">
-		 
+		Specifies whether a type is highlighted. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.Highlighted"/> property.
+
             </param>
             <param name="ns">
-		 
+		The name of the namespace containing the current type. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.Namespace"/> property.
+
             </param>
             <param name="typeName">
-		 
-            </param>
-            <param name="typeFullName">
-		 
+		The name of the current type. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.TypeName"/> property.
+
             </param>
             <param name="classType">
-		 
+		The type of the current object class. This value is assigned to the <see cref="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.ClassType"/> property.
+
             </param>
 
 
@@ -18972,14 +18534,6 @@
             </summary>
             <value>A <see cref="T:DevExpress.DataAccess.Wizard.Views.TypeViewInfo"/> object specifying the parent of the current type.
 </value>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.Wizard.Views.TypeViewInfo.TypeFullName">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>
@@ -20483,21 +20037,17 @@
             </summary>
 
         </member>
-        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectBindingModePage`1.#ctor(DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.Views.IChooseObjectBindingModePageView,DevExpress.DataAccess.Wizard.OperationMode)">
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectBindingModePage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IChooseObjectBindingModePageView,DevExpress.DataAccess.Wizard.OperationMode)">
             <summary>
                 <para>Initializes a new instance of the ChooseObjectBindingModePage&lt;TModel&gt; class with the specified settings.
 </para>
             </summary>
-            <param name="context">
-		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface.
-
-            </param>
             <param name="view">
-		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IChooseObjectBindingModePageView"/> interface.
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IChooseObjectBindingModePageView"/> interface that provides a view for a wizard page.
 
             </param>
             <param name="operationMode">
-		An <see cref="T:DevExpress.DataAccess.Wizard.OperationMode"/> enumeration value.
+		An <see cref="T:DevExpress.DataAccess.Wizard.OperationMode"/> enumeration value that specifies which modes of operation are available.
 
             </param>
 
@@ -20546,20 +20096,6 @@
             </summary>
             <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
 </value>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseObjectBindingModePage`1.Validate(System.String@)">
-            <summary>
-                <para>Validates the correctness of settings specified on the current wizard page.
-</para>
-            </summary>
-            <param name="errorMessage">
-		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
-
-            </param>
-            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
-</returns>
 
 
         </member>
@@ -21160,6 +20696,154 @@
 
         </member>
         <member name="M:DevExpress.DataAccess.Wizard.Presenters.ChooseEFContextPage`1.Validate(System.String@)">
+            <summary>
+                <para>Validates the correctness of settings specified on the current wizard page.
+</para>
+            </summary>
+            <param name="errorMessage">
+		A <see cref="T:System.String"/> value specifying the text of an error message shown if the validation fails.
+
+            </param>
+            <returns><b>true</b>, if the validation succeeded; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1">
+
+            <summary>
+                <para>Provides a presenter to the Create a Query or Select a Stored Procedure page of the Data Source Wizard.
+
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.SqlWizardOptions,DevExpress.DataAccess.Sql.IDBSchemaProviderEx,DevExpress.DataAccess.Wizard.Services.IParameterService,DevExpress.DataAccess.Wizard.Services.ICustomQueryValidator)">
+            <summary>
+                <para>Initializes a new instance of the ConfigureQueryPage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView"/> interface that provides a view for a wizard page. 
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface that provides the functionality to run the wizard. 
+
+            </param>
+            <param name="options">
+		An object that specifies the wizard options. 
+
+            </param>
+            <param name="dbSchemaProviderEx">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Sql.IDBSchemaProviderEx"/> interface that provides the capability to customize the data source schema. 
+
+            </param>
+            <param name="parameterService">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.IParameterService"/> interface that provides a service functionality to manage query parameters. 
+
+            </param>
+            <param name="customQueryValidator">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.ICustomQueryValidator"/> interface that provides custom validation logic for SQL queries. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.#ctor(DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView,DevExpress.DataAccess.Wizard.IWizardRunnerContext,DevExpress.DataAccess.Wizard.SqlWizardOptions,DevExpress.DataAccess.Sql.IDBSchemaProviderEx,DevExpress.DataAccess.Sql.IResultSchemaProvider,DevExpress.DataAccess.Wizard.Services.IParameterService,DevExpress.DataAccess.Wizard.Services.ICustomQueryValidator)">
+            <summary>
+                <para>Initializes a new instance of the ConfigureQueryPage&lt;TModel&gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="view">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Views.IConfigureQueryPageView"/> interface.
+
+            </param>
+            <param name="context">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.IWizardRunnerContext"/> interface.
+
+            </param>
+            <param name="options">
+		One or more <see cref="T:DevExpress.DataAccess.Wizard.SqlWizardOptions"/> enumeration values.
+
+            </param>
+            <param name="dbSchemaProviderEx">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Sql.IDBSchemaProviderEx"/> interface.
+
+            </param>
+            <param name="resultSchemaProvider">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Sql.IResultSchemaProvider"/> interface.
+
+            </param>
+            <param name="parameterService">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.IParameterService"/> interface.
+
+            </param>
+            <param name="customQueryValidator">
+		An object implementing the <see cref="T:DevExpress.DataAccess.Wizard.Services.ICustomQueryValidator"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.Begin">
+            <summary>
+                <para>Initializes controls of the current wizard page.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.Commit">
+            <summary>
+                <para>Saves settings specified by a wizard page to the report model.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.DBSchema">
+            <summary>
+                <para>Gets the schema of the connected SQL data source.
+</para>
+            </summary>
+            <value>An object specifying the database schema.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.FinishEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Finish</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Finish</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.GetNextPageType">
+            <summary>
+                <para>Returns the type of the next wizard page.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Type"/> enumeration value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.MoveNextEnabled">
+            <summary>
+                <para>Specifies whether or not the <b>Next</b> button is enabled on a wizard page.
+</para>
+            </summary>
+            <value><b>true</b>, if the <b>Next</b> button is enabled; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.DataAccess.Wizard.Presenters.ConfigureQueryPage`1.Validate(System.String@)">
             <summary>
                 <para>Validates the correctness of settings specified on the current wizard page.
 </para>

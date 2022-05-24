@@ -80,5 +80,8 @@
     <Setting Name="UrlLogin" Type="System.String" Scope="User">
       <Value Profile="(Default)">https://4600240441002.nextinvoice.vn/api/Account/Login</Value>
     </Setting>
+    <Setting Name="UrlDownloadPDF" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

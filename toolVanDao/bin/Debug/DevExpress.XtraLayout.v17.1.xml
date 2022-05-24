@@ -1003,27 +1003,6 @@ This property indicates when changes to the bound editor property are propagated
 
 
         </member>
-        <member name="M:DevExpress.XtraLayout.RowDefinitions.Insert(System.Int32,DevExpress.XtraLayout.RowDefinition,System.Boolean)">
-            <summary>
-                <para>Inserts an element into the collection at the specified index.
-</para>
-            </summary>
-            <param name="index">
-		The zero-based index at which a <i>rowDefinition</i> should be inserted.
-
-
-            </param>
-            <param name="rowDefinition">
-		The <see cref="T:DevExpress.XtraLayout.RowDefinition"/> to insert.
-
-            </param>
-            <param name="updateItemIndexes">
-		<b>true</b>, to recalculate the <see cref="P:DevExpress.XtraLayout.OptionsTableLayoutItem.RowIndex"/> property of items in the current layout group; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
         <member name="P:DevExpress.XtraLayout.RowDefinitions.Item(System.Int32)">
             <summary>
                 <para>Provides indexed access to rows within the current row collection.
@@ -1035,22 +1014,6 @@ This property indicates when changes to the bound editor property are propagated
             </param>
             <value>An object that represents the row at the specified position within the collection.
 </value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraLayout.RowDefinitions.RemoveAt(System.Int32,System.Boolean)">
-            <summary>
-                <para>Removes the element at the specified index.
-</para>
-            </summary>
-            <param name="index">
-		The zero-based index of the element to remove.
-
-            </param>
-            <param name="updateItemIndexes">
-		<b>true</b>, to recalculate the <see cref="P:DevExpress.XtraLayout.OptionsTableLayoutItem.RowIndex"/> property of items in the current layout group; otherwise, <b>false</b>.
-
-            </param>
 
 
         </member>
@@ -1242,105 +1205,25 @@ This property indicates when changes to the bound editor property are propagated
 
 
         </member>
-        <member name="M:DevExpress.XtraLayout.OptionsTableLayoutGroup.Insert(System.Int32,DevExpress.XtraLayout.RowDefinition,System.Boolean)">
+        <member name="M:DevExpress.XtraLayout.OptionsTableLayoutGroup.Remove(DevExpress.XtraLayout.ColumnDefinition)">
             <summary>
-                <para>Inserts an element into the collection at the specified index.
-</para>
-            </summary>
-            <param name="index">
-		The zero-based index at which a <i>rowDefinition</i> should be inserted.
-
-            </param>
-            <param name="rowDefinition">
-		The <see cref="T:DevExpress.XtraLayout.RowDefinition"/> to insert.
-
-            </param>
-            <param name="updateItemIndexes">
-		<b>true</b>, to recalculate the <see cref="P:DevExpress.XtraLayout.OptionsTableLayoutItem.RowIndex"/> property of items in the current layout group; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraLayout.OptionsTableLayoutGroup.Insert(System.Int32,DevExpress.XtraLayout.ColumnDefinition,System.Boolean)">
-            <summary>
-                <para>Inserts an element into the collection at the specified index.
-</para>
-            </summary>
-            <param name="index">
-		The zero-based index at which a <i>columnDefinition</i> should be inserted.
-
-            </param>
-            <param name="columnDefinition">
-		The <see cref="T:DevExpress.XtraLayout.ColumnDefinition"/> to insert.
-
-            </param>
-            <param name="updateItemIndexes">
-		<b>true</b>, to recalculate the <see cref="P:DevExpress.XtraLayout.OptionsTableLayoutItem.ColumnIndex"/> property of items in the current layout group; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraLayout.OptionsTableLayoutGroup.Remove(DevExpress.XtraLayout.ColumnDefinition,System.Boolean)">
-            <summary>
-                <para>Removes the specified column definition.
+                <para>Removes the specified column from the table layout.
 </para>
             </summary>
             <param name="columnDefinition">
-		The <see cref="T:DevExpress.XtraLayout.ColumnDefinition"/> to remove.
-
-            </param>
-            <param name="updateItemIndexes">
-		<b>true</b>, to recalculate the <see cref="P:DevExpress.XtraLayout.OptionsTableLayoutItem.ColumnIndex"/> property of items in the current layout group; otherwise, <b>false</b>.
+		An object that specifies the column to be removed. 
 
             </param>
 
 
         </member>
-        <member name="M:DevExpress.XtraLayout.OptionsTableLayoutGroup.Remove(DevExpress.XtraLayout.RowDefinition,System.Boolean)">
+        <member name="M:DevExpress.XtraLayout.OptionsTableLayoutGroup.Remove(DevExpress.XtraLayout.RowDefinition)">
             <summary>
-                <para>Removes the specified row definition.
+                <para>Removes the specified row from a table layout.
 </para>
             </summary>
             <param name="rowDefinition">
-		The <see cref="T:DevExpress.XtraLayout.RowDefinition"/> to remove.
-
-            </param>
-            <param name="updateItemIndexes">
-		<b>true</b>, to recalculate the <see cref="P:DevExpress.XtraLayout.OptionsTableLayoutItem.RowIndex"/> property of items in the current layout group; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraLayout.OptionsTableLayoutGroup.RemoveColumnAt(System.Int32,System.Boolean)">
-            <summary>
-                <para>Removes the element at the specified index.
-</para>
-            </summary>
-            <param name="index">
-		The zero-based index of the element to remove.
-
-            </param>
-            <param name="updateItemIndexes">
-		<b>true</b>, to recalculate the <see cref="P:DevExpress.XtraLayout.OptionsTableLayoutItem.ColumnIndex"/> property of items in the current layout group; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraLayout.OptionsTableLayoutGroup.RemoveRowAt(System.Int32,System.Boolean)">
-            <summary>
-                <para>Removes the element at the specified index.
-</para>
-            </summary>
-            <param name="index">
-		The zero-based index of the element to remove.
-
-            </param>
-            <param name="updateItemIndexes">
-		<b>true</b>, to recalculate the <see cref="P:DevExpress.XtraLayout.OptionsTableLayoutItem.RowIndex"/> property of items in the current layout group; otherwise, <b>false</b>.
+		An object that specifies the row to be removed. 
 
             </param>
 
@@ -2847,27 +2730,6 @@ This property indicates when changes to the bound editor property are propagated
 
 
         </member>
-        <member name="M:DevExpress.XtraLayout.ColumnDefinitions.Insert(System.Int32,DevExpress.XtraLayout.ColumnDefinition,System.Boolean)">
-            <summary>
-                <para>Inserts an element into the collection at the specified index.
-</para>
-            </summary>
-            <param name="index">
-		The zero-based index at which a <i>columnDefinition</i> should be inserted.
-
-
-            </param>
-            <param name="columnDefinition">
-		The <see cref="T:DevExpress.XtraLayout.ColumnDefinition"/> to insert.
-
-            </param>
-            <param name="updateItemIndexes">
-		<b>true</b>, to recalculate the <see cref="P:DevExpress.XtraLayout.OptionsTableLayoutItem.ColumnIndex"/> property of items in the current layout group; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
         <member name="P:DevExpress.XtraLayout.ColumnDefinitions.Item(System.Int32)">
             <summary>
                 <para>Provides indexed access to columns within the table layout.
@@ -2879,22 +2741,6 @@ This property indicates when changes to the bound editor property are propagated
             </param>
             <value>A column at the specified position within the collection.
 </value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraLayout.ColumnDefinitions.RemoveAt(System.Int32,System.Boolean)">
-            <summary>
-                <para>Removes the element at the specified index.
-</para>
-            </summary>
-            <param name="index">
-		The zero-based index of the element to remove.
-
-            </param>
-            <param name="updateItemIndexes">
-		<b>true</b>, to recalculate the <see cref="P:DevExpress.XtraLayout.OptionsTableLayoutItem.ColumnIndex"/> property of items in the current layout group; otherwise, <b>false</b>.
-
-            </param>
 
 
         </member>
@@ -4807,28 +4653,6 @@ For the root group, its parent is the LayoutControl itself (the LayoutControl's 
 
 
         </member>
-        <member name="M:DevExpress.XtraLayout.BaseLayoutItem.Move(DevExpress.XtraLayout.BaseLayoutItem,DevExpress.XtraLayout.Utils.InsertType,DevExpress.XtraLayout.Utils.MoveType)">
-            <summary>
-                <para>Moves the item to the specified visual position within the LayoutControl. 
-</para>
-            </summary>
-            <param name="baseItem">
-		A <see cref="T:DevExpress.XtraLayout.BaseLayoutItem"/> descendant that represents the layout item within the LayoutControl.
-
-            </param>
-            <param name="insertType">
-		A <see cref="T:DevExpress.XtraLayout.Utils.InsertType"/> enumeration value that specifies the position of the new group relative to the specified <i>baseItem</i>.
-
-            </param>
-            <param name="moveType">
-		A <see cref="T:DevExpress.XtraLayout.Utils.MoveType"/> enumeration value that specifies how a layout item is inserted to another position. 
-
-            </param>
-            <returns><b>true</b>, if the item has been successfully moved to a new position; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
         <member name="P:DevExpress.XtraLayout.BaseLayoutItem.Name">
             <summary>
                 <para>Gets or sets the layout item's name. 
@@ -5122,8 +4946,7 @@ For the root group, its parent is the LayoutControl itself (the LayoutControl's 
                 <para>Gets or sets whether the text region is visible.
 </para>
             </summary>
-            <value><b>true</b>, if the text region is visible; otherwise, <b>false</b>. For <see cref="T:DevExpress.XtraLayout.LayoutControlItem"/>s, the <b>TextVisible</b> property's default value 
-is dependent on the type of control embedded in this layout item. 
+            <value><b>true</b> if the text region is visible; otherwise, <b>false</b>.
 </value>
 
 

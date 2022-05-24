@@ -22,16 +22,6 @@
 
 
         </member>
-        <member name="P:DevExpress.Pdf.PdfMetadata.Data">
-            <summary>
-                <para>Gets the data for the document components. 
-</para>
-            </summary>
-            <value>A string value that represents the data of document components. 
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Pdf.PdfWord">
 
             <summary>
@@ -345,7 +335,7 @@
         </member>
         <member name="P:DevExpress.Pdf.PdfDocument.AcroForm">
             <summary>
-                <para>Provides access to the document's interactive form (AcroForm) properties.
+                <para>Provides access to the document's interactive form (AcroForm) dictionary.
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.Pdf.PdfInteractiveForm"/> object.
@@ -355,10 +345,10 @@
         </member>
         <member name="P:DevExpress.Pdf.PdfDocument.Actions">
             <summary>
-                <para>Provides access to the <see cref="T:DevExpress.Pdf.PdfDocumentActions"/> class  that contains references to JavaScript actions which should be taken in response to some events.
+                <para>Provides access to a dictionary of additional actions defining the actions that shall be taken in response to various trigger events affecting the document as a whole.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfDocumentActions"/> object.
+            <value>A DevExpress.Pdf.PdfDocumentActions object.
 </value>
 
 
@@ -620,7 +610,7 @@
                 <para>Provides access to the outline dictionary that shall be the root of the document's outline hierarchy.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfOutlines"/> object.
+            <value>A DevExpress.Pdf.PdfOutlines object.
 </value>
 
 
@@ -5781,24 +5771,6 @@
 
 
         </member>
-        <member name="M:DevExpress.Pdf.PdfDocumentArea.Create(DevExpress.Pdf.PdfDocumentPosition,DevExpress.Pdf.PdfDocumentPosition)">
-            <summary>
-                <para>Creates a document area based on the specified start and end positions. 
-</para>
-            </summary>
-            <param name="position1">
-		A <see cref="T:DevExpress.Pdf.PdfDocumentPosition"/> object.
-
-            </param>
-            <param name="position2">
-		A <see cref="T:DevExpress.Pdf.PdfDocumentPosition"/> object.
-
-            </param>
-            <returns>A <see cref="T:DevExpress.Pdf.PdfDocumentArea"/> object.
-</returns>
-
-
-        </member>
         <member name="P:DevExpress.Pdf.PdfDocumentArea.PageNumber">
             <summary>
                 <para>Indicates the page number corresponding to the current document area.
@@ -8726,16 +8698,6 @@
         <member name="P:DevExpress.Pdf.PdfFont.FontDescriptor">
             <summary>
                 <para>Provides access to the PDF font options.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfFontDescriptor"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfFont.FontDescriptor">
-            <summary>
-                <para>Provides access to the PDF font options. 
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.Pdf.PdfFontDescriptor"/> object.

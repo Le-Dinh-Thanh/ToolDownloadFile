@@ -2049,16 +2049,6 @@
 
 
         </member>
-        <member name="P:DevExpress.XtraPivotGrid.PivotCustomCellEditEventArgs.Value">
-            <summary>
-                <para>Gets the processed cell's value.
-</para>
-            </summary>
-            <value>An object that is the processed cell's value. 
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraPivotGrid.PivotGridFormatRuleCollection">
 
             <summary>
@@ -8212,11 +8202,9 @@
         </member>
         <member name="P:DevExpress.XtraPivotGrid.PivotGridControl.DefaultDataProcessingEngine">
             <summary>
-                <para>Gets or sets a default engine used to perform data processing in the pivot grid. 
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraPivotGrid.PivotDataProcessingEngine"/> enumeration value that specifies an engine used to perform data processing in the pivot grid. 
-</value>
+            <value> </value>
 
 
         </member>

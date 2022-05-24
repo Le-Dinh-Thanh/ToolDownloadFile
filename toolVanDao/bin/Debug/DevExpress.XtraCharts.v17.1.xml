@@ -69,6 +69,34 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraCharts.ScrollBarAlignment">
+
+            <summary>
+                <para>Lists the values used to specify the alignment of a scrollbar relative to an XY-diagram.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraCharts.ScrollBarAlignment.Far">
+            <summary>
+                <para>A scroll bar is painted either at the bottom or on the left of an XY-diagram.
+
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraCharts.ScrollBarAlignment.Near">
+            <summary>
+                <para>A scroll bar is painted either at the top or on the right of an XY-diagram.
+
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraCharts.FinancialAnimationBase">
 
             <summary>
@@ -23865,34 +23893,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.ScrollBarAlignment">
-
-            <summary>
-                <para>Lists the values used to specify the alignment of a scrollbar relative to an XY-diagram.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.XtraCharts.ScrollBarAlignment.Far">
-            <summary>
-                <para>A scroll bar is painted either at the bottom or on the left of an XY-diagram.
-
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraCharts.ScrollBarAlignment.Near">
-            <summary>
-                <para>A scroll bar is painted either at the top or on the right of an XY-diagram.
-
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.ScrollBarOptions">
 
             <summary>
@@ -24426,34 +24426,81 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.BackgroundImage">
+        <member name="T:DevExpress.XtraCharts.SecondaryAxisCollection">
 
             <summary>
-                <para>Represents a background image within either a chart control or its elements. 
+                <para>Represents a base class for collections of secondary axes in an <see cref="T:DevExpress.XtraCharts.XYDiagram"/>.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraCharts.BackgroundImage.Assign(DevExpress.XtraCharts.ChartElement)">
+        <member name="M:DevExpress.XtraCharts.SecondaryAxisCollection.AddRange(DevExpress.XtraCharts.Axis[])">
             <summary>
-                <para>Copies all the settings from the BackgroundImage object passed as the parameter.
-
+                <para>Appends an array of secondary axes to the collection.
 </para>
             </summary>
-            <param name="obj">
-		A BackgroundImage object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+            <param name="coll">
+		An array of axes to append to the collection.
 
             </param>
 
 
         </member>
-        <member name="P:DevExpress.XtraCharts.BackgroundImage.Stretch">
+        <member name="M:DevExpress.XtraCharts.SecondaryAxisCollection.Contains(DevExpress.XtraCharts.Axis)">
             <summary>
-                <para>Gets or sets whether the background image is stretched in order to fit within the element (e.g. legend).
+                <para>Determines whether the collection contains the specified axis.
+
 </para>
             </summary>
-            <value><b>true</b> to stretch an image in order to fit within the element; otherwise, <b>false</b>.
+            <param name="axis">
+		A <see cref="T:DevExpress.XtraCharts.Axis"/> object to locate in the collection.
+
+
+            </param>
+            <returns><b>true</b> if the collection contains the specified axis; otherwise, <b>false</b>.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.SecondaryAxisCollection.GetAxisByName(System.String)">
+            <summary>
+                <para>Gets an axis within a secondary axes collection by its name.
+</para>
+            </summary>
+            <param name="name">
+		A <see cref="T:System.String"/> that specifies the name of the axis to be found.
+
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraCharts.Axis"/> object that represents the axis with the specified name.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.SecondaryAxisCollection.Item(System.Int32)">
+            <summary>
+                <para>Provides indexed access to individual items in the collection.
+</para>
+            </summary>
+            <param name="index">
+		A zero-based integer specifying the desired item's position within the collection. If it's negative or exceeds the last available index, an exception is raised. 
+
+            </param>
+            <value>An <see cref="T:DevExpress.XtraCharts.Axis2D"/> object which represents the secondary axis at the specified position.
 </value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.SecondaryAxisCollection.Remove(DevExpress.XtraCharts.Axis)">
+            <summary>
+                <para>Removes the specified <see cref="T:DevExpress.XtraCharts.Axis"/> object from the collection.
+</para>
+            </summary>
+            <param name="axis">
+		An <see cref="T:DevExpress.XtraCharts.Axis"/> object to be removed from the collection. 
+
+            </param>
 
 
         </member>
@@ -31081,30 +31128,6 @@ A <see cref="T:DevExpress.XtraCharts.Palette"/> object that is the <b>Oriel</b> 
 
 
         </member>
-        <member name="M:DevExpress.XtraCharts.PaletteRepository.Remove(System.Object)">
-            <summary>
-                <para>Removes the element with the specified key.
-</para>
-            </summary>
-            <param name="key">
-		The key of the element to remove.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.PaletteRepository.RemoveAt(System.Int32)">
-            <summary>
-                <para>Removes the element at the specified index of the PaletteRepository instance.
-</para>
-            </summary>
-            <param name="index">
-		A zero-based integer specifying the index of the entry to remove.
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.PaletteException">
 
             <summary>
@@ -36674,10 +36697,7 @@ A <see cref="T:DevExpress.XtraCharts.Palette"/> object that is the <b>Oriel</b> 
                 <para>Gets or sets whether anti-aliasing (smoothing) is applied to the line series.
 </para>
             </summary>
-            <value><b>True</b> to apply anti-aliasing to the line series;
-<b>False</b> to disable anti-aliasing;
-<b>Default</b> to automatically determine whether or not anti-aliasing is required. Anti-aliasing is enabled when a predefined (a relatively small) number of line points are rendered on a diagram area. 
-
+            <value><b>True</b> to apply anti-aliasing to the line series; <b>False</b> to disable anti-aliasing; <b>Default</b> to automatically determine whether or not anti-aliasing is required.
 </value>
 
 
@@ -39370,6 +39390,37 @@ A <see cref="T:DevExpress.XtraCharts.Palette"/> object that is the <b>Oriel</b> 
             </summary>
             <value>A <see cref="T:System.Byte"/> value from <b>0</b> (opaque) to <b>255</b> (transparent).
 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.BackgroundImage">
+
+            <summary>
+                <para>Represents a background image within either a chart control or its elements. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.BackgroundImage.Assign(DevExpress.XtraCharts.ChartElement)">
+            <summary>
+                <para>Copies all the settings from the BackgroundImage object passed as the parameter.
+
+</para>
+            </summary>
+            <param name="obj">
+		A BackgroundImage object (which is the <see cref="T:DevExpress.XtraCharts.ChartElement"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.BackgroundImage.Stretch">
+            <summary>
+                <para>Gets or sets whether the background image is stretched in order to fit within the element (e.g. legend).
+</para>
+            </summary>
+            <value><b>true</b> to stretch an image in order to fit within the element; otherwise, <b>false</b>.
 </value>
 
 
@@ -42975,9 +43026,7 @@ An object implementing the <see cref="T:System.Collections.IEnumerable"/> interf
         </member>
         <member name="F:DevExpress.XtraCharts.ProcessMissingPointsMode.InsertEmptyPoints">
             <summary>
-                <para><para>Inserts empty points into series where there are gaps in series points. </para>
-
-<para></para>
+                <para>Inserts empty points into series where there are gaps in series points. 
 </para>
             </summary>
 
@@ -42985,9 +43034,7 @@ An object implementing the <see cref="T:System.Collections.IEnumerable"/> interf
         </member>
         <member name="F:DevExpress.XtraCharts.ProcessMissingPointsMode.InsertZeroValues">
             <summary>
-                <para><para>Inserts zero value points into series where there are gaps in series points. </para>
-
-<para></para>
+                <para>Inserts zero value points into series where there are gaps in series points. 
 </para>
             </summary>
 
@@ -42995,9 +43042,7 @@ An object implementing the <see cref="T:System.Collections.IEnumerable"/> interf
         </member>
         <member name="F:DevExpress.XtraCharts.ProcessMissingPointsMode.Skip">
             <summary>
-                <para><para>Skips missing points in series.</para>
-
-<para></para>
+                <para>Skips missing points in series.
 </para>
             </summary>
 
@@ -43918,84 +43963,6 @@ An object implementing the <see cref="T:System.Collections.IEnumerable"/> interf
             </summary>
             <value>A <see cref="T:DevExpress.XtraCharts.StockLevel"/> enumeration value.
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.SecondaryAxisCollection">
-
-            <summary>
-                <para>Represents a base class for collections of secondary axes in an <see cref="T:DevExpress.XtraCharts.XYDiagram"/>.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.SecondaryAxisCollection.AddRange(DevExpress.XtraCharts.Axis[])">
-            <summary>
-                <para>Appends an array of secondary axes to the collection.
-</para>
-            </summary>
-            <param name="coll">
-		An array of axes to append to the collection.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.SecondaryAxisCollection.Contains(DevExpress.XtraCharts.Axis)">
-            <summary>
-                <para>Determines whether the collection contains the specified axis.
-
-</para>
-            </summary>
-            <param name="axis">
-		A <see cref="T:DevExpress.XtraCharts.Axis"/> object to locate in the collection.
-
-
-            </param>
-            <returns><b>true</b> if the collection contains the specified axis; otherwise, <b>false</b>.
-
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.SecondaryAxisCollection.GetAxisByName(System.String)">
-            <summary>
-                <para>Gets an axis within a secondary axes collection by its name.
-</para>
-            </summary>
-            <param name="name">
-		A <see cref="T:System.String"/> that specifies the name of the axis to be found.
-
-
-            </param>
-            <returns>A <see cref="T:DevExpress.XtraCharts.Axis"/> object that represents the axis with the specified name.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.SecondaryAxisCollection.Item(System.Int32)">
-            <summary>
-                <para>Provides indexed access to individual items in the collection.
-</para>
-            </summary>
-            <param name="index">
-		A zero-based integer specifying the desired item's position within the collection. If it's negative or exceeds the last available index, an exception is raised. 
-
-            </param>
-            <value>An <see cref="T:DevExpress.XtraCharts.Axis2D"/> object which represents the secondary axis at the specified position.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.SecondaryAxisCollection.Remove(DevExpress.XtraCharts.Axis)">
-            <summary>
-                <para>Removes the specified <see cref="T:DevExpress.XtraCharts.Axis"/> object from the collection.
-</para>
-            </summary>
-            <param name="axis">
-		An <see cref="T:DevExpress.XtraCharts.Axis"/> object to be removed from the collection. 
-
-            </param>
 
 
         </member>

@@ -12,7 +12,7 @@ namespace toolVanDao.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -326,13 +326,25 @@ namespace toolVanDao.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://{mst}.minvoice.com.vn/api/Account/Login")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://4600240441002.nextinvoice.vn/api/Account/Login")]
         public string UrlLogin {
             get {
                 return ((string)(this["UrlLogin"]));
             }
             set {
                 this["UrlLogin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string UrlDownloadPDF {
+            get {
+                return ((string)(this["UrlDownloadPDF"]));
+            }
+            set {
+                this["UrlDownloadPDF"] = value;
             }
         }
     }

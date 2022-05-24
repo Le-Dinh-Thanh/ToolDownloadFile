@@ -2026,16 +2026,9 @@
         </member>
         <member name="P:DevExpress.XtraCharts.Designer.XYDiagram2DModel.DependentAxesYRange">
             <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.XYDiagram2D.DependentAxesYRange"/> property in the chart model.
-
-</para>
+                <para> </para>
             </summary>
-            <value><list type="table">
-<item><term><b>Default</b></term><term>The default behavior of the value visual range.</term></item>
-<item><term><b>True</b></term><term>The visual range should be calculated by the values of points contained in the visual range of the axis of arguments.</term></item>
-<item><term><b>False</b></term><term>The visual range should be calculated by all values.</term></item>
-</list>
-</value>
+            <value> </value>
 
 
         </member>
@@ -2156,44 +2149,6 @@
 </para>
             </summary>
             <value>The model of zooming options.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.SideBySideRangeBarSeriesViewModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.SideBySideRangeBarSeriesView"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.SideBySideRangeBarSeriesViewModel.BarDistance">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.SideBySideRangeBarSeriesView.BarDistance"/> within the model.
-</para>
-            </summary>
-            <value>The distance between two neighboring bars, in axis unit fractions. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.SideBySideRangeBarSeriesViewModel.BarDistanceFixed">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.SideBySideRangeBarSeriesView.BarDistanceFixed"/> within the model.
-</para>
-            </summary>
-            <value>The distance between two neighboring bars, in pixels.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.SideBySideRangeBarSeriesViewModel.EqualBarWidth">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.SideBySideRangeBarSeriesView.EqualBarWidth"/> within the model.
-</para>
-            </summary>
-            <value><b>true</b> if all bars of the series should always have the same width; otherwise <b>false</b>. 
 </value>
 
 
@@ -2479,14 +2434,6 @@
             <value><b>true</b> if the zero level of an axis always should be shown; otherwise <b>false</b>.
 </value>
 
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.PolygonFillStyleModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.PolygonFillStyle"/> model.
-</para>
-            </summary>
 
         </member>
         <member name="T:DevExpress.XtraCharts.Designer.PolygonFillStyle3DModel">
@@ -3119,14 +3066,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.Designer.PieWidenAnimationModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.PieWidenAnimation"/> animation model.
-</para>
-            </summary>
-
-        </member>
         <member name="T:DevExpress.XtraCharts.Designer.ScrollingOptionsModel">
 
             <summary>
@@ -3390,44 +3329,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.Designer.PieSeriesLabelModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.PieSeriesLabel"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.PieSeriesLabelModel.ColumnIndent">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.PieSeriesLabel.ColumnIndent"/> within the model.
-</para>
-            </summary>
-            <value>The column indent, in pixels. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.PieSeriesLabelModel.Position">
-            <summary>
-                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.PieSeriesLabel.Position"/> within the model.
-</para>
-            </summary>
-            <value>The relative position of pie segment labels.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraCharts.Designer.PieSeriesLabelModel.TextOrientation">
-            <summary>
-                <para>Hides the <see cref="P:DevExpress.XtraCharts.Designer.SeriesLabelBaseModel.TextOrientation"/> property.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.Designer.TitleBaseModel">
 
             <summary>
@@ -3536,14 +3437,6 @@
             </summary>
 
         </member>
-        <member name="T:DevExpress.XtraCharts.Designer.PieGrowUpAnimationModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.PieGrowUpAnimation"/> animation model.
-</para>
-            </summary>
-
-        </member>
         <member name="T:DevExpress.XtraCharts.Designer.TickmarksXModel">
 
             <summary>
@@ -3583,22 +3476,6 @@
 
             <summary>
                 <para>The <see cref="T:DevExpress.XtraCharts.Tickmarks"/> model.
-</para>
-            </summary>
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.PieFanGrowUpAnimationModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.PieFanGrowUpAnimation"/> animation model.
-</para>
-            </summary>
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.PieAnimationBaseModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.PieAnimationBase"/> model.
 </para>
             </summary>
 
@@ -4495,14 +4372,6 @@
             <value>The Y-offset. 
 </value>
 
-
-        </member>
-        <member name="T:DevExpress.XtraCharts.Designer.OverlappedGanttSeriesViewModel">
-
-            <summary>
-                <para>The <see cref="T:DevExpress.XtraCharts.OverlappedGanttSeriesView"/> model.
-</para>
-            </summary>
 
         </member>
         <member name="T:DevExpress.XtraCharts.Designer.SwiftPlotDiagramSecondaryAxisXCollectionModel">
@@ -5571,6 +5440,44 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraCharts.Designer.SideBySideRangeBarSeriesViewModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.SideBySideRangeBarSeriesView"/> model.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.SideBySideRangeBarSeriesViewModel.BarDistance">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.SideBySideRangeBarSeriesView.BarDistance"/> within the model.
+</para>
+            </summary>
+            <value>The distance between two neighboring bars, in axis unit fractions. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.SideBySideRangeBarSeriesViewModel.BarDistanceFixed">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.SideBySideRangeBarSeriesView.BarDistanceFixed"/> within the model.
+</para>
+            </summary>
+            <value>The distance between two neighboring bars, in pixels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.SideBySideRangeBarSeriesViewModel.EqualBarWidth">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.SideBySideRangeBarSeriesView.EqualBarWidth"/> within the model.
+</para>
+            </summary>
+            <value><b>true</b> if all bars of the series should always have the same width; otherwise <b>false</b>. 
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraCharts.Designer.SideBySideGanttSeriesViewModel">
 
             <summary>
@@ -6166,9 +6073,11 @@
         </member>
         <member name="P:DevExpress.XtraCharts.Designer.SeriesBaseModel.ValueDataMembers">
             <summary>
-                <para> </para>
+                <para>Returns the value of the <see cref="P:DevExpress.XtraCharts.SeriesBase.ValueDataMembers"/> within the model.
+</para>
             </summary>
-            <value> </value>
+            <value>The names of the value data members.
+</value>
 
 
         </member>
@@ -6692,6 +6601,14 @@
             <value>The direction of the pie sweep.
 </value>
 
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.PieAnimationBaseModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.PieAnimationBase"/> model.
+</para>
+            </summary>
 
         </member>
         <member name="T:DevExpress.XtraCharts.Designer.Pie3DSeriesViewModel">
@@ -7466,9 +7383,11 @@
         </member>
         <member name="P:DevExpress.XtraCharts.Designer.ChartModel.OptionsPrint">
             <summary>
-                <para> </para>
+                <para>Returns the printing options of the Chart.
+</para>
             </summary>
-            <value> </value>
+            <value>The chart printing options.
+</value>
 
 
         </member>
@@ -9917,6 +9836,14 @@
             </summary>
 
         </member>
+        <member name="T:DevExpress.XtraCharts.Designer.PolygonFillStyleModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.PolygonFillStyle"/> model.
+</para>
+            </summary>
+
+        </member>
         <member name="T:DevExpress.XtraCharts.Designer.PolarDiagramModel">
 
             <summary>
@@ -9963,6 +9890,14 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraCharts.Designer.PieWidenAnimationModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.PieWidenAnimation"/> animation model.
+</para>
+            </summary>
+
+        </member>
         <member name="T:DevExpress.XtraCharts.Designer.PieSpinGrowUpAnimationModel">
 
             <summary>
@@ -9975,6 +9910,60 @@
 
             <summary>
                 <para>The <see cref="T:DevExpress.XtraCharts.PieSpinAnimation"/> animation model.
+</para>
+            </summary>
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.PieSeriesLabelModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.PieSeriesLabel"/> model.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.PieSeriesLabelModel.ColumnIndent">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.PieSeriesLabel.ColumnIndent"/> within the model.
+</para>
+            </summary>
+            <value>The column indent, in pixels. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.PieSeriesLabelModel.Position">
+            <summary>
+                <para>Gets or sets the value of the <see cref="P:DevExpress.XtraCharts.PieSeriesLabel.Position"/> within the model.
+</para>
+            </summary>
+            <value>The relative position of pie segment labels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraCharts.Designer.PieSeriesLabelModel.TextOrientation">
+            <summary>
+                <para>Hides the <see cref="P:DevExpress.XtraCharts.Designer.SeriesLabelBaseModel.TextOrientation"/> property.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.PieGrowUpAnimationModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.PieGrowUpAnimation"/> animation model.
+</para>
+            </summary>
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.PieFanGrowUpAnimationModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.PieFanGrowUpAnimation"/> animation model.
 </para>
             </summary>
 
@@ -22982,6 +22971,14 @@ This tab becomes available after assigning a <see cref="T:DevExpress.XtraPivotGr
 
             <summary>
                 <para>The <see cref="T:DevExpress.XtraCharts.XYSeriesStretchAnimation"/> animation model.
+</para>
+            </summary>
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Designer.OverlappedGanttSeriesViewModel">
+
+            <summary>
+                <para>The <see cref="T:DevExpress.XtraCharts.OverlappedGanttSeriesView"/> model.
 </para>
             </summary>
 

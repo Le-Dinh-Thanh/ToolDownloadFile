@@ -2387,40 +2387,6 @@
 
 
         </member>
-        <member name="T:DevExpress.DataAccess.UI.Design.DataSourceOptionsContainer">
-
-            <summary>
-                <para>Provides settings that define the data source options of an end-user application.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.DataAccess.UI.Design.DataSourceOptionsContainer.#ctor">
-            <summary>
-                <para>Initializes a new instance of the DataSourceOptionsContainer class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.UI.Design.DataSourceOptionsContainer.ObjectDataSourceLoadingBehavior">
-            <summary>
-                <para>Specifies whether to trust the object data sources available in the end-user application.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.DataAccess.DocumentLoadingBehavior"/> enumeration value.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.DataAccess.UI.Design.DataSourceOptionsContainer.Reset">
-            <summary>
-                <para>Restore the default data source settings.
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.DataAccess.UI.Wizard.Views.ConnectionPropertiesPageView">
 
             <summary>
@@ -2548,14 +2514,6 @@
                 <para>Initializes a new instance of the ConfigureConnectionContext class with default settings.
 </para>
             </summary>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.UI.Sql.ConfigureConnectionContext.ConnectionProviderService">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>
@@ -4407,14 +4365,6 @@
 
 
         </member>
-        <member name="P:DevExpress.DataAccess.UI.Sql.RebuildResultSchemaContext.ConnectionProviderService">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.DataAccess.UI.Sql.RebuildResultSchemaContext.LookAndFeel">
             <summary>
                 <para>Specifies the look and feel settings for the <b>Rebuild Schema</b> dialog.
@@ -4469,14 +4419,6 @@
                 <para>Initializes a new instance of the EditQueryContext class.
 </para>
             </summary>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.UI.Sql.EditQueryContext.ConnectionProviderService">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>
@@ -5874,14 +5816,6 @@
 
 
         </member>
-        <member name="F:DevExpress.DataAccess.UI.Localization.DataAccessUIStringId.MessageCannotLoadServersList">
-            <summary>
-                <para><b>Default value</b>: "Cannot find any database servers."
-</para>
-            </summary>
-
-
-        </member>
         <member name="F:DevExpress.DataAccess.UI.Localization.DataAccessUIStringId.MessageLessThanTwoQueries">
             <summary>
                 <para><b>Default value</b>: "At least two queries are required to create a master-detail relation."
@@ -6669,7 +6603,7 @@
         </member>
         <member name="F:DevExpress.DataAccess.UI.Localization.DataAccessUIStringId.WizardEmptyStoredProceduresListMessage">
             <summary>
-                <para><b>Default value:</b> "There are no stored procedures in the current database."
+                <para><b>Default value:</b> "There are no any stored procedures in current database."
 </para>
             </summary>
 
@@ -7216,14 +7150,6 @@
                 <para>Initialize a new instance of the ManageRelationsContext class with default settings.
 </para>
             </summary>
-
-
-        </member>
-        <member name="P:DevExpress.DataAccess.UI.Sql.ManageRelationsContext.ConnectionProviderService">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>
@@ -8679,16 +8605,6 @@
 
 
         </member>
-        <member name="M:DevExpress.DataAccess.UI.Wizard.WizardView.SetSize(System.Drawing.Size)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="newSize">
-		 
-            </param>
-
-
-        </member>
         <member name="M:DevExpress.DataAccess.UI.Wizard.WizardView.ShowError(System.String)">
             <summary>
                 <para>Displays an error message with a specified text.
@@ -8698,15 +8614,6 @@
 		A <see cref="T:System.String"/> value.
 
             </param>
-
-
-        </member>
-        <member name="F:DevExpress.DataAccess.UI.Wizard.WizardView.TouchUIFormScalingAware">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-            <returns> </returns>
 
 
         </member>

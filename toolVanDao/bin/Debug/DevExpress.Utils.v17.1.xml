@@ -3792,16 +3792,12 @@ In this mode, the scroll bar thumb supports the auto-hide functionality. It auto
         </member>
         <member name="M:DevExpress.Utils.RatingContextButton.GetActualCheckedGlyph(DevExpress.Skins.ISkinProvider)">
             <summary>
-                <para>Returns the Image object specifying the checked state glyph actually assigned.
-
-</para>
+                <para> </para>
             </summary>
             <param name="provider">
-		An ISkinProvider object.
-
+		 
             </param>
-            <returns>The Image object specifying the checked state glyph actually assigned. 
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -3924,16 +3920,6 @@ In this mode, the scroll bar thumb supports the auto-hide functionality. It auto
 
 
         </member>
-        <member name="P:DevExpress.Utils.CheckContextButton.Caption">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
         <member name="P:DevExpress.Utils.CheckContextButton.Checked">
             <summary>
                 <para>Gets or sets whether the current button is in the checked state.
@@ -3958,30 +3944,23 @@ In this mode, the scroll bar thumb supports the auto-hide functionality. It auto
         </member>
         <member name="M:DevExpress.Utils.CheckContextButton.GetActualCheckedGlyph(DevExpress.Skins.ISkinProvider)">
             <summary>
-                <para>Returns the Image object specifying the checked state glyph actually assigned.
-</para>
+                <para> </para>
             </summary>
             <param name="provider">
-		An ISkinProvider object.
-
+		 
             </param>
-            <returns>The Image object specifying the hovered state glyph actually assigned. 
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.Utils.CheckContextButton.GetActualHoverCheckedGlyph(DevExpress.Skins.ISkinProvider)">
             <summary>
-                <para>Returns the Image object specifying the hovered checked state glyph actually assigned.
-
-</para>
+                <para> </para>
             </summary>
             <param name="provider">
-		An ISkinProvider object.
-
+		 
             </param>
-            <returns>The Image object specifying the hovered checked state glyph actually assigned. 
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -4044,16 +4023,12 @@ In this mode, the scroll bar thumb supports the auto-hide functionality. It auto
         </member>
         <member name="M:DevExpress.Utils.ContextButton.GetActualPressedGlyph(DevExpress.Skins.ISkinProvider)">
             <summary>
-                <para>Returns the Image object specifying the pressed state glyph actually assigned.
-
-</para>
+                <para> </para>
             </summary>
             <param name="provider">
-		An ISkinProvider object.
-
+		 
             </param>
-            <returns>The Image object specifying the pressed state glyph actually assigned. 
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -4216,22 +4191,6 @@ In this mode, the scroll bar thumb supports the auto-hide functionality. It auto
 
 
         </member>
-        <member name="M:DevExpress.Utils.ContextItem.AssignPropertiesInternal(DevExpress.Utils.ContextItem,System.Boolean)">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="item">
-		 
-
-            </param>
-            <param name="assignCollection">
-		 
-
-            </param>
-
-
-        </member>
         <member name="M:DevExpress.Utils.ContextItem.BeginUpdate">
             <summary>
                 <para>Locks the ContextItem object by preventing visual updates until the <b>EndUpdate</b> method is called.
@@ -4307,31 +4266,23 @@ In this mode, the scroll bar thumb supports the auto-hide functionality. It auto
         </member>
         <member name="M:DevExpress.Utils.ContextItem.GetActualGlyph(DevExpress.Skins.ISkinProvider)">
             <summary>
-                <para>Returns the Image object specifying the glyph actually assigned.
-
-</para>
+                <para> </para>
             </summary>
             <param name="provider">
-		An ISkinProvider object.
-
+		 
             </param>
-            <returns>The Image object specifying the glyph actually assigned. 
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.Utils.ContextItem.GetActualHoverGlyph(DevExpress.Skins.ISkinProvider)">
             <summary>
-                <para>Returns the Image object specifying the hovered state glyph actually assigned.
-
-</para>
+                <para> </para>
             </summary>
             <param name="provider">
-		An ISkinProvider object.
-
+		 
             </param>
-            <returns>The Image object specifying the hovered state glyph actually assigned. 
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -5041,15 +4992,15 @@ The <b>false</b> value restricts the <b>SaveWorkspace</b> method to create new w
 </para>
             </summary>
             <param name="dataSourceIndex">
-		The index of the currently processed item among other items. This value is used to initialize the <see cref="P:DevExpress.Utils.ThumbnailImageEventArgs.DataSourceIndex"/> property.
+		An Int32 value that specifies the number of the current item among all items that load images asynchronously.
 
             </param>
             <param name="loader">
-		An object that performs image load.
+		An AsyncImageLoader object that performs image load.
 
             </param>
             <param name="info">
-		An object that stores detailed information about the item.
+		An ImageLoadInfo object that stores detailed information about the item.
 
             </param>
 
@@ -5092,10 +5043,10 @@ The <b>false</b> value restricts the <b>SaveWorkspace</b> method to create new w
         </member>
         <member name="P:DevExpress.Utils.ThumbnailImageEventArgs.DataSourceIndex">
             <summary>
-                <para>Gets the index of the currently processed item among other items in the source (the item's index in the bound data source for data-aware controls, e.g., <see cref="T:DevExpress.XtraGrid.GridControl"/>).
+                <para>Gets the index of the item that fired this event among other items that support the asynchronous image load feature.
 </para>
             </summary>
-            <value>An Int32 value that specifies the index of the currently processed item among other items in the source.
+            <value>An Int32 value that specifies the index of the item that fired this event among other items that support the asynchronous image load feature.
 </value>
 
 
@@ -5600,14 +5551,6 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
-        <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.ColumnAutoFilterMode">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.ColumnFilterPopupMode">
             <summary>
                 <para>Gets or sets the default display mode of column filter dropdowns in all <see cref="T:DevExpress.XtraGrid.GridControl"/>s and <see cref="T:DevExpress.XtraTreeList.TreeList"/>s in the current application.
@@ -6059,14 +6002,6 @@ This is a static property.
 
 
         </member>
-        <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.SvgImageRenderingMode">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.TouchScaleFactor">
             <summary>
                 <para>Gets or sets the scale factor used to calculate the size and distance between specific control elements when touch UI mode is enabled. This is a static property.
@@ -6086,6 +6021,38 @@ This is a static property.
             </summary>
             <value>A value that specifies if touch UI mode is enabled.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.DocumentView.PageBorderVisibility">
+
+            <summary>
+                <para>Lists the values used to specify the visibility of page borders.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.DocumentView.PageBorderVisibility.All">
+            <summary>
+                <para>Both standard borders and selection borders are painted around pages.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DocumentView.PageBorderVisibility.AllWithoutSelection">
+            <summary>
+                <para>Only standard page borders are painted.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.DocumentView.PageBorderVisibility.None">
+            <summary>
+                <para>Borders are not painted around pages at all.
+</para>
+            </summary>
 
 
         </member>
@@ -6466,7 +6433,7 @@ This is a static property.
                 <para>Gets or sets the name of the assembly that contains icons (in resources) for Jump List tasks.
 </para>
             </summary>
-            <value>A string value that specifies the name of the assembly that contains icons (in resources) for Jump List tasks.
+            <value>A string value that specifies the the name of the assembly that contains icons (in resources) for Jump List tasks.
 </value>
 
 
@@ -6840,42 +6807,10 @@ In other cases, tooltips are painted using the <see cref="F:DevExpress.Utils.Too
 
 
         </member>
-        <member name="T:DevExpress.DocumentView.PageBorderVisibility">
-
-            <summary>
-                <para>Lists the values used to specify the visibility of page borders.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.DocumentView.PageBorderVisibility.All">
-            <summary>
-                <para>Both standard borders and selection borders are painted around pages.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.DocumentView.PageBorderVisibility.AllWithoutSelection">
-            <summary>
-                <para>Only standard page borders are painted.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.DocumentView.PageBorderVisibility.None">
-            <summary>
-                <para>Borders are not painted around pages at all.
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.Utils.ContextButtonBase">
 
             <summary>
-                <para>A base class for context buttons.
+                <para>Represents a bass class for context buttons.
 </para>
             </summary>
 
@@ -7469,7 +7404,7 @@ In other cases, tooltips are painted using the <see cref="F:DevExpress.Utils.Too
         </member>
         <member name="E:DevExpress.DocumentView.Controls.DocumentViewerBase.BackgroundImageChanged">
             <summary>
-                <para>Hides the <see cref="E:System.Windows.Forms.Control.BackgroundImageChanged"/> event of the base class.
+                <para>Hides the <see cref="T:System.Windows.Forms.Control.BackgroundImageChanged"/> event of the base class.
 </para>
             </summary>
 
@@ -7487,7 +7422,7 @@ In other cases, tooltips are painted using the <see cref="F:DevExpress.Utils.Too
         </member>
         <member name="E:DevExpress.DocumentView.Controls.DocumentViewerBase.BackgroundImageLayoutChanged">
             <summary>
-                <para>Hides the <see cref="E:System.Windows.Forms.Control.BackgroundImageLayoutChanged"/> event of the base class.
+                <para>Hides the <see cref="T:System.Windows.Forms.Control.BackgroundImageLayoutChanged"/> event of the base class.
 </para>
             </summary>
 
@@ -7695,7 +7630,7 @@ In other cases, tooltips are painted using the <see cref="F:DevExpress.Utils.Too
         </member>
         <member name="M:DevExpress.DocumentView.Controls.DocumentViewerBase.ResetBackColor">
             <summary>
-                <para>Sets the <see cref="P:DevExpress.DocumentView.Controls.DocumentViewerBase.BackColor"/> property to <see cref="F:System.Drawing.Color.Empty"/>.
+                <para>Sets the <see cref="P:DevExpress.DocumentView.Controls.DocumentViewerBase.BackColor"/> property to <see cref="T:System.Drawing.Color.Empty"/>.
 </para>
             </summary>
 
@@ -7703,7 +7638,7 @@ In other cases, tooltips are painted using the <see cref="F:DevExpress.Utils.Too
         </member>
         <member name="M:DevExpress.DocumentView.Controls.DocumentViewerBase.ResetForeColor">
             <summary>
-                <para>Sets the <see cref="P:DevExpress.DocumentView.Controls.DocumentViewerBase.ForeColor"/> property to <see cref="F:System.Drawing.Color.Empty"/>.
+                <para>Sets the <see cref="P:DevExpress.DocumentView.Controls.DocumentViewerBase.ForeColor"/> property to <see cref="T:System.Drawing.Color.Empty"/>.
 </para>
             </summary>
 
@@ -8459,14 +8394,6 @@ Use the <see cref="P:DevExpress.Utils.FlyoutPanelOptions.AnchorType"/> property 
             </summary>
             <value> 
 </value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.FlyoutPanel.ForceCreateHandle">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>
@@ -10380,9 +10307,11 @@ For the <see cref="T:DevExpress.XtraBars.Ribbon.RibbonForm"/>, a shadow is displ
         </member>
         <member name="P:DevExpress.Utils.Menu.DXPopupMenu.ShowItemToolTips">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether or not items owned by this DXPopupMenu should display their tool tips.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if items owned by this DXPopupMenu should display their tool tips; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -10811,14 +10740,6 @@ For the <see cref="T:DevExpress.XtraBars.Ribbon.RibbonForm"/>, a shadow is displ
 
 
         </member>
-        <member name="P:DevExpress.Utils.Menu.DXMenuItem.CloseOwnerMenuOnlyOnClick">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.Utils.Menu.DXMenuItem.Collection">
             <summary>
                 <para>Gets the menu item collection which owns the current menu item.
@@ -10978,11 +10899,9 @@ For the <see cref="T:DevExpress.XtraBars.Ribbon.RibbonForm"/>, a shadow is displ
         </member>
         <member name="P:DevExpress.Utils.Menu.DXMenuItem.SvgImage">
             <summary>
-                <para>Gets or sets the vector image that is this DXMenuItem icon.
-</para>
+                <para> </para>
             </summary>
-            <value>An SvgImage object that is the vector image assigned to this DXMenuItem.
-</value>
+            <value> </value>
 
 
         </member>
@@ -13841,16 +13760,6 @@ For the PivotGrid control, this option acts as the <see cref="F:DevExpress.Utils
 
         </member>
         <member name="P:DevExpress.XtraEditors.SplitContainerControl.ScaleFactor">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.SplitContainerControl.SerializableRatio">
             <summary>
                 <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
 </para>

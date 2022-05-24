@@ -54,11 +54,11 @@
             this.groupBox1.Controls.Add(this.labelControl1);
             this.groupBox1.Controls.Add(this.txtTK);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.groupBox1.Location = new System.Drawing.Point(49, 71);
+            this.groupBox1.Location = new System.Drawing.Point(57, 87);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(279, 132);
+            this.groupBox1.Size = new System.Drawing.Size(325, 162);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đăng nhập";
@@ -66,30 +66,30 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(38, 23);
+            this.labelControl3.Location = new System.Drawing.Point(44, 28);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(57, 13);
+            this.labelControl3.Size = new System.Drawing.Size(72, 17);
             this.labelControl3.TabIndex = 5;
             this.labelControl3.Text = "Mã số thuế:";
             this.labelControl3.Click += new System.EventHandler(this.labelControl3_Click);
             // 
             // txtMST
             // 
-            this.txtMST.Location = new System.Drawing.Point(114, 20);
+            this.txtMST.Location = new System.Drawing.Point(133, 25);
             this.txtMST.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMST.Name = "txtMST";
-            this.txtMST.Size = new System.Drawing.Size(135, 20);
+            this.txtMST.Size = new System.Drawing.Size(157, 22);
             this.txtMST.TabIndex = 0;
             // 
             // btn_DN
             // 
             this.btn_DN.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btn_DN.Appearance.Options.UseForeColor = true;
-            this.btn_DN.Location = new System.Drawing.Point(104, 98);
+            this.btn_DN.Location = new System.Drawing.Point(121, 121);
             this.btn_DN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_DN.Name = "btn_DN";
-            this.btn_DN.Size = new System.Drawing.Size(75, 27);
+            this.btn_DN.Size = new System.Drawing.Size(87, 33);
             this.btn_DN.TabIndex = 3;
             this.btn_DN.Text = "Đăng nhập";
             this.btn_DN.Click += new System.EventHandler(this.btn_DN_Click);
@@ -97,55 +97,56 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(39, 69);
+            this.labelControl2.Location = new System.Drawing.Point(45, 85);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(48, 13);
+            this.labelControl2.Size = new System.Drawing.Size(61, 17);
             this.labelControl2.TabIndex = 3;
             this.labelControl2.Text = "Mật khẩu:";
             // 
             // txtMK
             // 
-            this.txtMK.Location = new System.Drawing.Point(114, 67);
+            this.txtMK.Location = new System.Drawing.Point(133, 82);
             this.txtMK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMK.Name = "txtMK";
-            this.txtMK.Size = new System.Drawing.Size(135, 20);
+            this.txtMK.Properties.UseSystemPasswordChar = true;
+            this.txtMK.Size = new System.Drawing.Size(157, 22);
             this.txtMK.TabIndex = 2;
             this.txtMK.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMK_KeyDown);
             this.txtMK.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMK_KeyPress);
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(38, 46);
+            this.labelControl1.Location = new System.Drawing.Point(44, 57);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(50, 13);
+            this.labelControl1.Size = new System.Drawing.Size(64, 17);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Tài khoản:";
             // 
             // txtTK
             // 
-            this.txtTK.Location = new System.Drawing.Point(114, 44);
+            this.txtTK.Location = new System.Drawing.Point(133, 54);
             this.txtTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTK.Name = "txtTK";
-            this.txtTK.Size = new System.Drawing.Size(135, 20);
+            this.txtTK.Size = new System.Drawing.Size(157, 22);
             this.txtTK.TabIndex = 1;
             // 
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Location = new System.Drawing.Point(77, 2);
+            this.panel1.Location = new System.Drawing.Point(90, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(225, 58);
+            this.panel1.Size = new System.Drawing.Size(262, 71);
             this.panel1.TabIndex = 1;
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 210);
+            this.ClientSize = new System.Drawing.Size(436, 258);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

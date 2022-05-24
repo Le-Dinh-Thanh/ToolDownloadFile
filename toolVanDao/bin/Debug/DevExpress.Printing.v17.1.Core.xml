@@ -527,16 +527,6 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.WebClientUIControl.DataContracts.DataSourceInfo.DataSerializer">
-            <summary>
-                <para>Specifies the name of a data source serializer.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the data source serializer name.
-</value>
-
-
-        </member>
         <member name="P:DevExpress.XtraPrinting.WebClientUIControl.DataContracts.DataSourceInfo.Id">
             <summary>
                 <para>Specifies the data source ID.
@@ -2493,8 +2483,7 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         <member name="T:DevExpress.Export.Xl.IXlFilterCriteria">
 
             <summary>
-                <para>A base interface for classes that specify the filter criteria applied to worksheet and table columns.
-</para>
+                <para> </para>
             </summary>
 
         </member>
@@ -2725,11 +2714,9 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="P:DevExpress.DocumentServices.ServiceModel.DataContracts.DocumentData.BandSortingKeys">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
-            <value> 
-</value>
+            <value> </value>
 
 
         </member>
@@ -2913,11 +2900,9 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="P:DevExpress.Export.Xl.IXlTableColumn.FilterCriteria">
             <summary>
-                <para>Gets or sets the filter criteria that should be applied to the current table column.
-</para>
+                <para> </para>
             </summary>
-            <value>An object implementing the <see cref="T:DevExpress.Export.Xl.IXlFilterCriteria"/> interface. 
-</value>
+            <value> </value>
 
 
         </member>
@@ -4500,13 +4485,11 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.Native.PrintingSettings.RaiseStartPrintEventAfterPrintDocumentInit">
+        <member name="P:DevExpress.XtraPrinting.Native.PrintingSettings.UseDocxStreamingEngine">
             <summary>
-                <para>Enables you to specify the page orientation before raising the <b>Print</b> dialog.
-</para>
+                <para> </para>
             </summary>
-            <value><b>true</b>, to raise the <see cref="E:DevExpress.XtraPrinting.PrintingSystemBase.StartPrint"/> event after document initialization; otherwise, <b>false</b>. The default value is <b>false</b>.
-</value>
+            <value> </value>
 
 
         </member>
@@ -5999,16 +5982,6 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
 
 
         </member>
-        <member name="M:DevExpress.XtraReports.IReport.ApplyPageSettings(DevExpress.XtraPrinting.XtraPageSettingsBase)">
-            <summary>
-                <para>For internal use.</para>
-            </summary>
-            <param name="destinationSettings">
-		 
-            </param>
-
-
-        </member>
         <member name="M:DevExpress.XtraReports.IReport.CollectParameters(System.Collections.Generic.IList`1,System.Predicate`1)">
             <summary>
                 <para>For internal use. When implemented by a class, collects all report parameters that satisfy the specified conditions.
@@ -6347,16 +6320,6 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
             <param name="buildForInstantPreview">
 		A Boolean value. This value is ignored and has no effect on the document creation process.
 
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrintingLinks.PrintableComponentLinkBase.CreateDocument(System.Boolean)">
-            <summary>
-                <para>For internal use.</para>
-            </summary>
-            <param name="buildForInstantPreview">
-		 
             </param>
 
 
@@ -6741,11 +6704,11 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="P:DevExpress.XtraPrinting.PdfExportOptions.ShowPrintDialogOnOpen">
             <summary>
-                <para>Gets or sets a value indicating whether the <b>Print</b> dialog should be displayed when a PDF file is opened in an appropriate application.
+                <para>Gets or sets a value indicating whether the Print dialog should be displayed when a PDF file is opened in an appropriate application.
 
 </para>
             </summary>
-            <value><b>true</b>, to show the <b>Print</b> dialog on open; otherwise, <b>false</b>.
+            <value><b>true</b> to open the Print dialog on open; otherwise, <b>false</b>.
 </value>
 
 
@@ -7447,7 +7410,7 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="M:DevExpress.XtraPrinting.ImageExportOptions.#ctor">
             <summary>
-                <para>Initializes a new instance of the ImageExportOptions class with the default settings.
+                <para>Initializes a new instance of the ImageExportOptions class with default settings.
 
 </para>
             </summary>
@@ -7461,7 +7424,7 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
 </para>
             </summary>
             <param name="format">
-		An <see cref="T:System.Drawing.Imaging.ImageFormat"/> object. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.ImageExportOptions.Format"/> property.
+		An <see cref="T:System.Drawing.Imaging.ImageFormat"/> object representing the image format. This value is assigned to the <see cref="P:DevExpress.XtraPrinting.ImageExportOptions.Format"/> property.
 
 
             </param>
@@ -7470,12 +7433,12 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="M:DevExpress.XtraPrinting.ImageExportOptions.Assign(DevExpress.XtraPrinting.ExportOptionsBase)">
             <summary>
-                <para>Copies the settings from the specified ImageExportOptions object to the current object.
+                <para>Copies all the settings from the ImageExportOptions object passed as a parameter.
 
 </para>
             </summary>
             <param name="source">
-		An ImageExportOptions object whose settings are assigned to the current object.
+		An ImageExportOptions object (which is the <see cref="T:DevExpress.XtraPrinting.ExportOptionsBase"/> descendant) whose settings are assigned to the current object. If <b>null</b> (<b>Nothing</b> in Visual Basic), then a <see cref="T:System.ArgumentNullException"/> will be thrown.
 
             </param>
 
@@ -7483,20 +7446,24 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="P:DevExpress.XtraPrinting.ImageExportOptions.ExportMode">
             <summary>
-                <para>Specifies whether document pages are exported to a single or multiple images.
+                <para>Gets or sets a value indicating how a document is exported to Image.
+
 </para>
             </summary>
-            <value>An <see cref="T:DevExpress.XtraPrinting.ImageExportMode"/> enumeration value.
+            <value>An <see cref="T:DevExpress.XtraPrinting.ImageExportMode"/> enumeration value which represents the Image export mode.
+
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.ImageExportOptions.Format">
             <summary>
-                <para>Specifies the image format for exporting a document.
+                <para>Gets or sets an image format in which the document is exported.
+
+
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Imaging.ImageFormat"/> value.
+            <value>A <see cref="T:System.Drawing.Imaging.ImageFormat"/> value which represents the image format.
 
 </value>
 
@@ -7504,7 +7471,7 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="F:DevExpress.XtraPrinting.ImageExportOptions.ImageFormats">
             <summary>
-                <para>Lists the available image formats (".bmp", ".gif", ".jpg", ".png", ".emf", ".wmf", ".tiff").
+                <para>Lists the image formats available in the export options. The following values are available: ".bmp", ".gif", ".jpg", ".png", ".emf", ".wmf", ".tiff".
 </para>
             </summary>
             <returns> </returns>
@@ -7513,10 +7480,10 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="P:DevExpress.XtraPrinting.ImageExportOptions.PageBorderColor">
             <summary>
-                <para>Specifies the page border color when a document is exported to a single image page-by-page.
+                <para>Gets or sets the color of page borders when a document is exported to Image page-by-page.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> value.
+            <value>A <see cref="T:System.Drawing.Color"/> value which represents the page border color.
 
 </value>
 
@@ -7524,21 +7491,21 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="P:DevExpress.XtraPrinting.ImageExportOptions.PageBorderWidth">
             <summary>
-                <para>Specifies the page border width (in pixels) when a document is exported to a single image page-by-page.
+                <para>Gets or sets the width (in pixels) of page borders when a document is exported to Image page-by-page.
 </para>
             </summary>
-            <value>An integer value, specifying the page border width (in pixels).
+            <value>An integer value which represents the page border width.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.ImageExportOptions.PageRange">
             <summary>
-                <para>Specifies the range of pages to be exported.
+                <para>Gets or sets the range of pages to be exported.
 
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the range of pages. The ranges are defined using hyphens and separated by commas. For example: "1,3,5-12".
+            <value>A <see cref="T:System.String"/> specifying the range of pages.
 </value>
 
 
@@ -7567,11 +7534,11 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
         </member>
         <member name="P:DevExpress.XtraPrinting.ImageExportOptions.Resolution">
             <summary>
-                <para>Specifies the image resolution (in DPI).
+                <para>Gets or sets a resolution (in dpi), which should be used to create a resulting image from the current document.
 
 </para>
             </summary>
-            <value>An integer value, specifying the image resolution (in DPI).
+            <value>An integer value which represents an image resolution (in dpi).
 </value>
 
 
@@ -7581,14 +7548,14 @@ The displayed error message corresponds to the <see cref="F:DevExpress.XtraPrint
                 <para>Specifies whether a report is printed with a white or transparent background when the <see cref="P:DevExpress.XtraReports.UI.XtraReport.PageColor"/> (<see cref="P:DevExpress.XtraPrinting.BrickGraphics.PageBackColor"/>) property is set to transparent.
 </para>
             </summary>
-            <value><b>true</b>, to retain the transparency in a published report; otherwise, <b>false</b>.
+            <value><b>true</b> to retain the transparency in a published report; otherwise <b>false</b>.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.ImageExportOptions.TextRenderingMode">
             <summary>
-                <para>Specifies the quality of text rendering in images (especially in images having small DPI values and a transparent background).
+                <para>Specifies the quality of text rendering in images (especially in images having small dpi values and a transparent background). 
 
 </para>
             </summary>
@@ -12106,11 +12073,9 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="P:DevExpress.Export.Xl.IXlSheet.AutoFilterColumns">
             <summary>
-                <para>Provides access to the collection of column filters.
-</para>
+                <para> </para>
             </summary>
-            <value>An <see cref="T:DevExpress.Export.Xl.IXlFilterColumns"/> collection containing columns to which the filter criteria is applied.
-</value>
+            <value> </value>
 
 
         </member>
@@ -12126,12 +12091,10 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="M:DevExpress.Export.Xl.IXlSheet.BeginFiltering(DevExpress.Export.Xl.XlCellRange)">
             <summary>
-                <para>Starts filtering data in the specified cell range. 
-</para>
+                <para> </para>
             </summary>
             <param name="autoFilterRange">
-		An <see cref="T:DevExpress.Export.Xl.XlCellRange"/> object that is the header row of the cell range to be filtered. 
-
+		 
             </param>
 
 
@@ -12265,10 +12228,10 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="P:DevExpress.Export.Xl.IXlSheet.CurrentOutlineLevel">
             <summary>
-                <para>
+                <para>Gets the outline level where the exporter is currently positioned.
 </para>
             </summary>
-            <value>A zero-based integer that is the outline level. 
+            <value>An zero-based integer that is the outline level. 
 </value>
 
 
@@ -12305,8 +12268,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="M:DevExpress.Export.Xl.IXlSheet.EndFiltering">
             <summary>
-                <para>Finishes filtering data in the cell range after calling the <see cref="M:DevExpress.Export.Xl.IXlSheet.BeginFiltering"/> method.
-</para>
+                <para> </para>
             </summary>
 
 
@@ -12991,7 +12953,7 @@ Adds a single-line underline that is displayed lower than the <see cref="F:DevEx
         </member>
         <member name="F:DevExpress.XtraPrinting.XtraPageSettingsBase.DefaultPaperKind">
             <summary>
-                <para>Represents the default paper type (<see cref="F:System.Drawing.Printing.PaperKind.Letter"/>) used in a report. 
+                <para>Represents the default paper type (<see cref="T:System.Drawing.Printing.PaperKind.Letter"/>) used in a report. 
 </para>
             </summary>
             <returns>A <see cref="T:System.Drawing.Printing.PaperKind"/> enumeration value. 
@@ -15619,14 +15581,6 @@ When exporting to XLS and XLSX formats, the layout of control elements is retain
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.AllowCombinedBandAndColumnHeaderCellMerge">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.XtraPrinting.XlsxExportOptionsEx.AllowConditionalFormatting">
             <summary>
                 <para>Gets or sets whether conditional formatting rules applied to columns are preserved in the exported document.
@@ -16053,14 +16007,6 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.AllowCombinedBandAndColumnHeaderCellMerge">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptionsEx.AllowConditionalFormatting">
             <summary>
                 <para>Gets or sets whether conditional formatting rules applied to columns are preserved in the exported document.
@@ -16428,72 +16374,60 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         <member name="T:DevExpress.Export.Xl.XlCustomFilters">
 
             <summary>
-                <para>A custom filter that uses filter values and comparison operators to construct the filter expression.
-</para>
+                <para> </para>
             </summary>
 
         </member>
         <member name="M:DevExpress.Export.Xl.XlCustomFilters.#ctor(DevExpress.Export.Xl.XlCustomFilterCriteria,DevExpress.Export.Xl.XlCustomFilterCriteria,System.Boolean)">
             <summary>
-                <para>Initializes a new instance of the XlCustomFilters class with the specified settings.
-</para>
+                <para> </para>
             </summary>
             <param name="first">
-		An <see cref="T:DevExpress.Export.Xl.XlCustomFilterCriteria"/> object that specifies the first filter criterion. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlCustomFilters.First"/> property. 
-
+		 
             </param>
             <param name="second">
-		An <see cref="T:DevExpress.Export.Xl.XlCustomFilterCriteria"/> object that specifies the second filter criterion. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlCustomFilters.Second"/> property.
-
+		 
             </param>
             <param name="and">
-		A <see cref="T:System.Boolean"/> value indicating whether the logical operator &quot;AND&quot; should be used to combine two filter criteria. If <b>false</b>, the &quot;OR&quot; operator is used. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlCustomFilters.And"/> property.
-
+		 
             </param>
 
 
         </member>
         <member name="M:DevExpress.Export.Xl.XlCustomFilters.#ctor(DevExpress.Export.Xl.XlCustomFilterCriteria)">
             <summary>
-                <para>Initializes a new instance of the XlCustomFilters class with the specified settings.
-</para>
+                <para> </para>
             </summary>
             <param name="first">
-		An <see cref="T:DevExpress.Export.Xl.XlCustomFilterCriteria"/> object that specifies the filter criterion. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlCustomFilters.First"/> property.
-
+		 
             </param>
 
 
         </member>
         <member name="M:DevExpress.Export.Xl.XlCustomFilters.#ctor(DevExpress.Export.Xl.XlCustomFilterCriteria,DevExpress.Export.Xl.XlCustomFilterCriteria)">
             <summary>
-                <para>Initializes a new instance of the XlCustomFilters class with the specified settings.
-</para>
+                <para> </para>
             </summary>
             <param name="first">
-		An <see cref="T:DevExpress.Export.Xl.XlCustomFilterCriteria"/> object that specifies the first filter criterion. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlCustomFilters.First"/> property.
-
+		 
             </param>
             <param name="second">
-		An <see cref="T:DevExpress.Export.Xl.XlCustomFilterCriteria"/> object that specifies the second filter criterion. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlCustomFilters.Second"/> property.
-
+		 
             </param>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlCustomFilters.And">
             <summary>
-                <para>Gets or sets a value indicating whether the logical <b>AND</b> operator should be used to combine two filter criteria.
-</para>
+                <para> </para>
             </summary>
-            <value><b>true</b>, to use the <b>AND</b> operator; otherwise, <b>false</b>. If <b>false</b>, the <b>OR</b> operator is used.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlCustomFilters.FilterType">
             <summary>
-                <para>Returns the <see cref="F:DevExpress.Export.Xl.XlFilterType.Custom"/> value that is the current filter's type.
+                <para>Returns the filter's type.
 </para>
             </summary>
             <value>An <see cref="F:DevExpress.Export.Xl.XlFilterType.Custom"/> value.  
@@ -16503,21 +16437,17 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="P:DevExpress.Export.Xl.XlCustomFilters.First">
             <summary>
-                <para>Gets or sets the first filter criterion.
-</para>
+                <para> </para>
             </summary>
-            <value>An <see cref="T:DevExpress.Export.Xl.XlCustomFilterCriteria"/> object that specifies the filter criterion value and the comparison operator used to construct the filter expression.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlCustomFilters.Second">
             <summary>
-                <para>Gets or sets the second filter criterion.
-</para>
+                <para> </para>
             </summary>
-            <value>An <see cref="T:DevExpress.Export.Xl.XlCustomFilterCriteria"/> object that specifies the filter criterion value and the comparison operator used to construct the filter expression.
-</value>
+            <value> </value>
 
 
         </member>
@@ -16553,7 +16483,7 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
 
             </param>
             <param name="encryptionOptions">
-		An <see cref="T:DevExpress.Office.Crypto.EncryptionOptions"/> object containing encryption settings.
+		An <see cref="DevExpress.Office.Crypto.EncryptionOptions"/> object containing encryption settings.
 
             </param>
             <returns>An <see cref="T:DevExpress.Export.Xl.IXlDocument"/> object that is the newly created encrypted workbook.
@@ -17038,7 +16968,7 @@ The DefaultBoolean.Default value is equivalent to <b>True</b>.
         </member>
         <member name="P:DevExpress.XtraPrinting.PdfAttachment.Description">
             <summary>
-                <para>Specifies the attachment file's description.
+                <para>Specifies the the attachment file's description.
 </para>
             </summary>
             <value>A <see cref="T:System.String"/> value.
@@ -17365,72 +17295,60 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
         <member name="T:DevExpress.Export.Xl.XlDynamicFilter">
 
             <summary>
-                <para>A dynamic filter that shows dates that fall within a specified time period or displays values that are above or below the average.
-</para>
+                <para> </para>
             </summary>
 
         </member>
         <member name="M:DevExpress.Export.Xl.XlDynamicFilter.#ctor(DevExpress.Export.Xl.XlDynamicFilterType,DevExpress.Export.Xl.XlVariantValue,DevExpress.Export.Xl.XlVariantValue)">
             <summary>
-                <para>Initializes a new instance of the XlDynamicFilter class with the specified settings.
-</para>
+                <para> </para>
             </summary>
             <param name="dynamicFilterType">
-		An <see cref="T:DevExpress.Export.Xl.XlDynamicFilterType"/> enumeration member that specifies the dynamic filter type. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlDynamicFilter.DynamicFilterType"/> property.
-
+		 
             </param>
             <param name="value">
-		An XlVariantValue object that specifies a minimum value for a dynamic filter. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlDynamicFilter.Value"/> property.
-
+		 
             </param>
             <param name="maxValue">
-		An XlVariantValue object that specifies a maximum value for a dynamic filter. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlDynamicFilter.MaxValue"/> property.
-
+		 
             </param>
 
 
         </member>
         <member name="M:DevExpress.Export.Xl.XlDynamicFilter.#ctor(DevExpress.Export.Xl.XlDynamicFilterType,DevExpress.Export.Xl.XlVariantValue)">
             <summary>
-                <para>Initializes a new instance of the XlDynamicFilter class with the specified settings.
-</para>
+                <para> </para>
             </summary>
             <param name="dynamicFilterType">
-		An <see cref="T:DevExpress.Export.Xl.XlDynamicFilterType"/> enumeration member that specifies the dynamic filter type. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlDynamicFilter.DynamicFilterType"/> property.
-
+		 
             </param>
             <param name="value">
-		An XlVariantValue object that specifies a filter value. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlDynamicFilter.Value"/> property.
-
+		 
             </param>
 
 
         </member>
         <member name="M:DevExpress.Export.Xl.XlDynamicFilter.#ctor(DevExpress.Export.Xl.XlDynamicFilterType)">
             <summary>
-                <para>Initializes a new instance of the XlDynamicFilter class with the specified settings.
-</para>
+                <para> </para>
             </summary>
             <param name="dynamicFilterType">
-		An <see cref="T:DevExpress.Export.Xl.XlDynamicFilterType"/> enumeration member that specifies the dynamic filter type. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlDynamicFilter.DynamicFilterType"/> property.
-
+		 
             </param>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlDynamicFilter.DynamicFilterType">
             <summary>
-                <para>Gets or sets the type of the dynamic filter.
-</para>
+                <para> </para>
             </summary>
-            <value>An <see cref="T:DevExpress.Export.Xl.XlDynamicFilterType"/> enumeration member that specifies the dynamic filter type.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlDynamicFilter.FilterType">
             <summary>
-                <para>Returns the <see cref="F:DevExpress.Export.Xl.XlFilterType.Dynamic"/> value that is the current filter's type.
+                <para>Returns the filter's type.
 </para>
             </summary>
             <value>An <see cref="F:DevExpress.Export.Xl.XlFilterType.Dynamic"/> value.  
@@ -17440,21 +17358,17 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
         </member>
         <member name="P:DevExpress.Export.Xl.XlDynamicFilter.MaxValue">
             <summary>
-                <para>Gets or sets a maximum value for the dynamic filter.
-</para>
+                <para> </para>
             </summary>
-            <value>An XlVariantValue object. 
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlDynamicFilter.Value">
             <summary>
-                <para>Gets or sets a dynamic filter value.
-</para>
+                <para> </para>
             </summary>
-            <value>An XlVariantValue object. 
-</value>
+            <value> </value>
 
 
         </member>
@@ -22063,7 +21977,7 @@ The default is <b><see cref="PdfAttachmentRelationship"/>.Alternative</b>.
         </member>
         <member name="F:DevExpress.XtraPrinting.BookmarkInfo.Empty">
             <summary>
-                <para>A <see cref="F:System.String.Empty"/> value.
+                <para>A <see cref="T:System.String.Empty"/> value.
 </para>
             </summary>
             <returns> </returns>
@@ -22807,7 +22721,7 @@ Converts the current cell format to the differential formatting object.
 
             </param>
             <param name="runDialogAction">
-		A <b>System.Func&lt;TResult&gt;</b> delegate of a <see cref="T:System.Drawing.Printing.PrintDocument"/> object.
+		A <see cref="T:System.Func&lt;TResult&gt;"/> delegate of a <see cref="T:System.Drawing.Printing.PrintDocument"/> object.
 
             </param>
 
@@ -22827,7 +22741,7 @@ Converts the current cell format to the differential formatting object.
 
             </param>
             <param name="printDirectAction">
-		A <b>System.Action&lt;string&gt;</b> delegate.
+		A <see cref="T:System.Action&lt;string&gt;"/> delegate.
 
             </param>
 
@@ -23058,14 +22972,6 @@ Converts the current cell format to the differential formatting object.
 
 
         </member>
-        <member name="P:DevExpress.ReportServer.Printing.RemoteDocument.CanPerformContinuousExport">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="M:DevExpress.ReportServer.Printing.RemoteDocument.Dispose">
             <summary>
                 <para>Releases all resources used by RemoteDocument.
@@ -23281,8 +23187,7 @@ Converts the current cell format to the differential formatting object.
         </member>
         <member name="F:DevExpress.XtraPrinting.ImageExportMode.DifferentFiles">
             <summary>
-                <para>Exports each document page to a separate image (with the image file name indicating the page number).
-The document's page headers and footers, and the top and bottom margins are repeated only once - at the beginning and end of the resulting image.
+                <para>A document is exported to multiple files, page-by-page. In this mode every document page is exported to a single Image file.
 </para>
             </summary>
 
@@ -23290,9 +23195,8 @@ The document's page headers and footers, and the top and bottom margins are repe
         </member>
         <member name="F:DevExpress.XtraPrinting.ImageExportMode.SingleFile">
             <summary>
-                <para>Exports the document to a single image without indicating the borders of individual pages.
-The document's page headers and footers, and the top and bottom margins are repeated only once - at the beginning and end of the resulting image.
-When this export mode is used, the <see cref="P:DevExpress.XtraPrinting.ImageExportOptions.PageRange"/> property is ignored.
+                <para>A document is exported to a single file. Note that in this mode, page headers and footers are added to the resulting Image file only once, at the beginning and at the end of the document.
+
 </para>
             </summary>
 
@@ -23300,9 +23204,8 @@ When this export mode is used, the <see cref="P:DevExpress.XtraPrinting.ImageExp
         </member>
         <member name="F:DevExpress.XtraPrinting.ImageExportMode.SingleFilePageByPage">
             <summary>
-                <para>The document is exported to a single image with borders drawn around each page.
-The document's page headers and footers, and top and bottom margins appear on every page.
-The border settings are specified by the <see cref="P:DevExpress.XtraPrinting.ImageExportOptions.PageBorderWidth"/> and <see cref="P:DevExpress.XtraPrinting.ImageExportOptions.PageBorderColor"/> properties.
+                <para>A document is exported to a single file, page-by-page. In this mode, all pages are exported one under another, separated by page borders (which are specified by the <see cref="P:DevExpress.XtraPrinting.ImageExportOptions.PageBorderWidth"/> and <see cref="P:DevExpress.XtraPrinting.ImageExportOptions.PageBorderColor"/> properties). 
+
 </para>
             </summary>
 
@@ -23682,56 +23585,46 @@ The border settings are specified by the <see cref="P:DevExpress.XtraPrinting.Im
         <member name="T:DevExpress.Export.Xl.XlFilterColumn">
 
             <summary>
-                <para>A column in the filter range to which filtering is applied.
-</para>
+                <para> </para>
             </summary>
 
         </member>
         <member name="M:DevExpress.Export.Xl.XlFilterColumn.#ctor(System.Int32)">
             <summary>
-                <para>Initializes a new instance of the XlFilterColumn class with the specified settings.
-</para>
+                <para> </para>
             </summary>
             <param name="columnId">
-		A zero-based index of the column in the filtered range to which a filter should be applied. 
-
+		 
             </param>
 
 
         </member>
         <member name="M:DevExpress.Export.Xl.XlFilterColumn.#ctor(System.Int32,DevExpress.Export.Xl.IXlFilterCriteria)">
             <summary>
-                <para>Initializes a new instance of the XlFilterColumn class with the specified settings.
-</para>
+                <para> </para>
             </summary>
             <param name="columnId">
-		A zero-based index of the column in the filtered range to which a filter should be applied. 
-
+		 
             </param>
             <param name="filterCriteria">
-		An object implementing the <see cref="T:DevExpress.Export.Xl.IXlFilterCriteria"/> interface which specifies the filter criteria to be applied to this column.
-
+		 
             </param>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlFilterColumn.ColumnId">
             <summary>
-                <para>Gets the zero-based index of the current column in the filtered range. 
-</para>
+                <para> </para>
             </summary>
-            <value>An integer specifying the position of the column in the filtered range.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlFilterColumn.FilterCriteria">
             <summary>
-                <para> Gets or sets the filter criteria that should be applied to the current column.
-</para>
+                <para> </para>
             </summary>
-            <value>An object implementing the <see cref="T:DevExpress.Export.Xl.IXlFilterCriteria"/> interface. 
-</value>
+            <value> </value>
 
 
         </member>
@@ -25949,7 +25842,7 @@ The border settings are specified by the <see cref="P:DevExpress.XtraPrinting.Im
                 <para>Specifies the ShapeBrick's line style.
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Drawing2D.DashStyle"/> enumeration value.
+            <value>A <see cref="T:System.Drawing.DashStyle"/> enumeration value.
 </value>
 
 
@@ -26625,22 +26518,22 @@ The border settings are specified by the <see cref="P:DevExpress.XtraPrinting.Im
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptions.Suppress256ColumnsWarning">
             <summary>
-                <para>Gets or sets a value indicating whether to suppress the exception that raises when trying to export a document to an XLS file with more than <b>256</b> columns. 
+                <para>Gets or sets a value indicating whether to suppress the warning that appears if the resulting XLS file has more than <b>256</b> columns. 
 
 </para>
             </summary>
-            <value><b>true</b>, to suppress the exception and reduce the number of columns in the resulting XLS file; <b>false</b>, to cancel the export and fire the exception.
+            <value><b>true</b> to allow more than <b>256</b> columns without warning; otherwise, <b>false</b>.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraPrinting.XlsExportOptions.Suppress65536RowsWarning">
             <summary>
-                <para>Gets or sets a value indicating whether to suppress the exception that raises when trying to export a document to an XLS file with more than <b>65,536</b> rows. 
+                <para>Gets or sets a value indicating whether to suppress the warning that appears if the resulting XLS file has more than <b>65,536</b> rows. 
 
 </para>
             </summary>
-            <value><b>true</b>, to suppress the exception and reduce the number of rows in the resulting XLS file; <b>false</b>, to cancel the export and fire the exception.
+            <value><b>true</b> to allow more than <b>65,536</b> columns without warning; otherwise, <b>false</b>.
 </value>
 
 
@@ -26698,16 +26591,6 @@ The border settings are specified by the <see cref="P:DevExpress.XtraPrinting.Im
                 <para>Initializes a new instance of the DocxExportOptions class with the default settings.
 </para>
             </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.DocxExportOptions.AllowFloatingPictures">
-            <summary>
-                <para>Enables embedding floating pictures into exported DOCX files.
-</para>
-            </summary>
-            <value><b>true</b>, to enable embedding floating pictures into documents; otherwise, <b>false</b>.
-</value>
 
 
         </member>
@@ -28920,19 +28803,16 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
         <member name="T:DevExpress.Export.Xl.IXlFilterColumns">
 
             <summary>
-                <para>A collection of <see cref="T:DevExpress.Export.Xl.XlFilterColumn"/> objects.
-</para>
+                <para> </para>
             </summary>
 
         </member>
         <member name="M:DevExpress.Export.Xl.IXlFilterColumns.Add(DevExpress.Export.Xl.XlFilterColumn)">
             <summary>
-                <para>Adds a new filter column to the worksheet collection of filters.
-</para>
+                <para> </para>
             </summary>
             <param name="column">
-		An <see cref="T:DevExpress.Export.Xl.XlFilterColumn"/> object that should be added to the collection.
-
+		 
             </param>
 
 
@@ -28961,15 +28841,12 @@ A <b>System.Action</b> delegate to be called when the operation is complete.
         </member>
         <member name="M:DevExpress.Export.Xl.IXlFilterColumns.FindById(System.Int32)">
             <summary>
-                <para>Returns the <see cref="T:DevExpress.Export.Xl.XlFilterColumn"/> object by its index in the filtered range.
-</para>
+                <para> </para>
             </summary>
             <param name="columnId">
-		An integer that is the zero-based index of the required column in the filtered range.
-
+		 
             </param>
-            <returns>An <see cref="T:DevExpress.Export.Xl.XlFilterColumn"/> object with the specified index.
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -30496,16 +30373,6 @@ Supported in Excel 2010 and higher.
             <param name="buildForInstantPreview">
 		A Boolean value. This value is ignored and has no effect on the document creation process.
 
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.LinkBase.CreateDocument(System.Boolean)">
-            <summary>
-                <para>For internal use.</para>
-            </summary>
-            <param name="buildForInstantPreview">
-		 
             </param>
 
 
@@ -32944,8 +32811,7 @@ Gets or sets a value indicating whether the left, right, top and bottom borders 
         <member name="T:DevExpress.Export.Xl.XlColorFilter">
 
             <summary>
-                <para>A filter by cell fill or font color.
-</para>
+                <para> </para>
             </summary>
 
         </member>
@@ -32980,7 +32846,7 @@ The default is <b>true</b>.
         </member>
         <member name="P:DevExpress.Export.Xl.XlColorFilter.FilterType">
             <summary>
-                <para>Returns the <see cref="F:DevExpress.Export.Xl.XlFilterType.Color"/> value that is the current filter's type.
+                <para>Returns the filter's type.
 </para>
             </summary>
             <value>An <see cref="F:DevExpress.Export.Xl.XlFilterType.Color"/> value.  
@@ -33643,14 +33509,6 @@ The default is <b>true</b>.
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.PrinterSettingsUsing.UseMargins">
-            <summary>
-                <para>For internal use.</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.XtraPrinting.PrinterSettingsUsing.UsePaperKind">
             <summary>
                 <para>Specifies whether or not the <b>Paper Kind</b> setting of the system's default printer is used when printing a document.
@@ -34077,8 +33935,7 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
         <member name="T:DevExpress.Export.Xl.XlDateGroupItem">
 
             <summary>
-                <para>A group of dates or times used in the filter criteria.
-</para>
+                <para> </para>
             </summary>
 
         </member>
@@ -34110,11 +33967,9 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
         </member>
         <member name="P:DevExpress.Export.Xl.XlDateGroupItem.Value">
             <summary>
-                <para>Gets or sets the base date or time value used to construct the filter criteria.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:System.DateTime"/> object. 
-</value>
+            <value> </value>
 
 
         </member>
@@ -34604,7 +34459,7 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
         <member name="T:DevExpress.Export.Xl.XlDateTimeGroupingType">
 
             <summary>
-                <para>Lists grouping types used to specify the filter criteria for DateTime values.
+                <para>Lists grouping types used to specify filter criteria for DateTime values.
 </para>
             </summary>
 
@@ -35392,8 +35247,7 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
         <member name="T:DevExpress.Export.Xl.XlValuesFilter">
 
             <summary>
-                <para>A filter by a list of cell values or date and time values.
-</para>
+                <para> </para>
             </summary>
 
         </member>
@@ -35407,37 +35261,31 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
         </member>
         <member name="P:DevExpress.Export.Xl.XlValuesFilter.CalendarType">
             <summary>
-                <para>Gets or sets the calendar type for date groups used in filtering.
-</para>
+                <para> </para>
             </summary>
-            <value>An <see cref="T:DevExpress.Export.Xl.XlCalendarType"/> enumeration member.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlValuesFilter.DateGroups">
             <summary>
-                <para>Provides access to the collection of date and time values to filter by.
-</para>
+                <para> </para>
             </summary>
-            <value>A collection of <see cref="T:DevExpress.Export.Xl.XlDateGroupItem"/> objects specifying date and time values that should be used in a filter. 
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlValuesFilter.FilterByBlank">
             <summary>
-                <para>Gets or sets a value indicating whether blank cells should be included in the filtering results.
-</para>
+                <para> </para>
             </summary>
-            <value><b>true</b>, to filter blank cells; otherwise, <b>false</b>.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlValuesFilter.FilterType">
             <summary>
-                <para>Returns the <see cref="F:DevExpress.Export.Xl.XlFilterType.Values"/> value that is the current filter's type.
+                <para>Returns the filter's type.
 </para>
             </summary>
             <value>An <see cref="F:DevExpress.Export.Xl.XlFilterType.Values"/> value.  
@@ -35447,11 +35295,9 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
         </member>
         <member name="P:DevExpress.Export.Xl.XlValuesFilter.Values">
             <summary>
-                <para>Provides access to the collection of cell values to filter by.
-</para>
+                <para> </para>
             </summary>
-            <value>A collection of values to be used in a filter. 
-</value>
+            <value> </value>
 
 
         </member>
@@ -35688,8 +35534,7 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
         <member name="T:DevExpress.Export.Xl.XlCalendarType">
 
             <summary>
-                <para>Lists calendar types used to interpret filter values defined by the <see cref="T:DevExpress.Export.Xl.XlDateGroupItem"/> instances.
-</para>
+                <para> </para>
             </summary>
 
         </member>
@@ -35845,50 +35690,42 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
         <member name="T:DevExpress.Export.Xl.XlTop10Filter">
 
             <summary>
-                <para>A <b>Top 10</b> filter that displays top/bottom ranked values.
-</para>
+                <para> </para>
             </summary>
 
         </member>
         <member name="M:DevExpress.Export.Xl.XlTop10Filter.#ctor(System.Double,System.Double,System.Boolean,System.Boolean)">
             <summary>
-                <para>Initializes a new instance of the XlTop10Filter class with the specified settings.
-</para>
+                <para> </para>
             </summary>
             <param name="value">
-		A <see cref="T:System.Double"/> value that is a number or percentage of column values to display. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlTop10Filter.Value"/> property.
-
+		 
             </param>
             <param name="filterValue">
-		A <see cref="T:System.Double"/> value that is the actual cell value used by the filter to perform the comparison. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlTop10Filter.FilterValue"/> property.
-
+		 
             </param>
             <param name="top">
-		A <see cref="T:System.Boolean"/> value indicating whether to filter column values by top order. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlTop10Filter.Top"/> property.
-
+		 
             </param>
             <param name="percent">
-		A <see cref="T:System.Boolean"/> value indicating whether to show values that fall in the top/bottom N percent of column values. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlTop10Filter.Percent"/> property.
-
+		 
             </param>
 
 
         </member>
         <member name="M:DevExpress.Export.Xl.XlTop10Filter.#ctor(System.Double)">
             <summary>
-                <para>Initializes a new instance of the XlTop10Filter class with the specified settings.
-</para>
+                <para> </para>
             </summary>
             <param name="filterValue">
-		A <see cref="T:System.Double"/> value that is the actual cell value used by the filter to perform the comparison. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlTop10Filter.FilterValue"/> property.
-
+		 
             </param>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlTop10Filter.FilterType">
             <summary>
-                <para>Returns the <see cref="F:DevExpress.Export.Xl.XlFilterType.Top10"/> value that is the current filter's type.
+                <para>Returns the filter's type.
 </para>
             </summary>
             <value>An <see cref="F:DevExpress.Export.Xl.XlFilterType.Top10"/> value.  
@@ -35898,41 +35735,33 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
         </member>
         <member name="P:DevExpress.Export.Xl.XlTop10Filter.FilterValue">
             <summary>
-                <para>Gets or sets the actual cell value which is used to perform the comparison for the current filter.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:System.Double"/> value.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlTop10Filter.Percent">
             <summary>
-                <para>Gets or sets a value indicating whether to show values that fall in the top/bottom N percent of a column.
-</para>
+                <para> </para>
             </summary>
-            <value><b>true</b>, to filter by the top/bottom N percent of column items; otherwise, <b>false</b>. A <b>false</b> value filters by a number of items.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlTop10Filter.Top">
             <summary>
-                <para>Gets or sets whether top items should be included in the &#34;Top 10&#34; filtering results.
-</para>
+                <para> </para>
             </summary>
-            <value><b>true</b>, to filter by top order; otherwise, <b>false</b>. If <b>false</b>, bottom items satisfying the filter criteria are displayed.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlTop10Filter.Value">
             <summary>
-                <para>Gets or sets a top or bottom value to use as the filter criteria.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="T:System.Double"/> value that is a number or percentage of column items to display. For example, &#34;Filter by Top 5 Items&#34; or &#34;Filter by Top 10 Percent&#34;.
-</value>
+            <value> </value>
 
 
         </member>
@@ -36291,11 +36120,17 @@ This method is equivalent to the <see cref="M:DevExpress.Export.Xl.XlBorder.Outl
         </member>
         <member name="P:DevExpress.DocumentServices.ServiceModel.DataContracts.ReportBuildArgs.BandSorting">
             <summary>
-                <para>For internal use.
-</para>
+                <para> </para>
             </summary>
-            <value> 
-</value>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.DocumentServices.ServiceModel.DataContracts.ReportBuildArgs.BandSortingKey">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -37160,8 +36995,7 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         <member name="T:DevExpress.Export.Xl.XlFilterType">
 
             <summary>
-                <para>Lists types of filters available for the AutoFilter functionality.
-</para>
+                <para> </para>
             </summary>
 
         </member>
@@ -37449,86 +37283,6 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
             </summary>
 
         </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.EndOfCurrentDay">
-            <summary>
-                <para>The reference point corresponds to the end of the current day.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.EndOfCurrentMonth">
-            <summary>
-                <para>The reference point corresponds to the end of the current month.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.EndOfCurrentQuarter">
-            <summary>
-                <para>The reference point corresponds to the end of the current quarter.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.EndOfCurrentWeek">
-            <summary>
-                <para>The reference point corresponds to the end of the current week.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.EndOfCurrentYear">
-            <summary>
-                <para>The reference point corresponds to the end of the current year.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.EndOfNextDay">
-            <summary>
-                <para>The reference point corresponds to the end of the next day.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.EndOfNextMonth">
-            <summary>
-                <para>The reference point corresponds to the end of the next month.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.EndOfNextQuarter">
-            <summary>
-                <para>The reference point corresponds to the end of the next quarter.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.EndOfNextWeek">
-            <summary>
-                <para>The reference point corresponds to the end of the next week.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.EndOfNextYear">
-            <summary>
-                <para>The reference point corresponds to the end of the next year.
-</para>
-            </summary>
-
-
-        </member>
         <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.EndOfPreviousDay">
             <summary>
                 <para>The reference point corresponds to the end of the previous day.
@@ -37569,94 +37323,6 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
 
 
         </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.EndOfPreviousYear">
-            <summary>
-                <para>The reference point corresponds to the end of the previous year.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.StartOfCurrentDay">
-            <summary>
-                <para>The reference point corresponds to the start of the current day.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.StartOfCurrentMonth">
-            <summary>
-                <para>The reference point corresponds to the start of the current month.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.StartOfCurrentQuarter">
-            <summary>
-                <para>The reference point corresponds to the start of the current quarter.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.StartOfCurrentWeek">
-            <summary>
-                <para>The reference point corresponds to the start of the current week.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.StartOfCurrentYear">
-            <summary>
-                <para>The reference point corresponds to the start of the current year.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.StartOfNextDay">
-            <summary>
-                <para>The reference point corresponds to the start of the next day.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.StartOfNextMonth">
-            <summary>
-                <para>The reference point corresponds to the start of the next month.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.StartOfNextQuarter">
-            <summary>
-                <para>The reference point corresponds to the start of the next quarter.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.StartOfNextWeek">
-            <summary>
-                <para>The reference point corresponds to the start of the next week.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.StartOfNextYear">
-            <summary>
-                <para>The reference point corresponds to the start of the next year.
-</para>
-            </summary>
-
-
-        </member>
         <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.StartOfPreviousDay">
             <summary>
                 <para>The reference point corresponds to the start of the previous day.
@@ -37692,14 +37358,6 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.StartOfPreviousWeek">
             <summary>
                 <para>The reference point corresponds to the start of the previous week.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.ReportServer.ServiceModel.DataContracts.DateTimeCalculationKind.StartOfPreviousYear">
-            <summary>
-                <para>The reference point corresponds to the start of the previous year.
 </para>
             </summary>
 
@@ -37949,11 +37607,9 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         </member>
         <member name="P:DevExpress.Export.Xl.XlCondFmtValueObject.GreaterThanOrEqual">
             <summary>
-                <para>Gets or sets a value indicating whether the "greater than or equal to" comparison operator is used by the threshold value of the icon set conditional formatting rule to determine to which cells the icon should be applied.
-</para>
+                <para> </para>
             </summary>
-            <value><b>true</b>, to use the "greater than or equal to" comparison operator with the current threshold value; otherwise, <b>false</b>. If <b>false</b>, the "greater than" comparison operator is used.
-</value>
+            <value> </value>
 
 
         </member>
@@ -39634,14 +39290,6 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
 
 
         </member>
-        <member name="P:DevExpress.XtraExport.Csv.CsvDataAwareExporterOptions.QuoteTextValues">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="M:DevExpress.XtraExport.Csv.CsvDataAwareExporterOptions.ResetValueSeparator">
             <summary>
                 <para>Sets value separator to its default character.
@@ -40162,44 +39810,36 @@ With this setting, the actual cell size is less than the specified <b>CellHeight
         <member name="T:DevExpress.Export.Xl.XlCustomFilterCriteria">
 
             <summary>
-                <para>Specifies a criterion value and comparison operator for a custom filter.
-</para>
+                <para> </para>
             </summary>
 
         </member>
         <member name="M:DevExpress.Export.Xl.XlCustomFilterCriteria.#ctor(DevExpress.Export.Xl.XlFilterOperator,DevExpress.Export.Xl.XlVariantValue)">
             <summary>
-                <para>Initializes a new instance of the XlCustomFilterCriteria class with the specified settings.
-</para>
+                <para> </para>
             </summary>
             <param name="filterOperator">
-		An <see cref="T:DevExpress.Export.Xl.XlFilterOperator"/> enumeration member that specifies the comparison operator used to construct the filter expression. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlCustomFilterCriteria.FilterOperator"/> property. 
-
+		 
             </param>
             <param name="value">
-		An XlVariantValue object that specifies the filter criterion value. This value is assigned to the <see cref="P:DevExpress.Export.Xl.XlCustomFilterCriteria.Value"/> property.
-
+		 
             </param>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlCustomFilterCriteria.FilterOperator">
             <summary>
-                <para>Gets or sets the comparison operator to use with the custom filter value.
-</para>
+                <para> </para>
             </summary>
-            <value>An <see cref="T:DevExpress.Export.Xl.XlFilterOperator"/> enumeration member specifying the comparison operator used to construct the custom filter expression. 
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.Export.Xl.XlCustomFilterCriteria.Value">
             <summary>
-                <para>Gets or sets the custom filter criteria value.
-</para>
+                <para> </para>
             </summary>
-            <value>An <b>XlVariantValue</b> object that specifies the filter value.
-</value>
+            <value> </value>
 
 
         </member>
@@ -43180,14 +42820,6 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.Document.CanPerformContinuousExport">
-            <summary>
-                <para>For internal use.</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.XtraPrinting.Document.ContentIdentity">
             <summary>
                 <para>For internal use.
@@ -43651,14 +43283,6 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
 
 
         </member>
-        <member name="P:DevExpress.XtraPrinting.VisualBrick.NavigationId">
-            <summary>
-                <para>For internal use.</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.XtraPrinting.VisualBrick.NavigationPageIndex">
             <summary>
                 <para>Gets an index of a page, which contains a bookmark's brick.
@@ -43677,14 +43301,6 @@ This value should start from <b>1</b> and cannot exceed <b>1,048,575</b> for row
             </summary>
             <value>A <see cref="T:DevExpress.XtraPrinting.BrickPagePair"/> object.
 </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraPrinting.VisualBrick.NavigationRef">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>

@@ -49,19 +49,28 @@ namespace toolVanDao
 
         private void btn_get_Click(object sender, EventArgs e)
         {
-            if (check32.Checked == true && check78.Checked == false)
+            try
             {
-                // lấy thông tin thông báo phát hành
-                LoadMauHoaDon(mst);
+
+
+                if (check32.Checked == true && check78.Checked == false)
+                {
+                    // lấy thông tin thông báo phát hành
+                    LoadMauHoaDon(mst);
+                }
+                if (check78.Checked == true && check32.Checked == false)
+                {
+                    // lấy thông tin thông báo phát hành
+                    LoadMauHoaDon(mst);
+                }
+                else if (check78.Checked == false && check32.Checked == false)
+                {
+                    XtraMessageBox.Show("chưa tick chọn loại hóa đơn (HĐ32, HĐ78)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            if(check78.Checked == true && check32.Checked == false)
+            catch (Exception ex)
             {
-                // lấy thông tin thông báo phát hành
-                LoadMauHoaDon(mst);
-            }
-            else
-            {
-                XtraMessageBox.Show("chưa chọn check loại hóa đơn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                XtraMessageBox.Show(ex.Message.ToString(), "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -86,6 +95,7 @@ namespace toolVanDao
 
         private void LoadMauHoaDon(string mst)
         {
+            //TT32
             if (check32.Checked == true && check78.Checked == false)
             {
                 try
@@ -103,6 +113,7 @@ namespace toolVanDao
                     XtraMessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            //TT78
             if (check78.Checked == true && check32.Checked == false)
             {
                 try
@@ -164,78 +175,79 @@ namespace toolVanDao
 
         private void btn_loaddata_Click(object sender, EventArgs e)
         {
-            notifyIcon1.Icon = SystemIcons.Exclamation;
-            notifyIcon1.Visible = true;
-            notifyIcon1.ShowBalloonTip(5000, "Thông Báo", "Đang tải Dữ liệu!Vui lòng chờ!", ToolTipIcon.Info);
-            var webClient = MinvoiceService.SetupWebClient();
-            var url = BaseConfig.UrlSBM;
-
-            //  var command = BaseConfig.Command;
-            var tuNgay = !string.IsNullOrEmpty(txtTuNgay.Text) ? txtTuNgay.DateTime.ToString("yyyy-MM-dd") : DateTime.Now.ToString("yyyy-MM-dd");
-            var denNgay = !string.IsNullOrEmpty(txtDenNgay.Text) ? txtDenNgay.DateTime.ToString("yyyy-MM-dd") : DateTime.Now.ToString("yyyy-MM-dd");
-
-           
-            
-            if (check32.Checked == true && check78.Checked == false)
+            try
             {
+                notifyIcon1.Icon = SystemIcons.Exclamation;
+                notifyIcon1.Visible = true;
+                notifyIcon1.ShowBalloonTip(5000, "Thông Báo", "Đang tải Dữ liệu!Vui lòng chờ!", ToolTipIcon.Info);
+                var webClient = MinvoiceService.SetupWebClient();
+                var url = Properties.Settings.Default.UrlSBM; //k dùng baseconfig vì k load kịp change from settings
+                                                              //  var command = BaseConfig.Command;
+                var tuNgay = !string.IsNullOrEmpty(txtTuNgay.Text) ? txtTuNgay.DateTime.ToString("yyyy-MM-dd") : DateTime.Now.ToString("yyyy-MM-dd");
+                var denNgay = !string.IsNullOrEmpty(txtDenNgay.Text) ? txtDenNgay.DateTime.ToString("yyyy-MM-dd") : DateTime.Now.ToString("yyyy-MM-dd");
 
-                List<InvoiceObject> invoiceObjects = new List<InvoiceObject>();
-                var json = "{\"tu_ngay\":\"" + tuNgay + "\" , \"den_ngay\":\"" + denNgay + "\",\"mau_so\":\"" + txtmauso.Text + "\", \"ky_hieu\":\"" + txtkyhieu.Text + "\"}";
-                try
+
+                //TT32
+                if (check32.Checked == true && check78.Checked == false)
                 {
-                    var rs = webClient.UploadString(url, json);
-                    var result = JObject.Parse(rs);
-                    if (result["error"] == null)
+
+                    List<InvoiceObject> invoiceObjects = new List<InvoiceObject>();
+                    var json = "{\"tu_ngay\":\"" + tuNgay + "\" , \"den_ngay\":\"" + denNgay + "\",\"mau_so\":\"" + txtmauso.Text + "\", \"ky_hieu\":\"" + txtkyhieu.Text + "\"}";
+                    try
                     {
-                        var resultarr = JArray.Parse(result["data"].ToString());
-                        if (resultarr.Count > 0)
+                        var rs = webClient.UploadString(url, json);
+                        var result = JObject.Parse(rs);
+                        if (result["error"] == null)
                         {
-                            foreach (var jToken in resultarr)
+                            var resultarr = JArray.Parse(result["data"].ToString());
+                            if (resultarr.Count > 0)
                             {
-                                InvoiceObject invoiceObject = new InvoiceObject
+                                foreach (var jToken in resultarr)
                                 {
-                                    InvoiceNumber = jToken["inv_invoiceNumber"].ToString(),
-                                    KyHieu = jToken["inv_invoiceSeries"].ToString(),
-                                    MauSo = jToken["mau_hd"].ToString(),
-                                    Selected = false,
-                                    ngay_hd = Convert.ToDateTime(jToken["inv_invoiceIssuedDate"]),
-                                    SBM = jToken["sobaomat"].ToString(),
-                                    InvInvoiceAuthId = jToken["inv_InvoiceAuth_id"].ToString()
+                                    InvoiceObject invoiceObject = new InvoiceObject
+                                    {
+                                        InvoiceNumber = jToken["inv_invoiceNumber"].ToString(),
+                                        KyHieu = jToken["inv_invoiceSeries"].ToString(),
+                                        MauSo = jToken["mau_hd"].ToString(),
+                                        Selected = false,
+                                        ngay_hd = Convert.ToDateTime(jToken["inv_invoiceIssuedDate"]),
+                                        SBM = jToken["sobaomat"].ToString(),
+                                        InvInvoiceAuthId = jToken["inv_InvoiceAuth_id"].ToString()
 
-                                };
-                                invoiceObject.Value = $"{invoiceObject.MauSo} - {invoiceObject.KyHieu.Trim()} - {invoiceObject.InvoiceNumber} - {invoiceObject.ngay_hd} - {invoiceObject.SBM}";
-                                string trang_thai = jToken["trang_thai"].ToString();
-                                // Check có số bảo mật và phải là hóa đơn đã ký
-                                if (!string.IsNullOrWhiteSpace(invoiceObject.SBM.ToString()) && trang_thai == "Đã ký")
-                                {
-                                    invoiceObjects.Add(invoiceObject);
+                                    };
+                                    invoiceObject.Value = $"{invoiceObject.MauSo} - {invoiceObject.KyHieu.Trim()} - {invoiceObject.InvoiceNumber} - {invoiceObject.ngay_hd} - {invoiceObject.SBM}";
+                                    string trang_thai = jToken["trang_thai"].ToString();
+                                    // Check có số bảo mật và phải là hóa đơn đã ký
+                                    if (!string.IsNullOrWhiteSpace(invoiceObject.SBM.ToString()) && trang_thai == "Đã ký")
+                                    {
+                                        invoiceObjects.Add(invoiceObject);
+                                    }
+
                                 }
-
                             }
                         }
+                        else
+                        {
+                            XtraMessageBox.Show(result["error"].ToString(), "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                        invoiceObjects.Sort((x, y) => x.InvoiceNumber.CompareTo(y.InvoiceNumber));
+
+                        checkedListBoxControl1.DataSource = invoiceObjects;
+                        checkedListBoxControl1.DisplayMember = "Value";
+                        checkedListBoxControl1.ValueMember = "SBM";
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        XtraMessageBox.Show(result["error"].ToString(), "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        throw new Exception(ex.Message);
                     }
-
-                    invoiceObjects.Sort((x, y) => x.InvoiceNumber.CompareTo(y.InvoiceNumber));
-
-                    checkedListBoxControl1.DataSource = invoiceObjects;
-                    checkedListBoxControl1.DisplayMember = "Value";
-                    checkedListBoxControl1.ValueMember = "SBM";
                 }
-                catch (Exception ex)
+                //TT78
+                if (check78.Checked == true && check32.Checked == false)
                 {
-                    throw new Exception(ex.Message);
-                }
-            }
-            if (check78.Checked == true && check32.Checked == false)
-            {
-                List<InvoiceObject> invoiceObjects78 = new List<InvoiceObject>();
-                var json = "{\"tuNgay\":\"" + tuNgay + "\" , \"denNgay\":\"" + denNgay + "\", \"khieu\":\"" + txtkyhieu.Text + "\"}";
-                try
-                {
+                    List<InvoiceObject> invoiceObjects78 = new List<InvoiceObject>();
+                    var json = "{\"tuNgay\":\"" + tuNgay + "\" , \"denNgay\":\"" + denNgay + "\", \"khieu\":\"" + txtkyhieu.Text + "\"}";
+
                     var rs = webClient.UploadString(url, json);
                     var result = JObject.Parse(rs);
                     if (result["error"] == null)
@@ -258,7 +270,7 @@ namespace toolVanDao
                                 invoiceObject78.Value = $" {invoiceObject78.KyHieu.Trim()}  - {invoiceObject78.shdon} - {invoiceObject78.ngay_hd} - {invoiceObject78.SBM}";
                                 string trang_thai = jToken["tthai"].ToString();
                                 // Check có số bảo mật và phải là hóa đơn đã ký
-                                if (!string.IsNullOrWhiteSpace(invoiceObject78.SBM.ToString()) && trang_thai == "Đã ký" || trang_thai=="Đã gửi")
+                                if (!string.IsNullOrWhiteSpace(invoiceObject78.SBM.ToString()) && trang_thai == "Đã ký" || trang_thai == "Đã gửi")
                                 {
                                     invoiceObjects78.Add(invoiceObject78);
                                 }
@@ -271,209 +283,233 @@ namespace toolVanDao
                         XtraMessageBox.Show(result["error"].ToString(), "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
-                    invoiceObjects78.Sort((x, y) => x.shdon.CompareTo(y.shdon));
+                    invoiceObjects78.Sort((x, y) => int.Parse(x.shdon).CompareTo(int.Parse(y.shdon)));
 
                     checkedListBoxControl1.DataSource = invoiceObjects78;
                     checkedListBoxControl1.DisplayMember = "Value";
                     checkedListBoxControl1.ValueMember = "SBM";
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception(ex.Message);
+
+
                 }
             }
-           
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message.ToString(), "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
-        private void Btn_Download_PDF_Click(object sender, EventArgs e)
+        private void Btn_Download_PDF_Click(object sender, EventArgs e) //TẢI PDF HÀNG LOẠT
         {
-            //kiểm tra đường dẫn file
-            if (!string.IsNullOrWhiteSpace(txtPath.Text))
+            try
             {
 
-                if (check32.Checked == true && check78.Checked == false)
+
+                //kiểm tra đường dẫn file
+                if (!string.IsNullOrWhiteSpace(txtPath.Text))
                 {
-                    string invoiceNumber = "";
-                    List<string> sobaomat = new List<string>();
-                    List<InvoiceObject> invoiceObjects = new List<InvoiceObject>();
-                    List<string> listid = new List<string>();
-                    foreach (var selectedItem in checkedListBoxControl1.CheckedItems)
+                    //TT32
+                    if (check32.Checked == true && check78.Checked == false)
                     {
-
-                        invoiceNumber += $"'{(selectedItem as InvoiceObject)?.InvoiceNumber}' ,";
-                        listid.Add((selectedItem as InvoiceObject)?.hoadon68id);
-                        sobaomat.Add((selectedItem as InvoiceObject)?.SBM);
-                        var invoiceObject = selectedItem as InvoiceObject;
-                        invoiceObjects.Add(invoiceObject);
-
-                    }
-
-                    if (!string.IsNullOrEmpty(invoiceNumber))
-                    {
-                        invoiceNumber = invoiceNumber.Substring(0, invoiceNumber.Length - 1);
-
-                        //MinvoiceService.UpdateInvoice(invoiceNumber);
-                        //notifyIcon1.Icon = SystemIcons.Application;
-                        notifyIcon1.Icon = SystemIcons.Exclamation;
-                        notifyIcon1.Visible = true;
-                        notifyIcon1.ShowBalloonTip(5000, "Thông Báo", "Đang tải XML hóa đơn!Vui lòng chờ!", ToolTipIcon.Info);
-                        MinvoiceService.DownloadXML(sobaomat, txtPath.Text);
-                        if (MinvoiceService.ck == false)
+                        string invoiceNumber = "";
+                        List<string> sobaomat = new List<string>();
+                        List<InvoiceObject> invoiceObjects = new List<InvoiceObject>();
+                        List<string> listid = new List<string>();
+                        foreach (var selectedItem in checkedListBoxControl1.CheckedItems)
                         {
-                            XtraMessageBox.Show("Tải File hoàn tất", "Thông Báo!", MessageBoxButtons.OK,
-                          MessageBoxIcon.Information);
+                            invoiceNumber += $"'{(selectedItem as InvoiceObject)?.InvoiceNumber}' ,";
+                            listid.Add((selectedItem as InvoiceObject)?.hoadon68id);
+                            sobaomat.Add((selectedItem as InvoiceObject)?.SBM);
+                            var invoiceObject = selectedItem as InvoiceObject;
+                            invoiceObjects.Add(invoiceObject);
+
                         }
 
-                    }
-                    else
-                    {
-                        XtraMessageBox.Show("Chưa chọn hóa đơn muốn tải FILE XML", "Thông Báo", MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning);
-                    }
-                }
-                if (check78.Checked == true && check32.Checked == false)
-                {
-                    string shdon78 = "";
-
-                    List<string> sobaomat = new List<string>();
-                    List<InvoiceObject> invoiceObjects78 = new List<InvoiceObject>();
-                    List<string> listid = new List<string>();
-                    foreach (var selectedItem in checkedListBoxControl1.CheckedItems)
-                    {
-
-                        shdon78 += $"'{(selectedItem as InvoiceObject)?.shdon}' ,";
-
-                        listid.Add((selectedItem as InvoiceObject)?.hoadon68id);
-                        sobaomat.Add((selectedItem as InvoiceObject)?.SBM);
-                        var invoiceObject = selectedItem as InvoiceObject;
-                        invoiceObjects78.Add(invoiceObject);
-
-                    }
-
-                    if (!string.IsNullOrEmpty(shdon78))
-                    {
-                        shdon78 = shdon78.Substring(0, shdon78.Length - 1);
-
-                        //MinvoiceService.UpdateInvoice(invoiceNumber);
-                        //notifyIcon1.Icon = SystemIcons.Application;
-                        notifyIcon1.Icon = SystemIcons.Exclamation;
-                        notifyIcon1.Visible = true;
-                        notifyIcon1.ShowBalloonTip(5000, "Thông Báo", "Đang tải PDF hóa đơn!Vui lòng chờ!", ToolTipIcon.Info);
-                        MinvoiceService.Downloadpdf78(txtPath.Text, listid, invoiceObjects78);
-                        if (MinvoiceService.ck == false)
+                        if (!string.IsNullOrEmpty(invoiceNumber))
                         {
-                            XtraMessageBox.Show("Tải File PDF hoàn tất", "Thông Báo!", MessageBoxButtons.OK,
-                          MessageBoxIcon.Information);
+                            invoiceNumber = invoiceNumber.Substring(0, invoiceNumber.Length - 1);
+
+                            //MinvoiceService.UpdateInvoice(invoiceNumber);
+                            //notifyIcon1.Icon = SystemIcons.Application;
+                            notifyIcon1.Icon = SystemIcons.Exclamation;
+                            notifyIcon1.Visible = true;
+                            notifyIcon1.ShowBalloonTip(5000, "Thông Báo", "Đang tải XML hóa đơn!Vui lòng chờ!", ToolTipIcon.Info);
+
+                            MinvoiceService.DownloadPDF(txtPath.Text, listid, invoiceObjects);
+                            if (MinvoiceService.ck == false)
+                            {
+                                XtraMessageBox.Show("Tải File hoàn tất", "Thông Báo!", MessageBoxButtons.OK,
+                              MessageBoxIcon.Information);
+                            }
+
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("Chưa chọn hóa đơn muốn tải FILE XML", "Thông Báo", MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                        }
+                    }
+                    //TT78
+                    if (check78.Checked == true && check32.Checked == false)
+                    {
+                        string shdon78 = "";
+
+                        List<string> sobaomat = new List<string>();
+                        List<InvoiceObject> invoiceObjects78 = new List<InvoiceObject>();
+                        List<string> listid = new List<string>();
+                        foreach (var selectedItem in checkedListBoxControl1.CheckedItems)
+                        {
+
+                            shdon78 += $"'{(selectedItem as InvoiceObject)?.shdon}' ,";
+
+                            listid.Add((selectedItem as InvoiceObject)?.hoadon68id);
+                            sobaomat.Add((selectedItem as InvoiceObject)?.SBM);
+                            var invoiceObject = selectedItem as InvoiceObject;
+                            invoiceObjects78.Add(invoiceObject);
+
                         }
 
-                    }
-                    else
-                    {
-                        XtraMessageBox.Show("Chưa chọn hóa đơn muốn tải FILE PDF", "Thông Báo", MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning);
-                    }
-                }
+                        if (!string.IsNullOrEmpty(shdon78))
+                        {
+                            shdon78 = shdon78.Substring(0, shdon78.Length - 1);
 
+                            //MinvoiceService.UpdateInvoice(invoiceNumber);
+                            //notifyIcon1.Icon = SystemIcons.Application;
+                            notifyIcon1.Icon = SystemIcons.Exclamation;
+                            notifyIcon1.Visible = true;
+                            notifyIcon1.ShowBalloonTip(5000, "Thông Báo", "Đang tải PDF hóa đơn!Vui lòng chờ!", ToolTipIcon.Info);
+
+                            MinvoiceService.Downloadpdf78(txtPath.Text, listid, invoiceObjects78);
+
+                            if (MinvoiceService.ck == false)
+                            {
+                                XtraMessageBox.Show("Tải File PDF hoàn tất", "Thông Báo!", MessageBoxButtons.OK,
+                              MessageBoxIcon.Information);
+                            }
+
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("Chưa chọn hóa đơn muốn tải FILE PDF", "Thông Báo", MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                        }
+                    }
+
+                }
+                else
+                {
+                    XtraMessageBox.Show("Bạn chưa chọn vị trí lưu file!", "Thông Báo", MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                XtraMessageBox.Show("Bạn chưa chọn vị trí lưu file!", "Thông Báo", MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning);
+                XtraMessageBox.Show(ex.Message.ToString(), "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void btn_download_Click(object sender, EventArgs e)
+        private void btn_download_Click(object sender, EventArgs e) //TẢI XML HÀNG LOẠT
         {
-            //kiểm tra đường dẫn file
-            if (!string.IsNullOrWhiteSpace(txtPath.Text))
+            try
             {
 
-                if (check32.Checked == true && check78.Checked == false)
+
+                //kiểm tra đường dẫn file
+                if (!string.IsNullOrWhiteSpace(txtPath.Text))
                 {
-                    string invoiceNumber = "";
-                    List<string> sobaomat = new List<string>();
-                    List<InvoiceObject> invoiceObjects = new List<InvoiceObject>();
-                    List<string> listid = new List<string>();
-                    foreach (var selectedItem in checkedListBoxControl1.CheckedItems)
+                    //TT32
+                    if (check32.Checked == true && check78.Checked == false)
                     {
-
-                        invoiceNumber += $"'{(selectedItem as InvoiceObject)?.InvoiceNumber}' ,";
-                        listid.Add((selectedItem as InvoiceObject)?.hoadon68id);
-                        sobaomat.Add((selectedItem as InvoiceObject)?.SBM);
-                        var invoiceObject = selectedItem as InvoiceObject;
-                        invoiceObjects.Add(invoiceObject);
-
-                    }
-
-                    if (!string.IsNullOrEmpty(invoiceNumber))
-                    {
-                        invoiceNumber = invoiceNumber.Substring(0, invoiceNumber.Length - 1);
-
-                        //MinvoiceService.UpdateInvoice(invoiceNumber);
-                        //notifyIcon1.Icon = SystemIcons.Application;
-                        notifyIcon1.Icon = SystemIcons.Exclamation;
-                        notifyIcon1.Visible = true;
-                        notifyIcon1.ShowBalloonTip(5000, "Thông Báo", "Đang tải XML hóa đơn!Vui lòng chờ!", ToolTipIcon.Info);
-                        MinvoiceService.DownloadXML(sobaomat, txtPath.Text);
-                        if (MinvoiceService.ck == false)
+                        string invoiceNumber = "";
+                        List<string> sobaomat = new List<string>();
+                        List<InvoiceObject> invoiceObjects = new List<InvoiceObject>();
+                        List<string> listid = new List<string>();
+                        foreach (var selectedItem in checkedListBoxControl1.CheckedItems)
                         {
-                            XtraMessageBox.Show("Tải File hoàn tất", "Thông Báo!", MessageBoxButtons.OK,
-                          MessageBoxIcon.Information);
+
+                            invoiceNumber += $"'{(selectedItem as InvoiceObject)?.InvoiceNumber}' ,";
+                            listid.Add((selectedItem as InvoiceObject)?.hoadon68id);
+                            sobaomat.Add((selectedItem as InvoiceObject)?.SBM);
+                            var invoiceObject = selectedItem as InvoiceObject;
+                            invoiceObjects.Add(invoiceObject);
+
                         }
 
-                    }
-                    else
-                    {
-                        XtraMessageBox.Show("Chưa chọn hóa đơn muốn tải FILE XML", "Thông Báo", MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning);
-                    }
-                }
-                if (check78.Checked == true && check32.Checked == false)
-                {
-                    string shdon78 = "";
-                   
-                    List<string> sobaomat = new List<string>();
-                    List<InvoiceObject> invoiceObjects78 = new List<InvoiceObject>();
-                    List<string> listid = new List<string>();
-                    foreach (var selectedItem in checkedListBoxControl1.CheckedItems)
-                    {
-
-                        shdon78 += $"'{(selectedItem as InvoiceObject)?.shdon}' ,";
-                      
-                        listid.Add((selectedItem as InvoiceObject)?.hoadon68id);
-                        sobaomat.Add((selectedItem as InvoiceObject)?.SBM);
-                        var invoiceObject = selectedItem as InvoiceObject;
-                        invoiceObjects78.Add(invoiceObject);
-
-                    }
-
-                    if (!string.IsNullOrEmpty(shdon78))
-                    {
-                        shdon78 = shdon78.Substring(0, shdon78.Length - 1);
-
-                        //MinvoiceService.UpdateInvoice(invoiceNumber);
-                        //notifyIcon1.Icon = SystemIcons.Application;
-                        notifyIcon1.Icon = SystemIcons.Exclamation;
-                        notifyIcon1.Visible = true;
-                        notifyIcon1.ShowBalloonTip(5000, "Thông Báo", "Đang tải XML hóa đơn!Vui lòng chờ!", ToolTipIcon.Info);
-                        MinvoiceService.DownloadXML78( txtPath.Text, listid, invoiceObjects78);
-                        if (MinvoiceService.ck == false)
+                        if (!string.IsNullOrEmpty(invoiceNumber))
                         {
-                            XtraMessageBox.Show("Tải File hoàn tất", "Thông Báo!", MessageBoxButtons.OK,
-                          MessageBoxIcon.Information);
+                            invoiceNumber = invoiceNumber.Substring(0, invoiceNumber.Length - 1);
+
+                            //MinvoiceService.UpdateInvoice(invoiceNumber);
+                            //notifyIcon1.Icon = SystemIcons.Application;
+                            notifyIcon1.Icon = SystemIcons.Exclamation;
+                            notifyIcon1.Visible = true;
+                            notifyIcon1.ShowBalloonTip(5000, "Thông Báo", "Đang tải XML hóa đơn!Vui lòng chờ!", ToolTipIcon.Info);
+                            MinvoiceService.DownloadXML(sobaomat, txtPath.Text);
+                            if (MinvoiceService.ck == false)
+                            {
+                                XtraMessageBox.Show("Tải File hoàn tất", "Thông Báo!", MessageBoxButtons.OK,
+                              MessageBoxIcon.Information);
+                            }
+
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("Chưa chọn hóa đơn muốn tải FILE XML", "Thông Báo", MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                        }
+                    }
+                    //TT78
+                    if (check78.Checked == true && check32.Checked == false)
+                    {
+                        string shdon78 = "";
+
+                        List<string> sobaomat = new List<string>();
+                        List<InvoiceObject> invoiceObjects78 = new List<InvoiceObject>();
+                        List<string> listid = new List<string>();
+                        foreach (var selectedItem in checkedListBoxControl1.CheckedItems)
+                        {
+
+                            shdon78 += $"'{(selectedItem as InvoiceObject)?.shdon}' ,";
+
+                            listid.Add((selectedItem as InvoiceObject)?.hoadon68id);
+                            sobaomat.Add((selectedItem as InvoiceObject)?.SBM);
+                            var invoiceObject = selectedItem as InvoiceObject;
+                            invoiceObjects78.Add(invoiceObject);
+
                         }
 
+                        if (!string.IsNullOrEmpty(shdon78))
+                        {
+                            shdon78 = shdon78.Substring(0, shdon78.Length - 1);
+
+                            //MinvoiceService.UpdateInvoice(invoiceNumber);
+                            //notifyIcon1.Icon = SystemIcons.Application;
+                            notifyIcon1.Icon = SystemIcons.Exclamation;
+                            notifyIcon1.Visible = true;
+                            notifyIcon1.ShowBalloonTip(5000, "Thông Báo", "Đang tải XML hóa đơn!Vui lòng chờ!", ToolTipIcon.Info);
+                            MinvoiceService.DownloadXML78(txtPath.Text, listid, invoiceObjects78);
+                            if (MinvoiceService.ck == false)
+                            {
+                                XtraMessageBox.Show("Tải File hoàn tất", "Thông Báo!", MessageBoxButtons.OK,
+                              MessageBoxIcon.Information);
+                            }
+
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("Chưa chọn hóa đơn muốn tải FILE XML", "Thông Báo", MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                        }
                     }
-                    else
-                    {
-                        XtraMessageBox.Show("Chưa chọn hóa đơn muốn tải FILE XML", "Thông Báo", MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning);
-                    }
+
                 }
-               
+                else
+                {
+                    XtraMessageBox.Show("Bạn chưa chọn vị trí lưu file!", "Thông Báo", MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                XtraMessageBox.Show("Bạn chưa chọn vị trí lưu file!", "Thông Báo", MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning);
+                XtraMessageBox.Show(ex.Message.ToString(), "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -502,6 +538,11 @@ namespace toolVanDao
 
         private void check32_CheckedChanged(object sender, EventArgs e)
         {
+            if (check32.Checked == true)
+            {
+                check78.Checked = false;
+            }
+            
             if (check32.Checked == true && check78.Checked==false)
             {
                 CommonService.UpdateSettingAppConfig(CommonConstants.UsernameLoginWeb, tk);
@@ -511,7 +552,9 @@ namespace toolVanDao
                 string UrlLogin = $@"https://{mst}.minvoice.com.vn/api/Account/Login";
                 string UrlSBM = $@"https://{mst}.minvoice.com.vn/api/InvoiceAPISSE/GetInvoiceFromDateToDate";
                 string UrlDownloadXML = "https://tracuuhoadon.minvoice.com.vn/Tracuu2/ExportZipFileXML";
+                string UrlDownloadPDF = $@"https://{mst}.minvoice.com.vn/api/Invoice/Preview?id=";
                 CommonService.UpdateSettingAppConfig(CommonConstants.UrlDownloadXML, UrlDownloadXML);
+                CommonService.UpdateSettingAppConfig(CommonConstants.UrlDownloadPDF, UrlDownloadPDF);
                 CommonService.UpdateSettingAppConfig(CommonConstants.UrlRef, UrlRef);
                 CommonService.UpdateSettingAppConfig(CommonConstants.UrlSBM, UrlSBM);
                 CommonService.UpdateSettingAppConfig(CommonConstants.UrlLogin, UrlLogin);
@@ -524,16 +567,17 @@ namespace toolVanDao
                // frm.ShowDialog();
                // this.Close();
             }
-            else
-            {
-                XtraMessageBox.Show("chưa chọn check loại hóa đơn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-           
+
         }
 
         private void check78_CheckedChanged(object sender, EventArgs e)
         {
-           if(check78.Checked==true && check32.Checked == false)
+            if (check78.Checked == true)
+            {
+                check32.Checked = false;
+            }
+
+            if (check78.Checked==true && check32.Checked == false)
             {
                 CommonService.UpdateSettingAppConfig(CommonConstants.UsernameLoginWeb, tk);
                 CommonService.UpdateSettingAppConfig(CommonConstants.PasswordLoginWeb, mk);
@@ -551,7 +595,7 @@ namespace toolVanDao
                 CommonService.UpdateSettingAppConfig(CommonConstants.UrlRef78, UrlRef78);
                 CommonService.UpdateSettingAppConfig(CommonConstants.UrlSBM, UrlSBM);
                 CommonService.UpdateSettingAppConfig(CommonConstants.UrlLogin, UrlLogin);
-                CommonService.UpdateSettingAppConfig(CommonConstants.UrlLogin, UrlDownloadpdf78);
+                CommonService.UpdateSettingAppConfig(CommonConstants.UrlDownloadpdf78, UrlDownloadpdf78);
                 ////XtraMessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 ///this.Hide();
@@ -560,10 +604,6 @@ namespace toolVanDao
 
                 //frm.ShowDialog();
                 //this.Close();
-            }
-            else
-            {
-                XtraMessageBox.Show("chưa chọn check loại hóa đơn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

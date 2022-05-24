@@ -74,27 +74,27 @@ namespace toolVanDao
             // txtTuNgay
             // 
             this.txtTuNgay.EditValue = new System.DateTime(2022, 4, 20, 0, 0, 0, 0);
-            this.txtTuNgay.Location = new System.Drawing.Point(27, 55);
+            this.txtTuNgay.Location = new System.Drawing.Point(31, 68);
             this.txtTuNgay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTuNgay.Name = "txtTuNgay";
             this.txtTuNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtTuNgay.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtTuNgay.Size = new System.Drawing.Size(86, 20);
+            this.txtTuNgay.Size = new System.Drawing.Size(100, 22);
             this.txtTuNgay.TabIndex = 0;
             // 
             // txtDenNgay
             // 
             this.txtDenNgay.EditValue = new System.DateTime(2022, 4, 20, 0, 0, 0, 0);
-            this.txtDenNgay.Location = new System.Drawing.Point(134, 55);
+            this.txtDenNgay.Location = new System.Drawing.Point(156, 68);
             this.txtDenNgay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDenNgay.Name = "txtDenNgay";
             this.txtDenNgay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDenNgay.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtDenNgay.Size = new System.Drawing.Size(86, 20);
+            this.txtDenNgay.Size = new System.Drawing.Size(100, 22);
             this.txtDenNgay.TabIndex = 1;
             // 
             // groupControl1
@@ -117,16 +117,17 @@ namespace toolVanDao
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(759, 88);
+            this.groupControl1.Size = new System.Drawing.Size(885, 108);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Thông tin cần lấy";
             // 
             // check78
             // 
             this.check78.AutoSize = true;
-            this.check78.Location = new System.Drawing.Point(304, 57);
+            this.check78.Location = new System.Drawing.Point(355, 70);
+            this.check78.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.check78.Name = "check78";
-            this.check78.Size = new System.Drawing.Size(52, 17);
+            this.check78.Size = new System.Drawing.Size(65, 21);
             this.check78.TabIndex = 12;
             this.check78.Text = "HD78";
             this.check78.UseVisualStyleBackColor = true;
@@ -135,9 +136,10 @@ namespace toolVanDao
             // check32
             // 
             this.check32.AutoSize = true;
-            this.check32.Location = new System.Drawing.Point(246, 57);
+            this.check32.Location = new System.Drawing.Point(287, 70);
+            this.check32.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.check32.Name = "check32";
-            this.check32.Size = new System.Drawing.Size(52, 17);
+            this.check32.Size = new System.Drawing.Size(65, 21);
             this.check32.TabIndex = 11;
             this.check32.Text = "HD32";
             this.check32.UseVisualStyleBackColor = true;
@@ -145,44 +147,45 @@ namespace toolVanDao
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(605, 40);
+            this.labelControl6.Location = new System.Drawing.Point(706, 49);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(39, 13);
+            this.labelControl6.Size = new System.Drawing.Size(50, 17);
             this.labelControl6.TabIndex = 10;
             this.labelControl6.Text = "Ký hiệu:";
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(546, 40);
+            this.labelControl5.Location = new System.Drawing.Point(637, 49);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(38, 13);
+            this.labelControl5.Size = new System.Drawing.Size(48, 17);
             this.labelControl5.TabIndex = 9;
             this.labelControl5.Text = "Mẫu số:";
             // 
             // txtkyhieu
             // 
-            this.txtkyhieu.Location = new System.Drawing.Point(605, 57);
+            this.txtkyhieu.Location = new System.Drawing.Point(706, 70);
             this.txtkyhieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtkyhieu.Name = "txtkyhieu";
-            this.txtkyhieu.Size = new System.Drawing.Size(53, 20);
+            this.txtkyhieu.Size = new System.Drawing.Size(62, 22);
             this.txtkyhieu.TabIndex = 5;
             // 
             // txtmauso
             // 
-            this.txtmauso.Location = new System.Drawing.Point(546, 57);
+            this.txtmauso.Location = new System.Drawing.Point(637, 70);
             this.txtmauso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtmauso.Name = "txtmauso";
-            this.txtmauso.Size = new System.Drawing.Size(53, 20);
+            this.txtmauso.Size = new System.Drawing.Size(62, 22);
             this.txtmauso.TabIndex = 4;
             // 
             // chkAll
             // 
-            this.chkAll.Location = new System.Drawing.Point(4, 57);
+            this.chkAll.Location = new System.Drawing.Point(5, 70);
+            this.chkAll.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkAll.Name = "chkAll";
             this.chkAll.Properties.Caption = "";
-            this.chkAll.Size = new System.Drawing.Size(17, 19);
+            this.chkAll.Size = new System.Drawing.Size(20, 19);
             this.chkAll.TabIndex = 8;
             this.chkAll.CheckedChanged += new System.EventHandler(this.chkAll_CheckedChanged);
             // 
@@ -191,10 +194,10 @@ namespace toolVanDao
             this.btn_loaddata.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_loaddata.Appearance.Options.UseFont = true;
             this.btn_loaddata.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_loaddata.ImageOptions.Image")));
-            this.btn_loaddata.Location = new System.Drawing.Point(664, 46);
+            this.btn_loaddata.Location = new System.Drawing.Point(775, 57);
             this.btn_loaddata.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_loaddata.Name = "btn_loaddata";
-            this.btn_loaddata.Size = new System.Drawing.Size(90, 38);
+            this.btn_loaddata.Size = new System.Drawing.Size(105, 47);
             this.btn_loaddata.TabIndex = 6;
             this.btn_loaddata.Text = "Tải dữ liệu";
             this.btn_loaddata.Click += new System.EventHandler(this.btn_loaddata_Click);
@@ -202,34 +205,34 @@ namespace toolVanDao
             // btn_get
             // 
             this.btn_get.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_get.ImageOptions.Image")));
-            this.btn_get.Location = new System.Drawing.Point(362, 46);
+            this.btn_get.Location = new System.Drawing.Point(422, 57);
             this.btn_get.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_get.Name = "btn_get";
-            this.btn_get.Size = new System.Drawing.Size(65, 38);
+            this.btn_get.Size = new System.Drawing.Size(76, 47);
             this.btn_get.TabIndex = 2;
             this.btn_get.Text = "Lấy";
             this.btn_get.Click += new System.EventHandler(this.btn_get_Click);
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(433, 37);
+            this.labelControl3.Location = new System.Drawing.Point(505, 46);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(61, 13);
+            this.labelControl3.Size = new System.Drawing.Size(79, 17);
             this.labelControl3.TabIndex = 5;
             this.labelControl3.Text = "Dải hóa đơn:";
             // 
             // searchLookUpEdit1
             // 
             this.searchLookUpEdit1.EditValue = "[Chưa chọn dải hóa đơn]";
-            this.searchLookUpEdit1.Location = new System.Drawing.Point(433, 55);
+            this.searchLookUpEdit1.Location = new System.Drawing.Point(505, 68);
             this.searchLookUpEdit1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchLookUpEdit1.Name = "searchLookUpEdit1";
             this.searchLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.searchLookUpEdit1.Properties.NullText = "[Chưa chọn dải hóa đơn]";
             this.searchLookUpEdit1.Properties.View = this.searchLookUpEdit1View;
-            this.searchLookUpEdit1.Size = new System.Drawing.Size(107, 20);
+            this.searchLookUpEdit1.Size = new System.Drawing.Size(125, 22);
             this.searchLookUpEdit1.TabIndex = 3;
             this.searchLookUpEdit1.EditValueChanged += new System.EventHandler(this.searchLookUpEdit1_EditValueChanged);
             // 
@@ -242,19 +245,19 @@ namespace toolVanDao
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(134, 37);
+            this.labelControl2.Location = new System.Drawing.Point(156, 46);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(51, 13);
+            this.labelControl2.Size = new System.Drawing.Size(65, 17);
             this.labelControl2.TabIndex = 3;
             this.labelControl2.Text = "Đến ngày:";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(27, 37);
+            this.labelControl1.Location = new System.Drawing.Point(31, 46);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(44, 13);
+            this.labelControl1.Size = new System.Drawing.Size(57, 17);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Từ ngày:";
             this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
@@ -262,36 +265,36 @@ namespace toolVanDao
             // checkedListBoxControl1
             // 
             this.checkedListBoxControl1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.checkedListBoxControl1.Location = new System.Drawing.Point(0, 93);
+            this.checkedListBoxControl1.Location = new System.Drawing.Point(0, 114);
             this.checkedListBoxControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBoxControl1.Name = "checkedListBoxControl1";
-            this.checkedListBoxControl1.Size = new System.Drawing.Size(759, 187);
+            this.checkedListBoxControl1.Size = new System.Drawing.Size(885, 230);
             this.checkedListBoxControl1.TabIndex = 7;
             // 
             // txtPath
             // 
-            this.txtPath.Location = new System.Drawing.Point(27, 303);
+            this.txtPath.Location = new System.Drawing.Point(31, 373);
             this.txtPath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPath.Name = "txtPath";
-            this.txtPath.Size = new System.Drawing.Size(233, 20);
+            this.txtPath.Size = new System.Drawing.Size(272, 22);
             this.txtPath.TabIndex = 8;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(27, 284);
+            this.labelControl4.Location = new System.Drawing.Point(31, 350);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(60, 13);
+            this.labelControl4.Size = new System.Drawing.Size(73, 17);
             this.labelControl4.TabIndex = 5;
             this.labelControl4.Text = "Vị trí lưu file:";
             // 
             // btn_Path
             // 
             this.btn_Path.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Path.ImageOptions.Image")));
-            this.btn_Path.Location = new System.Drawing.Point(266, 292);
+            this.btn_Path.Location = new System.Drawing.Point(310, 359);
             this.btn_Path.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Path.Name = "btn_Path";
-            this.btn_Path.Size = new System.Drawing.Size(73, 38);
+            this.btn_Path.Size = new System.Drawing.Size(85, 47);
             this.btn_Path.TabIndex = 9;
             this.btn_Path.Text = "Chọn";
             this.btn_Path.Click += new System.EventHandler(this.btn_Path_Click);
@@ -299,10 +302,10 @@ namespace toolVanDao
             // btn_download
             // 
             this.btn_download.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_download.ImageOptions.Image")));
-            this.btn_download.Location = new System.Drawing.Point(664, 285);
+            this.btn_download.Location = new System.Drawing.Point(766, 351);
             this.btn_download.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_download.Name = "btn_download";
-            this.btn_download.Size = new System.Drawing.Size(98, 38);
+            this.btn_download.Size = new System.Drawing.Size(114, 47);
             this.btn_download.TabIndex = 10;
             this.btn_download.Text = "Tải File XML";
             this.btn_download.Click += new System.EventHandler(this.btn_download_Click);
@@ -316,19 +319,19 @@ namespace toolVanDao
             // Btn_Download_PDF
             // 
             this.Btn_Download_PDF.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Download_PDF.ImageOptions.Image")));
-            this.Btn_Download_PDF.Location = new System.Drawing.Point(546, 285);
+            this.Btn_Download_PDF.Location = new System.Drawing.Point(637, 351);
             this.Btn_Download_PDF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Download_PDF.Name = "Btn_Download_PDF";
-            this.Btn_Download_PDF.Size = new System.Drawing.Size(98, 38);
+            this.Btn_Download_PDF.Size = new System.Drawing.Size(114, 47);
             this.Btn_Download_PDF.TabIndex = 11;
             this.Btn_Download_PDF.Text = "Tải File PDF";
             this.Btn_Download_PDF.Click += new System.EventHandler(this.Btn_Download_PDF_Click);
             // 
             // FormGetXML
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 331);
+            this.ClientSize = new System.Drawing.Size(887, 407);
             this.Controls.Add(this.Btn_Download_PDF);
             this.Controls.Add(this.btn_download);
             this.Controls.Add(this.btn_Path);

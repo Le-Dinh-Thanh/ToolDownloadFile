@@ -936,17 +936,6 @@
 
 
         </member>
-        <member name="M:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.GetDragItemInfo">
-            <summary>
-                <para>Retrieves information about the current position of the dragged WinExplorerView item.
-
-</para>
-            </summary>
-            <returns>A WinExplorerViewDragItemInfo object that stores information about the current position of the dragged WinExplorerView item.
-</returns>
-
-
-        </member>
         <member name="M:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.GetGroupRowDisplayText(System.Int32)">
             <summary>
                 <para>Gets the text displayed within a specific group row.
@@ -1389,11 +1378,10 @@
         </member>
         <member name="P:DevExpress.XtraGrid.Views.WinExplorer.WinExplorerView.Position">
             <summary>
-                <para>Gets or sets the distance that specifies how much this WinExplorerView is scrolled down, counting from the View client area's top edge.
-
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
 </para>
             </summary>
-            <value>An Int32 value that is the distance between the current WinExplorerView viewport and the View top edge.
+            <value> 
 </value>
 
 
@@ -3656,15 +3644,12 @@ Multiple rows can be selected via the mouse and keyboard. Individual cells canno
         </member>
         <member name="M:DevExpress.XtraGrid.Views.Tile.TileViewItem.GetElementByName(System.String)">
             <summary>
-                <para>Retrieves an element from the <see cref="P:DevExpress.XtraEditors.TileItem.Elements"/> collection that has the specified <see cref="P:DevExpress.XtraGrid.Views.Tile.TileViewItemElement.Name"/>.
-</para>
+                <para> </para>
             </summary>
             <param name="name">
-		The target element's name (<see cref="P:DevExpress.XtraGrid.Views.Tile.TileViewItemElement.Name"/>).
-
+		 
             </param>
-            <returns>The element with the specified name.
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -3818,12 +3803,10 @@ Multiple rows can be selected via the mouse and keyboard. Individual cells canno
         </member>
         <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.AssignTileTable(DevExpress.XtraGrid.Views.Tile.TileViewTemplateItem)">
             <summary>
-                <para>Clones all available table layout settings from the specified template item to the current View's template item.
-</para>
+                <para> </para>
             </summary>
             <param name="srcItem">
-		A template item from which to clone table layout settings.
-
+		 
             </param>
 
 
@@ -3971,7 +3954,7 @@ Multiple rows can be selected via the mouse and keyboard. Individual cells canno
         </member>
         <member name="E:DevExpress.XtraGrid.Views.Tile.TileView.CustomItemTemplate">
             <summary>
-                <para>Allows you to assign custom item templates to tiles.
+                <para>Allows you to assign custom item templates to TileView tiles.
 </para>
             </summary>
 
@@ -3982,6 +3965,16 @@ Multiple rows can be selected via the mouse and keyboard. Individual cells canno
                 <para>Allows you to replace default editors in an Edit Form with custom ones.
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.DetailHeight">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
 
 
         </member>
@@ -4078,20 +4071,6 @@ Multiple rows can be selected via the mouse and keyboard. Individual cells canno
 
 
         </member>
-        <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.IsImageColumn(DevExpress.XtraGrid.Columns.TileViewColumn)">
-            <summary>
-                <para>Gets whether the specified column displays images using the <see cref="T:DevExpress.XtraEditors.PictureEdit"/>.
-</para>
-            </summary>
-            <param name="column">
-		A column for which to return whether it displays images.
-
-            </param>
-            <returns><b>true</b>, if the specified column displays images; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
         <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.IsVisible">
             <summary>
                 <para>Gets whether this TileView is currently visible.
@@ -4120,7 +4099,7 @@ Multiple rows can be selected via the mouse and keyboard. Individual cells canno
         </member>
         <member name="E:DevExpress.XtraGrid.Views.Tile.TileView.ItemCustomize">
             <summary>
-                <para>Allows you to customize individual tiles.
+                <para>Allows you to customize individual tiles within this TileView.
 </para>
             </summary>
 
@@ -4291,11 +4270,9 @@ Multiple rows can be selected via the mouse and keyboard. Individual cells canno
         </member>
         <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.OptionsList">
             <summary>
-                <para>Contains options related to the <see cref="F:DevExpress.XtraGrid.Views.Tile.TileViewLayoutMode.List"/> layout mode.
-</para>
+                <para> </para>
             </summary>
-            <value>Options related to the <see cref="F:DevExpress.XtraGrid.Views.Tile.TileViewLayoutMode.List"/> layout mode.
-</value>
+            <value> </value>
 
 
         </member>
@@ -4331,11 +4308,9 @@ Multiple rows can be selected via the mouse and keyboard. Individual cells canno
         </member>
         <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.OptionsView">
             <summary>
-                <para>Contains options that affect the general appearance of the Tile View.
-</para>
+                <para> </para>
             </summary>
-            <value>The options that control the general appearance of the Tile View.
-</value>
+            <value> </value>
 
 
         </member>
@@ -4423,8 +4398,7 @@ Multiple rows can be selected via the mouse and keyboard. Individual cells canno
         </member>
         <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.Templates">
             <summary>
-                <para>Provides access to the collection of tile templates.
-</para>
+                <para> </para>
             </summary>
             <value> </value>
 
@@ -4432,37 +4406,31 @@ Multiple rows can be selected via the mouse and keyboard. Individual cells canno
         </member>
         <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.TileColumns">
             <summary>
-                <para>Provides access to the collection of columns into which tile elements are arranged.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="TableColumnDefinitionCollection"/> object that specifies the collection of columns into which tile elements are arranged.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.TileRows">
             <summary>
-                <para>Provides access to the collection of rows into which tile elements are arranged.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="TableRowDefinitionCollection"/> object that specifies the collection of rows into which tile elements are arranged.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.TileSpans">
             <summary>
-                <para>Provides access to the collection of cell spans within the table where tile elements are arranged.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="TableSpanCollection"/> object that specifies the collection of cell spans within the table where tile elements are arranged.
-</value>
+            <value> </value>
 
 
         </member>
         <member name="P:DevExpress.XtraGrid.Views.Tile.TileView.TileTemplate">
             <summary>
-                <para>Provides access to the template from which all tiles are generated by default.
+                <para>Provides access to the template applied to all <see cref="T:DevExpress.XtraGrid.Views.Tile.TileViewItem"/>s in this TileView.
 </para>
             </summary>
             <value>A <see cref="TileItemElementCollection"/> object that is the template applied to all <see cref="T:DevExpress.XtraGrid.Views.Tile.TileViewItem"/>s in this TileView.
@@ -5232,33 +5200,22 @@ If all values in the date-time column are set to <b>null</b>, all check boxes ar
         </member>
         <member name="F:DevExpress.XtraGrid.Columns.FilterPopupMode.Default">
             <summary>
-                <para>The actual display mode is determined by the View's <b>OptionsFilter.ColumnFilterPopupMode</b> (<see cref="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.ColumnFilterPopupMode"/>) property.
-<para>
-If the View's <b>OptionsFilter.ColumnFilterPopupMode</b> property is set to <b>Classic</b>:
-</para>
-<list>
-<item><term>for date-time columns, filter dropdowns are painted in <b>FilterPopupMode.DateSmart</b> mode;
-</term></item>
-<item><term>for all other columns, filter dropdowns are painted in <b>FilterPopupMode.List</b> mode.
-</term></item>
-</list>
+                <para>The actual display mode is determined by the View's <b>OptionsFilter.ColumnFilterPopupMode</b> (<see cref="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.ColumnFilterPopupMode"/>) property. 
 
 <para>
-If the View's <b>OptionsFilter.ColumnFilterPopupMode</b> property is set to <b>Default</b> (which is the initial value):
+If the View's <b>OptionsFilter.ColumnFilterPopupMode</b> property is set to <b>Default</b> (which is the initial value), the column filter dropdown style is determined by the <see cref="P:DevExpress.XtraEditors.WindowsFormsSettings.ColumnFilterPopupMode"/> global setting.
 </para>
-<list>
-<item><term>the column filter dropdown style is determined by the <see cref="P:DevExpress.XtraEditors.WindowsFormsSettings.ColumnFilterPopupMode"/> global setting.
-</term></item>
-</list>
 
 <para>
-If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to <b>Default</b> (which is the initial value): 
+If <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to <b>Default</b> (which is the initial value), the <b>Classic</b> filter dropdown styles are applied:
 </para>
+
 <list>
-<item><term>the <b>Excel</b> filter dropdown style is applied.
+<item><term>for date-time columns, filter dropdowns are painted in <b>FilterPopupMode.DateSmart</b> mode
+</term></item>
+<item><term>for all other columns, filter dropdowns are painted in <b>FilterPopupMode.List</b> mode
 </term></item>
 </list>
-
 </para>
             </summary>
 
@@ -5398,7 +5355,7 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
         </member>
         <member name="P:DevExpress.XtraGrid.WinExplorer.WinExplorerViewOptionsImageLoad.DesiredThumbnailSize">
             <summary>
-                <para>Gets or sets the desired size of thumbnail images, created during the Asynchronous Image Load in WinExplorer and Tile Views.
+                <para>Gets or sets the desired size of thumbnail images, created during the Asynchronous Image Load.
 </para>
             </summary>
             <value>A Size structure that is the desired thumbnail image size.
@@ -5516,6 +5473,202 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
 
 
         </member>
+        <member name="T:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior">
+
+            <summary>
+                <para>Serves as the base for classes which provide behavior options for Views.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.#ctor">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior"/> class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.#ctor(DevExpress.XtraGrid.Views.Base.ColumnView)">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior"/> class with the specified owning View.
+</para>
+            </summary>
+            <param name="view">
+		A <see cref="T:DevExpress.XtraGrid.Views.Base.ColumnView"/> object whose behavior options are initialized.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.AllowAddRows">
+            <summary>
+                <para>Gets or sets whether the Data Navigator's Append button is enabled for the current View.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value that specifies whether the Data Navigator's Append button is enabled for the current View.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.AllowDeleteRows">
+            <summary>
+                <para>Gets or sets whether the Data Navigator's Delete button is enabled for the current View.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value that specifies whether the Data Navigator's Delete button is enabled for the current View.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.Assign(DevExpress.Utils.Controls.BaseOptions)">
+            <summary>
+                <para>Copies all the settings of the options object passed as this method's parameter to the current object.
+</para>
+            </summary>
+            <param name="options">
+		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> descendant whose settings are assigned to the current object.
+
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.AutoPopulateColumns">
+            <summary>
+                <para>Gets or sets whether columns should be created automatically for all fields in the underlying data source when the View doesn't contain any columns. When bound to a business object, the grid does not generate columns for properties of collection types.
+</para>
+            </summary>
+            <value><b>true</b>, if the columns are created automatically when the View doesn't contain any columns; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.AutoSelectAllInEditor">
+            <summary>
+                <para>Gets or sets whether activating a cell editor using the ENTER or F2 keys leads to the entire editor's content being selected.
+</para>
+            </summary>
+            <value><b>true</b> to select the entire cell's content when editing starts; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.CacheValuesOnRowUpdating">
+            <summary>
+                <para>Gets or sets whether the grid caches data for a row that is about to be saved to a data source. 
+</para>
+            </summary>
+            <value>A DevExpress.Data.CacheRowValesMode value that specifies the caching mode.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.Editable">
+            <summary>
+                <para>Gets or sets whether end-users are allowed to invoke cell editors.
+</para>
+            </summary>
+            <value><b>true</b> if end-users are allowed to invoke cell editors; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.EditorShowMode">
+            <summary>
+                <para>Gets or sets a value which specifies how a cell editor is activated by the mouse.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.EditorShowMode"/> enumeration value which specifies how a cell editor is activated by the mouse.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.FocusLeaveOnTab">
+            <summary>
+                <para>Gets or sets whether pressing the TAB key moves focus to the next control in the tab order, if moving focus via the TAB key within the View is prohibited (or cannot be performed).
+
+</para>
+            </summary>
+            <value><b>true</b> to allow focus to be moved away from the grid control when the TAB key is pressed; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.ImmediateUpdateRowPosition">
+            <summary>
+                <para>Gets or sets whether a row's position is immediately updated according to the current sorting, grouping and filtering settings after the row's modified data has been posted.
+
+</para>
+            </summary>
+            <value><b>true</b>, if a row's position is immediately updated after its data has been modified; otherwise, <b>false</b>. 
+
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.KeepFocusedRowOnUpdate">
+            <summary>
+                <para>Gets or sets whether the currently focused row retains focus when data is sorted, grouped or filtered or when records are added to/removed from the underlying data source.
+</para>
+            </summary>
+            <value><b>true</b> if the currently focused row retains focus when data is sorted, grouped or filtered or when records are added to/removed from the underlying data source; <b>false</b> if the focused row handle (visual position) is kept when these actions are performed.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.ReadOnly">
+            <summary>
+                <para>Gets or sets whether the current View is read-only.
+</para>
+            </summary>
+            <value><b>true</b> if the current View is read-only; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.ShowAllTableValuesInFilterPopup">
+            <summary>
+                <para>Gets or sets whether the filter dropdowns should contain unique values from all the records in the View's data source or only from those records that meet the current filter criteria.
+</para>
+            </summary>
+            <value><b>true</b> if filter dropdowns should contain unique values from all the records in the View's data source; <b>false</b> if the filter dropdowns of unfiltered columns should contain unique values only from the records that meet the current filter criteria.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.ShowEditorOnMouseUp">
+            <summary>
+                <para>Gets or sets whether a cell's editor is activated when the mouse button is released from a click within the cell.
+</para>
+            </summary>
+            <value><b>true</b> to activate a cell's editor when the mouse button is released from a click within the cell; <b>false</b> to activate a cell's editor when the mouse button is initially pressed within the cell.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.UnboundColumnExpressionEditorMode">
+            <summary>
+                <para>Gets or sets the type of unbound expression editor that end-users can utilize to modify expressions for unbound columns owned by this View.
+</para>
+            </summary>
+            <value>An <see cref="ExpressionEditorMode"/> enumeration value that specifies the type of unbound expression editor end-users can utilize for unbound columns within this View.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.UseNewCustomFilterDialog">
+            <summary>
+                <para>Gets or sets whether the advanced custom filter dialog is used instead of the standard one.
+</para>
+            </summary>
+            <value><b>true</b> to use the advanced custom filter dialog; <b>false</b> to use the standard filter dialog.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraGrid.Views.Tile.TileViewItemOptions">
 
             <summary>
@@ -5572,7 +5725,7 @@ If the <b>WindowsFormsSettings.ColumnFilterPopupMode</b> property is also set to
         <member name="P:DevExpress.XtraGrid.Views.Tile.TileViewItemOptions.ColumnCount">
             <summary>
                 <para><para>
-In <see cref="F:DevExpress.XtraGrid.Views.Tile.TileViewLayoutMode.Default"/> mode, this property specifies the maximum number of columns to accommodate tiles.
+In <see cref="F:DevExpress.XtraGrid.Views.Tile.TileViewLayoutMode.Default"/> mode, this property specifies the maximum number of columns medium-sized tiles can occupy within this <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/>.
 </para>
 <para>
 In <see cref="F:DevExpress.XtraGrid.Views.Tile.TileViewLayoutMode.List"/> mode, this property specifies the number of columns to accommodate tiles.
@@ -5589,42 +5742,12 @@ The <b>ColumnCount</b> property is in effect when the <see cref="P:DevExpress.Xt
 
 
         </member>
-        <member name="P:DevExpress.XtraGrid.Views.Tile.TileViewItemOptions.DefaultIndentBetweenGroups">
-            <summary>
-                <para>Gets the default distance between neighboring tile groups.
-</para>
-            </summary>
-            <value>An integer value that is the default distance between neighboring tile groups.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Tile.TileViewItemOptions.DefaultIndentBetweenItems">
-            <summary>
-                <para>Gets the default distance between neighboring tiles within this <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/>.
-</para>
-            </summary>
-            <value>An integer vaule that is the default distance between neighboring tiles within this <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/>.
-</value>
-
-
-        </member>
         <member name="P:DevExpress.XtraGrid.Views.Tile.TileViewItemOptions.DefaultItemPadding">
             <summary>
                 <para>Returns the default tile padding.
 </para>
             </summary>
             <value>A Padding(12, 8, 12, 8) structure that is the default tile padding.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Tile.TileViewItemOptions.DefaultItemSize">
-            <summary>
-                <para>Gets the default size of tiles within this <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/>.
-</para>
-            </summary>
-            <value>A Size structure that is the default size of tiles within this <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/>.
 </value>
 
 
@@ -5787,7 +5910,7 @@ The <b>ColumnCount</b> property is in effect when the <see cref="P:DevExpress.Xt
         <member name="P:DevExpress.XtraGrid.Views.Tile.TileViewItemOptions.RowCount">
             <summary>
                 <para><para>
-In <see cref="F:DevExpress.XtraGrid.Views.Tile.TileViewLayoutMode.Default"/> mode, this property specifies the maximum number of rows to accommodate tiles.
+In <see cref="F:DevExpress.XtraGrid.Views.Tile.TileViewLayoutMode.Default"/> mode, this property specifies the maximum number of rows medium-sized tiles can occupy within this <see cref="T:DevExpress.XtraGrid.Views.Tile.TileView"/>.
 </para>
 <para>
 In <see cref="F:DevExpress.XtraGrid.Views.Tile.TileViewLayoutMode.List"/> mode, this property specifies the number of rows to accommodate tiles.
@@ -6713,11 +6836,9 @@ The <b>RowCount</b> property is in effect when the <see cref="P:DevExpress.XtraG
         </member>
         <member name="P:DevExpress.XtraGrid.Views.Tile.TileViewItemElement.Name">
             <summary>
-                <para>Gets or sets the element's name.
-</para>
+                <para> </para>
             </summary>
-            <value>The element's name.
-</value>
+            <value> </value>
 
 
         </member>
@@ -7084,17 +7205,6 @@ The <b>RowCount</b> property is in effect when the <see cref="P:DevExpress.XtraG
 
 
         </member>
-        <member name="P:DevExpress.XtraGrid.WinExplorer.WinExplorerViewOptionsView.ShowDropMark">
-            <summary>
-                <para>Gets or sets whether or not the WinExplorerViewOptionsView should highlight the item drop position.
-
-</para>
-            </summary>
-            <value><b>true</b>, to highlight an item drop position; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
         <member name="P:DevExpress.XtraGrid.WinExplorer.WinExplorerViewOptionsView.ShowExpandCollapseButtons">
             <summary>
                 <para>Gets or sets whether the group expand/collapse button should be displayed.
@@ -7404,11 +7514,9 @@ The <b>RowCount</b> property is in effect when the <see cref="P:DevExpress.XtraG
         </member>
         <member name="P:DevExpress.XtraGrid.Views.Grid.FilterPopupExcelEventArgs.DefaultFilterType">
             <summary>
-                <para>Gets or sets the filter operator selected by default in the Filters tab.
-</para>
+                <para> </para>
             </summary>
-            <value>A <see cref="CustomUIFilterType"/> enumeration value that specifies the filter operator used by default.
-</value>
+            <value> </value>
 
 
         </member>
@@ -9681,16 +9789,6 @@ The <b>RowCount</b> property is in effect when the <see cref="P:DevExpress.XtraG
 
 
         </member>
-        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewField.OptionsPrint">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
         <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewField.RepositoryItem">
             <summary>
                 <para>Gets the repository item specifying the editor used to edit the current field's cell values. 
@@ -11157,16 +11255,6 @@ The <b>RowCount</b> property is in effect when the <see cref="P:DevExpress.XtraG
 
 
         </member>
-        <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewCard.OptionsPrint">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
         <member name="P:DevExpress.XtraGrid.Views.Layout.LayoutViewCard.Owner">
             <summary>
                 <para>Returns the owner of this LayoutViewCard.
@@ -12035,8 +12123,7 @@ The <b>RowCount</b> property is in effect when the <see cref="P:DevExpress.XtraG
         <member name="T:DevExpress.XtraGrid.Views.Grid.GridOptionsFilter">
 
             <summary>
-                <para>Provides access to Data Grid filtering options.
-</para>
+                <para> </para>
             </summary>
 
         </member>
@@ -12771,11 +12858,9 @@ Currently this option is the same as the <b>GridView</b> option
         </member>
         <member name="M:DevExpress.XtraGrid.Columns.TileViewColumns.ToString">
             <summary>
-                <para>Returns the textual representation of the current TileViewColumns object.
-</para>
+                <para> </para>
             </summary>
-            <returns>A <see cref="T:System.String"/> value, which is the textual representation of the current TileViewColumns object.
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -13155,7 +13240,7 @@ Currently this option is the same as the <b>GridView</b> option
         </member>
         <member name="P:DevExpress.XtraGrid.Views.Tile.TileViewOptionsImageLoad.DesiredThumbnailSize">
             <summary>
-                <para>Gets or sets the desired size of thumbnail images created during the Asynchronous Image Load in WinExplorer and Tile Views.
+                <para>Gets or sets the desired size of thumbnail images created during the Asynchronous Image Load.
 </para>
             </summary>
             <value>A Size structure that is the desired thumbnail image size.
@@ -16880,7 +16965,7 @@ For instance, when the PaintStyleName property is set to "Default" and the "Offi
         </member>
         <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.ShowAllTableValuesInFilterPopup">
             <summary>
-                <para>Gets or sets whether filter dropdown lists must display unique values from all the records in the View's data source or only from those records that meet the current filter criteria. This option is in effect for regular and Excel-style Filter Dropdowns.
+                <para>Gets or sets whether filter dropdown lists must display unique values from all the records in the View's data source or only from those records that meet the current filter criteria. This option is in effect for regular and Excel-style filter dropdowns.
 </para>
             </summary>
             <value><b>true</b> if filter dropdowns should contain unique values from all the records in the View's data source; <b>false</b> if the filter dropdowns of unfiltered columns should contain unique values only from the records that meet the current filter criteria.
@@ -16889,202 +16974,6 @@ For instance, when the PaintStyleName property is set to "Default" and the "Offi
 
         </member>
         <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsFilter.UseNewCustomFilterDialog">
-            <summary>
-                <para>Gets or sets whether the advanced custom filter dialog is used instead of the standard one.
-</para>
-            </summary>
-            <value><b>true</b> to use the advanced custom filter dialog; <b>false</b> to use the standard filter dialog.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior">
-
-            <summary>
-                <para>Serves as the base for classes which provide behavior options for Views.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.#ctor">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior"/> class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.#ctor(DevExpress.XtraGrid.Views.Base.ColumnView)">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior"/> class with the specified owning View.
-</para>
-            </summary>
-            <param name="view">
-		A <see cref="T:DevExpress.XtraGrid.Views.Base.ColumnView"/> object whose behavior options are initialized.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.AllowAddRows">
-            <summary>
-                <para>Gets or sets whether the Data Navigator's Append button is enabled for the current View.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value that specifies whether the Data Navigator's Append button is enabled for the current View.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.AllowDeleteRows">
-            <summary>
-                <para>Gets or sets whether the Data Navigator's Delete button is enabled for the current View.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value that specifies whether the Data Navigator's Delete button is enabled for the current View.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.Assign(DevExpress.Utils.Controls.BaseOptions)">
-            <summary>
-                <para>Copies all the settings of the options object passed as this method's parameter to the current object.
-</para>
-            </summary>
-            <param name="options">
-		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> descendant whose settings are assigned to the current object.
-
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.AutoPopulateColumns">
-            <summary>
-                <para>Gets or sets whether columns should be created automatically for all fields in the underlying data source when the View doesn't contain any columns. When bound to a business object, the grid does not generate columns for properties of collection types.
-</para>
-            </summary>
-            <value><b>true</b>, if the columns are created automatically when the View doesn't contain any columns; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.AutoSelectAllInEditor">
-            <summary>
-                <para>Gets or sets whether activating a cell editor using the ENTER or F2 keys leads to the entire editor's content being selected.
-</para>
-            </summary>
-            <value><b>true</b> to select the entire cell's content when editing starts; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.CacheValuesOnRowUpdating">
-            <summary>
-                <para>Gets or sets whether the grid caches data for a row that is about to be saved to a data source. 
-</para>
-            </summary>
-            <value>A DevExpress.Data.CacheRowValesMode value that specifies the caching mode.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.Editable">
-            <summary>
-                <para>Gets or sets whether end-users are allowed to invoke cell editors.
-</para>
-            </summary>
-            <value><b>true</b> if end-users are allowed to invoke cell editors; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.EditorShowMode">
-            <summary>
-                <para>Gets or sets a value which specifies how a cell editor is activated by the mouse.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.EditorShowMode"/> enumeration value which specifies how a cell editor is activated by the mouse.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.FocusLeaveOnTab">
-            <summary>
-                <para>Gets or sets whether pressing the TAB key moves focus to the next control in the tab order, if moving focus via the TAB key within the View is prohibited (or cannot be performed).
-
-</para>
-            </summary>
-            <value><b>true</b> to allow focus to be moved away from the grid control when the TAB key is pressed; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.ImmediateUpdateRowPosition">
-            <summary>
-                <para>Gets or sets whether a row's position is immediately updated according to the current sorting, grouping and filtering settings after the row's modified data has been posted.
-
-</para>
-            </summary>
-            <value><b>true</b>, if a row's position is immediately updated after its data has been modified; otherwise, <b>false</b>. 
-
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.KeepFocusedRowOnUpdate">
-            <summary>
-                <para>Gets or sets whether the currently focused row retains focus when data is sorted, grouped or filtered or when records are added to/removed from the underlying data source. Disabling this property is in effect when the data source is not managed by the CurrencyManager (see <see cref="P:DevExpress.XtraGrid.Views.Base.ColumnView.DisableCurrencyManager"/>).
-</para>
-            </summary>
-            <value><b>true</b> if the currently focused row retains focus when data is sorted, grouped or filtered or when records are added to/removed from the underlying data source; <b>false</b> if the focused row handle (visual position) is kept when these actions are performed.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.ReadOnly">
-            <summary>
-                <para>Gets or sets whether the current View is read-only.
-</para>
-            </summary>
-            <value><b>true</b> if the current View is read-only; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.ShowAllTableValuesInFilterPopup">
-            <summary>
-                <para>Gets or sets whether the filter dropdowns should contain unique values from all the records in the View's data source or only from those records that meet the current filter criteria.
-</para>
-            </summary>
-            <value><b>true</b> if filter dropdowns should contain unique values from all the records in the View's data source; <b>false</b> if the filter dropdowns of unfiltered columns should contain unique values only from the records that meet the current filter criteria.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.ShowEditorOnMouseUp">
-            <summary>
-                <para>Gets or sets whether a cell's editor is activated when the mouse button is released from a click within the cell.
-</para>
-            </summary>
-            <value><b>true</b> to activate a cell's editor when the mouse button is released from a click within the cell; <b>false</b> to activate a cell's editor when the mouse button is initially pressed within the cell.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.UnboundColumnExpressionEditorMode">
-            <summary>
-                <para>Gets or sets the type of unbound expression editor that end-users can utilize to modify expressions for unbound columns owned by this View.
-</para>
-            </summary>
-            <value>An <see cref="ExpressionEditorMode"/> enumeration value that specifies the type of unbound expression editor end-users can utilize for unbound columns within this View.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGrid.Views.Base.ColumnViewOptionsBehavior.UseNewCustomFilterDialog">
             <summary>
                 <para>Gets or sets whether the advanced custom filter dialog is used instead of the standard one.
 </para>
@@ -17153,13 +17042,11 @@ For instance, when the PaintStyleName property is set to "Default" and the "Offi
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraGrid.Columns.OptionsColumnFilter.#ctor(DevExpress.XtraGrid.Columns.GridColumn)">
+        <member name="M:DevExpress.XtraGrid.Columns.OptionsColumnFilter.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the OptionsColumnFilter class with default settings.
+</para>
             </summary>
-            <param name="column">
-		 
-            </param>
 
 
         </member>
@@ -17280,7 +17167,7 @@ It specifies whether selecting a date or date range via the embedded calendar fi
         </member>
         <member name="P:DevExpress.XtraGrid.Columns.OptionsColumnFilter.ImmediateUpdatePopupExcelFilter">
             <summary>
-                <para>Gets or sets whether filter conditions immediately apply to data, or only when the filter dropdown closes. This property is in effect for the Excel-inspired Filter Dropdown.
+                <para>Gets or sets whether filter conditions immediately apply to data, or only when the filter dropdown closes. This property is in effect for the Excel style filter dropdown.
 
 </para>
             </summary>
@@ -17292,28 +17179,28 @@ It specifies whether selecting a date or date range via the embedded calendar fi
         </member>
         <member name="P:DevExpress.XtraGrid.Columns.OptionsColumnFilter.PopupExcelFilterDateTimeValuesTabFilterType">
             <summary>
-                <para>Gets or sets the type of filtering UI used to create filters in the Values tab in the Excel-inspired Filter Dropdown (if the current column contains date-time values).
+                <para>Gets or sets the type of filtering UI used to create filters in the Values tab in the Excel-inspired filter dropdown (if the current column is of the date-time data type).
 
 </para>
             </summary>
-            <value>The value that specifies the type of filtering UI in the Values tab in the Excel-inspired Filter Dropdown.
+            <value>The value that specifies the type of filtering UI in the Values tab in the Excel-inspired filter dropdown.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraGrid.Columns.OptionsColumnFilter.PopupExcelFilterDefaultTab">
             <summary>
-                <para>Gets or sets whether the Values or Filters tab opens by default in the Excel-inspired Filter Dropdown.
+                <para>Gets or sets whether the Values or Filters tab opens by default in the Excel-inspired filter dropdown.
 </para>
             </summary>
-            <value>An <see cref="ExcelFilterDefaultTab"/> enumeration value that specifies whether the Values or Filters tab opens by default in the Excel-inspired Filter Dropdown. By <b>Default</b>,  the opened tab depends on the column data type.
+            <value>An <see cref="ExcelFilterDefaultTab"/> enumeration value that specifies whether the Values or Filters tab opens by default in the Excel-inspired filter dropdown. By <b>Default</b>,  the opened tab depends on the column data type.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraGrid.Columns.OptionsColumnFilter.PopupExcelFilterEnumFilters">
             <summary>
-                <para>Gets or sets whether to show relational operators (equality and inequalities) in the Filters tab of the Excel-inspired Filter Dropdown (if the current column contains enumeration data).
+                <para>Gets or sets whether to show relational operators (equality and inequalities) in the Filters tab of the Excel-inspired filter dropdown (if the current column is of an enumeration data type). 
 
 </para>
             </summary>
@@ -17334,11 +17221,9 @@ It specifies whether selecting a date or date range via the embedded calendar fi
         </member>
         <member name="P:DevExpress.XtraGrid.Columns.OptionsColumnFilter.PopupExcelFilterTextFilters">
             <summary>
-                <para>Gets or sets whether to show relational operators (equality and inequalities) in the Filters tab of the Excel-inspired Filter Dropdown (if the current column contains text data). 
-</para>
+                <para> </para>
             </summary>
-            <value>An <see cref="ExcelFilterTextFilters"/> enumeration value that specifies whether to show relational operators (equality and inequalities) used to create a filter condition in the Filters tab of the Excel-inspired Filter Dropdown. By <b>Default</b>, the relational operators (equality and inequalities) are hidden.
-</value>
+            <value> </value>
 
 
         </member>
@@ -17620,19 +17505,15 @@ It specifies whether selecting a date or date range via the embedded calendar fi
         </member>
         <member name="M:DevExpress.XtraGrid.Columns.GridColumnSortInfoCollection.Add(DevExpress.XtraGrid.Columns.GridColumn[],DevExpress.Data.ColumnSortOrder[])">
             <summary>
-                <para>Adds a new GridMergedColumnSortInfo item to the collection.
-</para>
+                <para> </para>
             </summary>
             <param name="columns">
-		An array of <see cref="T:DevExpress.XtraGrid.Columns.GridColumn"/> objects which will be sorted using the specified sort order. This parameter's value is used to initialize the GridMergedColumnSortInfo.Columns property.
-
+		 
             </param>
             <param name="sortOrders">
-		An array of <see cref="T:DevExpress.Data.ColumnSortOrder"/> values specifying the sort order for the columns. This parameter's value is used to initialize the GridMergedColumnSortInfo.SortOrders property.
-
+		 
             </param>
-            <returns>A GridMergedColumnSortInfo object representing the new element in the collection; <b>null</b> (<b>Nothing</b> in VB) if the object cannot be added to the collection.
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -20360,10 +20241,10 @@ It specifies whether selecting a date or date range via the embedded calendar fi
         </member>
         <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsView.BestFitMode">
             <summary>
-                <para>Gets or sets whether column best-fit resizing operations should prioritize precision or speed.
+                <para>Gets or sets whether column best fit resize operations should prioritize precision or speed.
 </para>
             </summary>
-            <value>A <see cref="GridBestFitMode"/> object that specifies whether column best-fit resizing operations should prioritize precision or speed.
+            <value>A <see cref="GridBestFitMode"/> object that specifies whether column best fit resize operations should prioritize precision or speed.
 
 </value>
 
@@ -21024,16 +20905,6 @@ This option is in effect when the <see cref="P:DevExpress.XtraGrid.Views.Grid.Gr
 
 
         </member>
-        <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsPrint.SplitDataCellAcrossPages">
-            <summary>
-                <para>Gets or sets whether data cells are allowed to be split across pages when printing/exporting.
-</para>
-            </summary>
-            <value><b>true</b>, if data cells are allowed to be split across pages when printing/exporting; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
         <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsPrint.UsePrintStyles">
             <summary>
                 <para>Gets or sets whether print appearances are used when the grid control is printed/exported.
@@ -21637,7 +21508,7 @@ This option is in effect when the <see cref="P:DevExpress.XtraGrid.Views.Grid.Gr
         </member>
         <member name="P:DevExpress.XtraGrid.Views.Grid.GridOptionsBehavior.AlignGroupSummaryInGroupRow">
             <summary>
-                <para>Gets or sets whether to forcibly move group footer summaries (which reside in group footers) to positions in group rows under corresponding column headers. Group footers will be hidden as a result. This feature is supported for the <see cref="T:DevExpress.XtraGrid.Views.Grid.GridView"/> and <see cref="T:DevExpress.XtraGrid.Views.BandedGrid.BandedGridView"/>.
+                <para>Gets or sets whether to forcibly move group footer summaries (which reside in group footers) to positions in group rows under corresponding column headers. Group footers will be hidden as a result.
 </para>
             </summary>
             <value>A value that specifies whether to display group footer summaries in group rows under corresponding column headers. 
@@ -31802,7 +31673,7 @@ Supports numerous editing and data-shaping features, such as summaries, filtrati
                 <para>Gets the collection of controls contained within the control.
 </para>
             </summary>
-            <value>An object representing the collection of controls contained within the grid control.
+            <value>A <see cref="T:System.Windows.Forms.Control.ControlCollection"/> object representing the collection of controls contained within the grid control.
 </value>
 
 
@@ -34585,7 +34456,7 @@ to the specified file in XLSX (MS Excel 2007) format.
         </member>
         <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.FilterPopupExcelData">
             <summary>
-                <para>Allows you to remove and modify items within Excel-styled Filter Dropdowns, as well as add your own custom items that apply specific filtering conditions.
+                <para>Allows you to remove and modify items within Excel-styled filter dropdowns, as well as add your own custom items that will apply specific filtering conditions.
 </para>
             </summary>
 
@@ -36164,7 +36035,7 @@ The <see cref="F:DevExpress.XtraGrid.GridControl.InvalidRowHandle"/> value, if n
         </member>
         <member name="E:DevExpress.XtraGrid.Views.Base.ColumnView.ShowFilterPopupExcel">
             <summary>
-                <para>Allows you to hide specific filtering conditions from the <i>"Filters"</i> tab of the Excel-inspired Filter Dropdown.
+                <para>Allows you to hide specific filtering conditions from the <i>"Filters"</i> tab of an Excel-styled filtering dropdown.
 </para>
             </summary>
 

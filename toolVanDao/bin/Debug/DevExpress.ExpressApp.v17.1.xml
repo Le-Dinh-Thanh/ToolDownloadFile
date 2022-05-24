@@ -2287,17 +2287,17 @@ The SchemaModules node provides access to the list of modules implementing the <
         </member>
         <member name="P:DevExpress.ExpressApp.Model.IModelLayoutItem.MaxSize">
             <summary>
-                <para>Specifies the layout item's maximum size. 
+                <para>Specifies the maximum size of the layout item when the <see cref="P:DevExpress.ExpressApp.Model.IModelLayoutItem.SizeConstraintsType"/> is <b>Custom</b>.
 </para>
             </summary>
-            <value>A <b>System.Drawing.Size</b> object that specifies the maximum size of the layout item.
+            <value>A <b>System.Drawing.Size</b> object that specifies the maximum size of the layout item
 </value>
 
 
         </member>
         <member name="P:DevExpress.ExpressApp.Model.IModelLayoutItem.MinSize">
             <summary>
-                <para>Specifies the layout item's minimum size. 
+                <para>Specifies the minimum size of the layout item when the <see cref="P:DevExpress.ExpressApp.Model.IModelLayoutItem.SizeConstraintsType"/> is <b>Custom</b>.
 </para>
             </summary>
             <value>A <b>System.Drawing.Size</b> object that specifies the minimum size of the layout item.
@@ -2308,7 +2308,6 @@ The SchemaModules node provides access to the list of modules implementing the <
         <member name="P:DevExpress.ExpressApp.Model.IModelLayoutItem.SizeConstraintsType">
             <summary>
                 <para>Specifies the layout item's size constraints type.
-
 </para>
             </summary>
             <value>A <b>XafSizeConstraintsType</b> enumeration value that specifies the layout item's size constraints type.
@@ -2744,30 +2743,6 @@ The SchemaModules node provides access to the list of modules implementing the <
             </summary>
             <value>A string specifying the current Item's shortcut.
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.ExpressApp.Actions.ParametrizedActionExecuteEventHandler">
-
-            <summary>
-                <para>Represents a method that will handle the <see cref="E:DevExpress.ExpressApp.Actions.ParametrizedAction.Execute"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.ExpressApp.Actions.ParametrizedActionExecuteEventHandler.Invoke(System.Object,DevExpress.ExpressApp.Actions.ParametrizedActionExecuteEventArgs)">
-            <summary>
-                <para>Represents a method that will handle the <see cref="E:DevExpress.ExpressApp.Actions.ParametrizedAction.Execute"/> event.
-</para>
-            </summary>
-            <param name="sender">
-		The event sender (typically a <see cref="T:DevExpress.ExpressApp.Actions.ParametrizedAction"/> object).
-
-            </param>
-            <param name="e">
-		A <see cref="T:DevExpress.ExpressApp.Actions.ParametrizedActionExecuteEventArgs"/> object containing data related to the event.
-
-            </param>
 
 
         </member>
@@ -5109,7 +5084,7 @@ The SchemaModules node provides access to the list of modules implementing the <
         </member>
         <member name="P:DevExpress.ExpressApp.Model.IModelListView.AutoExpandAllGroups">
             <summary>
-                <para>Specifies whether all group rows displayed within the List View are automatically expanded after each grouping operation.
+                <para>Specifies whether all group rows displayed within the List View are automatically expanded.
 </para>
             </summary>
             <value><b>true</b>, to expand all group rows; otherwise, <b>false</b>.
@@ -6268,14 +6243,6 @@ The SchemaModules node provides access to the list of modules implementing the <
 		A string that specifies the form text.
 
             </param>
-
-
-        </member>
-        <member name="P:DevExpress.ExpressApp.SystemModule.WindowTemplateController.UpdateWindowCaptionContexts">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>
@@ -7931,21 +7898,20 @@ The SchemaModules node provides access to the list of modules implementing the <
         </member>
         <member name="P:DevExpress.ExpressApp.MessageOptions.CancelDelegate">
             <summary>
-                <para>Specifies a delegate that is executed on a <b>Cancel</b> button click in WinForms applications.
+                <para>Specifies a delegate that is executed on the <b>Cancel</b> button click.
 </para>
             </summary>
-            <value>A <see cref="T:System.Action"/> that is executed on a <b>Cancel</b> button click.
+            <value>A <see cref="T:System.Action"/> that is executed on the <b>Cancel</b> button click.
 </value>
 
 
         </member>
         <member name="P:DevExpress.ExpressApp.MessageOptions.Duration">
             <summary>
-                <para>Specifies the duration of the WinForms Alert and ASP.NET notification display in milliseconds.
+                <para>Specifies the duration of the notification display in milliseconds.
 </para>
             </summary>
-            <value>An integer which specifies the duration of the WinForms <b>Alert</b> and ASP.NET notification display in milliseconds.
-
+            <value>An integer which specifies the duration of the notification display. The value indicates milliseconds.
 
 </value>
 
@@ -10568,14 +10534,6 @@ The SchemaModules node provides access to the list of modules implementing the <
 
 
         </member>
-        <member name="P:DevExpress.ExpressApp.CollectionSourceBase.IsCriteriaApplying">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="P:DevExpress.ExpressApp.CollectionSourceBase.IsCriteriaLocked">
             <summary>
                 <para>For internal use.
@@ -11165,13 +11123,6 @@ Specifies that such format items and the delimiter strings that precede them mus
             <summary>
                 <para>Creates an instance of the <see cref="T:DevExpress.ExpressApp.SystemModule.ListViewProcessCurrentObjectController"/> class.
 </para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.ExpressApp.SystemModule.ListViewProcessCurrentObjectController.CustomHandleProcessSelectedItem">
-            <summary>
-                <para> </para>
             </summary>
 
 
@@ -13162,9 +13113,7 @@ For the List Views used by the Lookup Property Editors, the default value is <b>
         </member>
         <member name="E:DevExpress.ExpressApp.SystemModule.FilterController.SetFilterActionRefreshed">
             <summary>
-                <para>Occurs after the Application Model's <b>Filters</b> node settings (the list of filters and the selected filter item) are applied to the <see cref="P:DevExpress.ExpressApp.SystemModule.FilterController.SetFilterAction"/> and before the current filter is applied to the List View's collection source.
-
-</para>
+                <para> </para>
             </summary>
 
 
@@ -13191,13 +13140,6 @@ For the List Views used by the Lookup Property Editors, the default value is <b>
             <summary>
                 <para>Creates an instance of the <see cref="T:DevExpress.ExpressApp.SystemModule.ShowNavigationItemController"/> class.
 </para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.ExpressApp.SystemModule.ShowNavigationItemController.CustomGetStartupNavigationItem">
-            <summary>
-                <para> </para>
             </summary>
 
 
@@ -16389,7 +16331,7 @@ For the List Views used by the Lookup Property Editors, the default value is <b>
         </member>
         <member name="P:DevExpress.ExpressApp.XafApplication.EnableModelCache">
             <summary>
-                <para>Specifies if the Application Model cache designed to improve the startup speed and performance is enabled.
+                <para>Specifies if the Application Model cache is enabled.
 </para>
             </summary>
             <value><b>true</b>, if the Application Model is cached; otherwise, <b>false</b>.
@@ -17172,14 +17114,6 @@ For the List Views used by the Lookup Property Editors, the default value is <b>
             </summary>
             <value>A <see cref="T:DevExpress.ExpressApp.ShowViewStrategyBase"/> descendant that represents the application's Show View Strategy.
 </value>
-
-
-        </member>
-        <member name="E:DevExpress.ExpressApp.XafApplication.ShowViewStrategyChanged">
-            <summary>
-                <para>Occurs when the <see cref="P:DevExpress.ExpressApp.XafApplication.ShowViewStrategy"/> object is changed.
-</para>
-            </summary>
 
 
         </member>
@@ -18051,6 +17985,30 @@ For the List Views used by the Lookup Property Editors, the default value is <b>
                 <para>Raises the <see cref="E:DevExpress.ExpressApp.Actions.PopupWindowShowAction.Cancel"/> event.
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.ExpressApp.Actions.ParametrizedActionExecuteEventHandler">
+
+            <summary>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.ExpressApp.Actions.ParametrizedAction.Execute"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.ExpressApp.Actions.ParametrizedActionExecuteEventHandler.Invoke(System.Object,DevExpress.ExpressApp.Actions.ParametrizedActionExecuteEventArgs)">
+            <summary>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.ExpressApp.Actions.ParametrizedAction.Execute"/> event.
+</para>
+            </summary>
+            <param name="sender">
+		The event sender (typically a <see cref="T:DevExpress.ExpressApp.Actions.ParametrizedAction"/> object).
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.ExpressApp.Actions.ParametrizedActionExecuteEventArgs"/> object containing data related to the event.
+
+            </param>
 
 
         </member>
@@ -20517,29 +20475,6 @@ For the List Views used by the Lookup Property Editors, the default value is <b>
 
 
         </member>
-        <member name="M:DevExpress.ExpressApp.ListView.CorrectMemberNames(DevExpress.ExpressApp.DC.ITypeInfo,System.Collections.Generic.IList`1,System.Boolean,System.Boolean,System.Boolean)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="objectTypeInfo">
-		 
-            </param>
-            <param name="memberNames">
-		 
-            </param>
-            <param name="addKeyMembers">
-		 
-            </param>
-            <param name="addBraces">
-		 
-            </param>
-            <param name="allowMembersWithExpression">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
         <member name="M:DevExpress.ExpressApp.ListView.CorrectMemberNamesForDataViewMode(DevExpress.ExpressApp.DC.ITypeInfo,System.Collections.Generic.IList`1,System.Boolean,System.Boolean)">
             <summary>
                 <para>For internal use.
@@ -20582,15 +20517,6 @@ For the List Views used by the Lookup Property Editors, the default value is <b>
             </summary>
             <value>An <b>Object</b> representing the current List View's current object.
 </value>
-
-
-        </member>
-        <member name="E:DevExpress.ExpressApp.ListView.CustomizeDisplayableProperties">
-            <summary>
-                <para>Occurs before the <see cref="P:DevExpress.ExpressApp.CollectionSourceBase.DisplayableProperties"/> collection is populated by displayable properties collected from the current List Editor and from ListView model columns settings. 
-
-</para>
-            </summary>
 
 
         </member>
@@ -24172,8 +24098,7 @@ For the List Views used by the Lookup Property Editors, the default value is <b>
         <member name="T:DevExpress.ExpressApp.XafDataViewRecord">
 
             <summary>
-                <para>An abstract class that represents a lightweight read-only data record (a data view) retrieved from a database without loading a complete business object.
-
+                <para>An abstract class that represents a lightweight read-only data record (a data view) retrieved from a database without loading complete business object.
 </para>
             </summary>
 
@@ -24184,7 +24109,7 @@ For the List Views used by the Lookup Property Editors, the default value is <b>
 </para>
             </summary>
             <param name="dataView">
-		A <see cref="T:DevExpress.ExpressApp.XafDataView"/> collection in which a new <b>XafDataViewRecord</b> object is placed.
+		A <see cref="T:DevExpress.ExpressApp.XafDataView"/> collection in which a new .ctor object is placed.
 
             </param>
 
@@ -24192,172 +24117,133 @@ For the List Views used by the Lookup Property Editors, the default value is <b>
         </member>
         <member name="M:DevExpress.ExpressApp.XafDataViewRecord.ContainsMember(System.String)">
             <summary>
-                <para>Indicates whether a property with the specified name is contained in the current <see cref="T:DevExpress.ExpressApp.XafDataView"/>, or not.
-
+                <para>Indicates whether the expression with the specified name is contained in current <see cref="T:DevExpress.ExpressApp.XafDataView"/>, or not.
 </para>
             </summary>
             <param name="name">
-		A string which is the name of a property. 
+		A string which is the name of the expression. 
 
             </param>
-            <returns><b>true</b>, if a property with the specified name is contained in the current <b>XafDataView</b>; otherwise <b>false</b>.
+            <returns><b>true</b>, if the expression with the specified name is contained in current <b>XafDataView</b>; otherwise <b>false</b>.
 </returns>
 
 
         </member>
         <member name="P:DevExpress.ExpressApp.XafDataViewRecord.DataView">
             <summary>
-                <para>Gets the <see cref="T:DevExpress.ExpressApp.XafDataView"/> object that contains the current XafDataViewRecord.
-
+                <para>Gets the <see cref="T:DevExpress.ExpressApp.XafDataView"/> collection contained the current XafDataViewRecord object.
 </para>
             </summary>
-            <value>The <see cref="T:DevExpress.ExpressApp.XafDataView"/> object that contains the current XafDataViewRecord.
-
+            <value>The <see cref="T:DevExpress.ExpressApp.XafDataView"/> collection contained the current XafDataViewRecord object.
 </value>
 
 
         </member>
         <member name="M:DevExpress.ExpressApp.XafDataViewRecord.GetAttributes">
             <summary>
-                <para>Returns a collection of attributes of this instance of the XafDataViewRecord.
-
-</para>
+                <para> </para>
             </summary>
-            <returns>An <b>AttributeCollection</b> object which is a collection of attributes of this instance of the <b>XafDataViewRecord</b>.
-
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.ExpressApp.XafDataViewRecord.GetClassName">
             <summary>
-                <para>Returns a class name of this instance of the XafDataViewRecord.
-</para>
+                <para> </para>
             </summary>
-            <returns>A string which is a class name of this instance of the <b>XafDataViewRecord</b>.
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.ExpressApp.XafDataViewRecord.GetComponentName">
             <summary>
-                <para>Returns a name of this instance of the XafDataViewRecord.
-</para>
+                <para> </para>
             </summary>
-            <returns>A string which is a name of this instance of the <b>XafDataViewRecord</b>.
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.ExpressApp.XafDataViewRecord.GetConverter">
             <summary>
-                <para>Returns a type converter for this instance of the XafDataViewRecord.
-</para>
+                <para> </para>
             </summary>
-            <returns>A <b>TypeConverter</b> object which is a type converter for this instance of the XafDataViewRecord.
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.ExpressApp.XafDataViewRecord.GetDefaultEvent">
             <summary>
-                <para>Returns a default event for this instance of the XafDataViewRecord.
-</para>
+                <para> </para>
             </summary>
-            <returns>A <b>EventDescriptor</b> object which is a default event for this instance of the <b>XafDataViewRecord</b>.
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.ExpressApp.XafDataViewRecord.GetDefaultProperty">
             <summary>
-                <para>Returns a default property for this instance of the XafDataViewRecord.
-</para>
+                <para> </para>
             </summary>
-            <returns>A <b>PropertyDescriptor</b> object which is a default property for this instance of the <b>XafDataViewRecord</b>.
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.ExpressApp.XafDataViewRecord.GetEditor(System.Type)">
             <summary>
-                <para>Returns an editor of the specified type for this instance of the XafDataViewRecord.
-
-</para>
+                <para> </para>
             </summary>
             <param name="editorBaseType">
-		The <b>Type</b> of an editor for this object.
-
+		 
             </param>
-            <returns>An <b>Object</b> which is an editor of the specified type for this instance of the <b>XafDataViewRecord</b>.
-
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.ExpressApp.XafDataViewRecord.GetEvents(System.Attribute[])">
             <summary>
-                <para>Returns a collection of events with the specified attributes for this instance of the XafDataViewRecord.
-
-</para>
+                <para> </para>
             </summary>
             <param name="attributes">
-		An array of the <b>Attribute</b> objects which is used as a filter. 
-
+		 
             </param>
-            <returns>An <b>EventDescriptorCollection</b> object which is the collection of events for this instance of the <b>XafDataViewRecord</b>.
-
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.ExpressApp.XafDataViewRecord.GetEvents">
             <summary>
-                <para>Returns a collection of events for this instance of the XafDataViewRecord.
-</para>
+                <para> </para>
             </summary>
-            <returns>An <b>EventDescriptorCollection</b> object which is the collection of events for this instance of the <b>XafDataViewRecord</b>.
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.ExpressApp.XafDataViewRecord.GetProperties(System.Attribute[])">
             <summary>
-                <para>Returns a collection of properties with the specified attributes for this instance of the XafDataViewRecord.
-</para>
+                <para> </para>
             </summary>
             <param name="attributes">
-		An array of the <b>Attribute</b> objects which is used as a filter. 
-
+		 
             </param>
-            <returns>An <b>PropertyDescriptorCollection</b> object which is the collection of properties for this instance of the <b>XafDataViewRecord</b>.
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.ExpressApp.XafDataViewRecord.GetProperties">
             <summary>
-                <para>Returns a collection of properties for this instance of the XafDataViewRecord.
-</para>
+                <para> </para>
             </summary>
-            <returns>An <b>PropertyDescriptorCollection</b> object which is the collection of properties for this instance of the <b>XafDataViewRecord</b>.
-</returns>
+            <returns> </returns>
 
 
         </member>
         <member name="M:DevExpress.ExpressApp.XafDataViewRecord.GetPropertyOwner(System.ComponentModel.PropertyDescriptor)">
             <summary>
-                <para>Returns an object which is the owner of a property described by the specified property descriptor.
-</para>
+                <para> </para>
             </summary>
             <param name="propertyDescriptor">
-		A <b>PropertyDescriptor</b> object which is a property whose owner is to be found.
-
-
+		 
             </param>
-            <returns>An <b>Object</b> which is the owner of the target property.
-
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -24393,10 +24279,10 @@ For the List Views used by the Lookup Property Editors, the default value is <b>
         </member>
         <member name="P:DevExpress.ExpressApp.XafDataViewRecord.ObjectType">
             <summary>
-                <para>Gets the type of an original business object that are queried by XafDataViewRecord.
+                <para>Gets the type of business objects that are queried by XafDataViewRecord.
 </para>
             </summary>
-            <value>The <b>Type</b> of an original business object that are queried by the data view.
+            <value>The <b>Type</b> of business objects that are queried by the data view.
 </value>
 
 
@@ -25231,13 +25117,11 @@ For the List Views used by the Lookup Property Editors, the default value is <b>
         </member>
         <member name="P:DevExpress.ExpressApp.Actions.CustomizeControlEventArgs.Control">
             <summary>
-                <para>Gets an object that allows you to access the control which is used to display an Action.
-
+                <para>Gets an Action Item which can be used to access the Action's control.
 
 </para>
             </summary>
-            <value>An object that allows you to access the control which is used to display an Action.
-
+            <value>An object is an Action Item which can be used to access the Action's control.
 </value>
 
 
@@ -28339,8 +28223,7 @@ For the List Views used by the Lookup Property Editors, the default value is <b>
         <member name="T:DevExpress.ExpressApp.ModelCacheManager">
 
             <summary>
-                <para>Manages the Application Model cache designed to improve the startup speed and performance.
-
+                <para>Manages the Application Model cache.
 </para>
             </summary>
 
@@ -28358,22 +28241,6 @@ For the List Views used by the Lookup Property Editors, the default value is <b>
 		 
 
             </param>
-
-
-        </member>
-        <member name="P:DevExpress.ExpressApp.ModelCacheManager.FullFileName">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.ExpressApp.ModelCacheManager.ModelCacheName">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
 
 
         </member>
@@ -32027,75 +31894,6 @@ to key/value pairs of the current View Shortcut; otherwise, <b>false</b>.
 
 
         </member>
-        <member name="T:DevExpress.ExpressApp.SystemModule.ObjectCreatingEventArgs">
-
-            <summary>
-                <para>Arguments passed to the <see cref="E:DevExpress.ExpressApp.SystemModule.NewObjectViewController.ObjectCreating"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.ExpressApp.SystemModule.ObjectCreatingEventArgs.#ctor(DevExpress.ExpressApp.IObjectSpace,System.Type)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="objectSpace">
-		 
-            </param>
-            <param name="objectType">
-		 
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.ExpressApp.SystemModule.ObjectCreatingEventArgs.Cancel">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.ExpressApp.SystemModule.ObjectCreatingEventArgs.DisposeObjectSpaceOnCancel">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.ExpressApp.SystemModule.ObjectCreatingEventArgs.NewObject">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.ExpressApp.SystemModule.ObjectCreatingEventArgs.ObjectSpace">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.ExpressApp.SystemModule.ObjectCreatingEventArgs.ObjectType">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.ExpressApp.SystemModule.ObjectCreatingEventArgs.ShowDetailView">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="T:DevExpress.ExpressApp.Utils.ITranslatorProvider">
 
             <summary>
@@ -32811,36 +32609,6 @@ to key/value pairs of the current View Shortcut; otherwise, <b>false</b>.
 </para>
             </summary>
             <value>An Object representing the logon parameters used by the security system.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.ExpressApp.SystemModule.CustomizeShowViewParametersEventArgs">
-
-            <summary>
-                <para>Arguments passed to the <see cref="E:DevExpress.ExpressApp.Notifications.NotificationsController.CustomizeNotificationViewParameters"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.ExpressApp.SystemModule.CustomizeShowViewParametersEventArgs.#ctor(DevExpress.ExpressApp.ShowViewParameters)">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.ExpressApp.SystemModule.CustomizeShowViewParametersEventArgs"/> class.
-</para>
-            </summary>
-            <param name="showViewParameters">
-		A <see cref="T:DevExpress.ExpressApp.ShowViewParameters"/> object that contains the view parameters.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.ExpressApp.SystemModule.CustomizeShowViewParametersEventArgs.ShowViewParameters">
-            <summary>
-                <para>Gets the notification view parameters.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.ExpressApp.ShowViewParameters"/> object that contains the notification view parameters.
 </value>
 
 
@@ -35698,14 +35466,6 @@ to key/value pairs of the current View Shortcut; otherwise, <b>false</b>.
 
 
         </member>
-        <member name="F:DevExpress.ExpressApp.TemplateContext.ApplicationWindowContextName">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
         <member name="M:DevExpress.ExpressApp.TemplateContext.Equals(System.Object)">
             <summary>
                 <para>Determines whether the specified object is equal to the current TemplateContext.
@@ -35730,14 +35490,6 @@ to key/value pairs of the current View Shortcut; otherwise, <b>false</b>.
 
 
         </member>
-        <member name="F:DevExpress.ExpressApp.TemplateContext.FindPopupWindowContextName">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
         <member name="M:DevExpress.ExpressApp.TemplateContext.GetHashCode">
             <summary>
                 <para>Serves as a hash function for the TemplateContext.
@@ -35758,14 +35510,6 @@ to key/value pairs of the current View Shortcut; otherwise, <b>false</b>.
 
 
         </member>
-        <member name="F:DevExpress.ExpressApp.TemplateContext.LogonWindowContextName">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
         <member name="P:DevExpress.ExpressApp.TemplateContext.LookupControl">
             <summary>
                 <para>Represents the lookup control Template context.
@@ -35776,14 +35520,6 @@ to key/value pairs of the current View Shortcut; otherwise, <b>false</b>.
 
 
         </member>
-        <member name="F:DevExpress.ExpressApp.TemplateContext.LookupControlContextName">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
         <member name="P:DevExpress.ExpressApp.TemplateContext.LookupWindow">
             <summary>
                 <para>Represents the lookup window Template context.
@@ -35791,14 +35527,6 @@ to key/value pairs of the current View Shortcut; otherwise, <b>false</b>.
             </summary>
             <value>A <see cref="T:DevExpress.ExpressApp.TemplateContext"/> object representing the lookup window Template context.
 </value>
-
-
-        </member>
-        <member name="F:DevExpress.ExpressApp.TemplateContext.LookupWindowContextName">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
 
 
         </member>
@@ -35822,14 +35550,6 @@ to key/value pairs of the current View Shortcut; otherwise, <b>false</b>.
 
 
         </member>
-        <member name="F:DevExpress.ExpressApp.TemplateContext.NestedFrameContextName">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
         <member name="P:DevExpress.ExpressApp.TemplateContext.PopupWindow">
             <summary>
                 <para>Represents the pop-up window Template context.
@@ -35837,14 +35557,6 @@ to key/value pairs of the current View Shortcut; otherwise, <b>false</b>.
             </summary>
             <value>A <see cref="T:DevExpress.ExpressApp.TemplateContext"/> object representing the pop-up window Template context.
 </value>
-
-
-        </member>
-        <member name="F:DevExpress.ExpressApp.TemplateContext.PopupWindowContextName">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
 
 
         </member>
@@ -35875,14 +35587,6 @@ to key/value pairs of the current View Shortcut; otherwise, <b>false</b>.
             </summary>
             <value>A <see cref="T:DevExpress.ExpressApp.TemplateContext"/> object, representing the view Template context.
 </value>
-
-
-        </member>
-        <member name="F:DevExpress.ExpressApp.TemplateContext.ViewContextName">
-            <summary>
-                <para> </para>
-            </summary>
-            <returns> </returns>
 
 
         </member>
