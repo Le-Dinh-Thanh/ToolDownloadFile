@@ -1,0 +1,84 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="toolVanDao.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UsernameLoginWeb" Type="System.String" Scope="User">
+      <Value Profile="(Default)">THANHLOI</Value>
+    </Setting>
+    <Setting Name="PasswordLoginWeb" Type="System.String" Scope="User">
+      <Value Profile="(Default)">kythuat</Value>
+    </Setting>
+    <Setting Name="MauSo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">01GTKT0/001</Value>
+    </Setting>
+    <Setting Name="KyHieu" Type="System.String" Scope="User">
+      <Value Profile="(Default)">VD/14P</Value>
+    </Setting>
+    <Setting Name="TableInvocie" Type="System.String" Scope="User">
+      <Value Profile="(Default)">HoaDonGtGt</Value>
+    </Setting>
+    <Setting Name="UrlSave" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://0106393463.nextinvoice.vn/api/InvoiceAPI/Save</Value>
+    </Setting>
+    <Setting Name="UrlGetInvoiceByInvoiceAuthId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://0106393463.nextinvoice.vn/api/Invoice/GetById?id=</Value>
+    </Setting>
+    <Setting Name="UrlCommand" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://0106393463.nextinvoice.vn/api/System/ExecuteCommand</Value>
+    </Setting>
+    <Setting Name="Command" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CM00027</Value>
+    </Setting>
+    <Setting Name="svname" Type="System.String" Scope="User">
+      <Value Profile="(Default)">KTMC</Value>
+    </Setting>
+    <Setting Name="txtusername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Login2</Value>
+    </Setting>
+    <Setting Name="txtpassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">123456</Value>
+    </Setting>
+    <Setting Name="authen" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="mau_so" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ky_hieu" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="InvoiceCodeId" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UrlRef" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://0106393463.nextinvoice.vn/api/System/GetDataReferencesByRefId?refId=RF00187</Value>
+    </Setting>
+    <Setting Name="MST" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0106393463</Value>
+    </Setting>
+    <Setting Name="UrlSBM" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Folder" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UrlDownloadXML" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://tracuuhoadon.nextinvoice.vn/Tracuu2/ExportZipFileXML</Value>
+    </Setting>
+    <Setting Name="UrlRef78" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UrlDownloadXml78" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UrlDownloadpdf78" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UrlLogin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://4600240441002.nextinvoice.vn/api/Account/Login</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
