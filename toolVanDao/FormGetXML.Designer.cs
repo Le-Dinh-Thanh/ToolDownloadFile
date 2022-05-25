@@ -302,7 +302,7 @@ namespace toolVanDao
             // btn_download
             // 
             this.btn_download.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_download.ImageOptions.Image")));
-            this.btn_download.Location = new System.Drawing.Point(766, 351);
+            this.btn_download.Location = new System.Drawing.Point(766, 357);
             this.btn_download.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_download.Name = "btn_download";
             this.btn_download.Size = new System.Drawing.Size(114, 47);
@@ -319,7 +319,7 @@ namespace toolVanDao
             // Btn_Download_PDF
             // 
             this.Btn_Download_PDF.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Download_PDF.ImageOptions.Image")));
-            this.Btn_Download_PDF.Location = new System.Drawing.Point(637, 351);
+            this.Btn_Download_PDF.Location = new System.Drawing.Point(637, 357);
             this.Btn_Download_PDF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Download_PDF.Name = "Btn_Download_PDF";
             this.Btn_Download_PDF.Size = new System.Drawing.Size(114, 47);

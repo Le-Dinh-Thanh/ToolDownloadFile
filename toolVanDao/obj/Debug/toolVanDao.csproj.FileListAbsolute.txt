@@ -1429,3 +1429,4 @@ D:\Tool_XML_PDF\tooldowloadfile\toolVanDao\obj\Debug\toolVanDao.csproj.CoreCompi
 D:\Tool_XML_PDF\tooldowloadfile\toolVanDao\obj\Debug\toolVanDao.csproj.CopyComplete
 D:\Tool_XML_PDF\tooldowloadfile\toolVanDao\obj\Debug\toolVanDao.exe
 D:\Tool_XML_PDF\tooldowloadfile\toolVanDao\obj\Debug\toolVanDao.pdb
+D:\Tool_XML_PDF\tooldowloadfile\toolVanDao\obj\Debug\toolVanDao.csprojAssemblyReference.cache
