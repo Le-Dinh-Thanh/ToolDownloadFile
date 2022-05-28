@@ -12,6 +12,8 @@ using toolVanDao.Data;
 using toolVanDao.Services;
 using toolVanDao.Config;
 using Newtonsoft.Json.Linq;
+using System.Diagnostics;
+using System.Threading;
 
 namespace toolVanDao
 {
@@ -24,10 +26,18 @@ namespace toolVanDao
         public string id;
         public string token;
 
+       
+
+        private readonly System.Windows.Forms.Timer _labelUpdateTimer = new System.Windows.Forms.Timer();
+        private readonly Stopwatch _stopwatch = new Stopwatch();
+        private const string TimeFormat = "hh\\ \\:\\ mm\\ \\:\\ ss";
+
         public FormGetXML()
         {
             InitializeComponent();
-
+            _labelUpdateTimer.Interval = 100;
+            _labelUpdateTimer.Tick += Timer_Tick;
+            UpdateDisplay();
         }
        
      
@@ -298,15 +308,20 @@ namespace toolVanDao
             }
 
         }
-        private void Btn_Download_PDF_Click(object sender, EventArgs e) //TẢI PDF HÀNG LOẠT
+        private async void Btn_Download_PDF_Click(object sender, EventArgs e) //TẢI PDF HÀNG LOẠT
         {
+            
             try
             {
-
+                MinvoiceService.tokenSource = new CancellationTokenSource();
 
                 //kiểm tra đường dẫn file
                 if (!string.IsNullOrWhiteSpace(txtPath.Text))
                 {
+                    _stopwatch.Reset();
+                    _stopwatch.Start();
+                    UpdateDisplay();
+                    _labelUpdateTimer.Start();
                     //TT32
                     if (check32.Checked == true && check78.Checked == false)
                     {
@@ -334,7 +349,13 @@ namespace toolVanDao
                             notifyIcon1.Visible = true;
                             notifyIcon1.ShowBalloonTip(5000, "Thông Báo", "Đang tải XML hóa đơn!Vui lòng chờ!", ToolTipIcon.Info);
 
-                            MinvoiceService.DownloadPDF(txtPath.Text, listid, invoiceObjects);
+                            await MinvoiceService.DownloadPDFAsync(txtPath.Text, listid, invoiceObjects);
+
+
+                            _stopwatch.Stop();
+                            UpdateDisplay();
+                            _labelUpdateTimer.Stop();
+
                             if (MinvoiceService.ck == false)
                             {
                                 XtraMessageBox.Show("Tải File hoàn tất", "Thông Báo!", MessageBoxButtons.OK,
@@ -378,10 +399,17 @@ namespace toolVanDao
                             notifyIcon1.Visible = true;
                             notifyIcon1.ShowBalloonTip(5000, "Thông Báo", "Đang tải PDF hóa đơn!Vui lòng chờ!", ToolTipIcon.Info);
 
-                            MinvoiceService.Downloadpdf78(txtPath.Text, listid, invoiceObjects78);
+                            var taipdf = await MinvoiceService.Downloadpdf78(txtPath.Text, listid, invoiceObjects78);
+
+                            _stopwatch.Stop();
+                            UpdateDisplay();
+                            _labelUpdateTimer.Stop();
 
                             if (MinvoiceService.ck == false)
                             {
+                               
+
+
                                 XtraMessageBox.Show("Tải File PDF hoàn tất", "Thông Báo!", MessageBoxButtons.OK,
                               MessageBoxIcon.Information);
                             }
@@ -389,11 +417,14 @@ namespace toolVanDao
                         }
                         else
                         {
+
                             XtraMessageBox.Show("Chưa chọn hóa đơn muốn tải FILE PDF", "Thông Báo", MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
                         }
                     }
 
+
+         
                 }
                 else
                 {
@@ -405,16 +436,21 @@ namespace toolVanDao
             {
                 XtraMessageBox.Show(ex.Message.ToString(), "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+           
         }
-        private void btn_download_Click(object sender, EventArgs e) //TẢI XML HÀNG LOẠT
+        private async void btn_download_Click(object sender, EventArgs e) //TẢI XML HÀNG LOẠT
         {
             try
             {
-
+                MinvoiceService.tokenSource = new CancellationTokenSource();
 
                 //kiểm tra đường dẫn file
                 if (!string.IsNullOrWhiteSpace(txtPath.Text))
                 {
+                    _stopwatch.Reset();
+                    _stopwatch.Start();
+                    UpdateDisplay();
+                    _labelUpdateTimer.Start();
                     //TT32
                     if (check32.Checked == true && check78.Checked == false)
                     {
@@ -442,7 +478,12 @@ namespace toolVanDao
                             notifyIcon1.Icon = SystemIcons.Exclamation;
                             notifyIcon1.Visible = true;
                             notifyIcon1.ShowBalloonTip(5000, "Thông Báo", "Đang tải XML hóa đơn!Vui lòng chờ!", ToolTipIcon.Info);
-                            MinvoiceService.DownloadXML(sobaomat, txtPath.Text);
+                            await MinvoiceService.DownloadXMLAsync(sobaomat, txtPath.Text);
+
+                            _stopwatch.Stop();
+                            UpdateDisplay();
+                            _labelUpdateTimer.Stop();
+
                             if (MinvoiceService.ck == false)
                             {
                                 XtraMessageBox.Show("Tải File hoàn tất", "Thông Báo!", MessageBoxButtons.OK,
@@ -485,7 +526,12 @@ namespace toolVanDao
                             notifyIcon1.Icon = SystemIcons.Exclamation;
                             notifyIcon1.Visible = true;
                             notifyIcon1.ShowBalloonTip(5000, "Thông Báo", "Đang tải XML hóa đơn!Vui lòng chờ!", ToolTipIcon.Info);
-                            MinvoiceService.DownloadXML78(txtPath.Text, listid, invoiceObjects78);
+                            await MinvoiceService.DownloadXML78Async(txtPath.Text, listid, invoiceObjects78);
+
+                            _stopwatch.Stop();
+                            UpdateDisplay();
+                            _labelUpdateTimer.Stop();
+
                             if (MinvoiceService.ck == false)
                             {
                                 XtraMessageBox.Show("Tải File hoàn tất", "Thông Báo!", MessageBoxButtons.OK,
@@ -607,6 +653,19 @@ namespace toolVanDao
             }
         }
 
-       
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            UpdateDisplay();
+        }
+        private void UpdateDisplay()
+        {
+            lblTime.Text = _stopwatch.Elapsed.ToString(TimeFormat);
+        }
+
+        private void btn_stop_Click(object sender, EventArgs e)
+        {
+            
+           MinvoiceService.tokenSource.Cancel();
+        }
     }
 }

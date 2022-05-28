@@ -8,6 +8,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Transactions;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -19,6 +21,9 @@ namespace toolVanDao.Services
     public class MinvoiceService
     {
         public static bool ck = false;
+        public static CancellationTokenSource tokenSource = null;
+       
+
 
         public static WebClient SetupWebClient()
         {
@@ -33,6 +38,7 @@ namespace toolVanDao.Services
             LoginService.CreateAuthorization(webClient, userName, passWord);
             return webClient;
         }
+
 
         public static SqlConnection GetSqlConnectionMisaTest()
         {
@@ -211,14 +217,18 @@ namespace toolVanDao.Services
                     XtraMessageBox.Show(e.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }*/
-        public static void DownloadXML(List<string> sobaomat, string txtPath)
+        public static async Task DownloadXMLAsync(List<string> sobaomat, string txtPath)
         {
             try
             {
                 foreach (var sbm in sobaomat)
                 {
                     ///////////////////////////////
-
+                    CancellationToken tokenAsync = tokenSource.Token;
+                    if (tokenAsync.IsCancellationRequested)
+                    {
+                        break;
+                    }
 
 
                     var webClient = new WebClient
@@ -237,7 +247,7 @@ namespace toolVanDao.Services
                     //var ketqua1 = webClient.UploadString(url, json.ToString());
                     byte[] byteArray = Encoding.ASCII.GetBytes(json.ToString());
 
-                    byte[] ketqua = webClient.UploadData(url, byteArray);
+                    byte[] ketqua = await webClient.UploadDataTaskAsync(url, byteArray);
                     Encoding.ASCII.GetString(ketqua);
 
                     string filenameEncoding = webClient.ResponseHeaders["Content-Disposition"].ToString();
@@ -254,107 +264,34 @@ namespace toolVanDao.Services
                 MessageBoxIcon.Error);
                 
             }
-            ///////////////////////////////////////////////////////
-            //HttpClient client = new HttpClient();
-            //client.BaseAddress = new Uri(url);
-
-            //// Add an Accept header for JSON format.
-            //client.DefaultRequestHeaders.Accept.Add(
-            //new MediaTypeWithQualityHeaderValue("application/json"));
-            //var content = new FormUrlEncodedContent(new[]
-            //{
-            //new KeyValuePair<string, string>("masothue", BaseConfig.MST),
-            //new KeyValuePair<string, string>("sobaomat", sbm.ToString())
-            // });
-            //// List data response.
-            //HttpResponseMessage response = client.PostAsync( "",content).Result;  // Blocking call! Program will wait here until a response is received or a timeout occurs.
-            //if (response.IsSuccessStatusCode)
-            //{
-            //   string fileName = response.Content.Headers.ContentDisposition.FileName;
-
-
-
-
-            //    response.Content = new StreamContent(new FileStream(txtPath+fileName, FileMode.Open, FileAccess.Read));
-            //    response.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment");
-            //    //response.Content.Headers.ContentDisposition.FileName = fileName;
-            //    response.Content.Headers.ContentType = new MediaTypeHeaderValue("application/zip");
-            //    // Parse the response body.
-            //    //var dataObjects = response.Content.ReadAsAsync<IEnumerable<DataObject>>().Result;  //Make sure to add a reference to System.Net.Http.Formatting.dll
-            //    //foreach (var d in dataObjects)
-            //    //{
-            //    //    Console.WriteLine("{0}", d.Name);
-            //    //}
-            //}
-            //else
-            //{
-            //    Console.WriteLine("{0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
-            //}
-
-            ////Make any other calls using HttpClient here.
-
-            ////Dispose once all HttpClient calls are complete. This is not necessary if the containing object will be disposed of; for example in this case the HttpClient instance will be disposed automatically when the application terminates so the following call is superfluous.
-            //client.Dispose();
-
-            //if (String.IsNullOrEmpty(id))
-            //    return Request.CreateResponse(HttpStatusCode.BadRequest);
-
-            //string fileName1;
-            //string localFilePath;
-            //int fileSize;
-
-            ////localFilePath = getFileFromID(result, out fileName1, out fileSize);
-            //fileName1 = response.Content.Headers.ContentDisposition.FileName;
-            ////HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
-            //response.Content = new StreamContent(new FileStream(txtPath+fileName1, FileMode.Open, FileAccess.ReadWrite));
-            //response.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment");
-
-            //response.Content.Headers.ContentType = new MediaTypeHeaderValue("application/zip");
-
-
-
-            //byte[] byteArray = Encoding.ASCII.GetBytes(invoice);
-
-
-
-            //byte[] ketqua = client2.UploadData("http://0103407189.minvoice.com.vn/api/Invoice/InChuyenDoi", byteArray);
-            //Encoding.ASCII.GetString(ketqua);
-
-            //System.IO.File.WriteAllBytes(@"D:\hello.pdf", ketqua);
-            ////FileStream oFS = File.OpenRead(@"top-secret.pdf");
-            ////oFS.Read(ketqua, 0, Convert.ToInt32(oFS.Length));
-
-
-            //FileStream oFS = File.OpenRead(@"D:\hello.pdf");
-            //byte[] baPDF = new byte[oFS.Length];
-
-            //oFS.Read(ketqua, 0, Convert.ToInt32(oFS.Length));
-
-            //pdfViewer1.LoadDocument(oFS);
-
-
-            //JObject jObject = JObject.Parse(result);
-            //if (jObject.ContainsKey("inv_InvoiceAuth_id"))
-            //{
-
-            //}
+           
 
 
 
         }
-        public static void DownloadPDF( string txtPath, List<string> listid, List<InvoiceObject> invoiceObjects)
+        public static async Task DownloadPDFAsync( string txtPath, List<string> listid, List<InvoiceObject> invoiceObjects)
         {
             try
             {
+                int i = 0;
+                var webClient = SetupWebClient();
                 foreach (var id in invoiceObjects)
                 {
+                    
+                    CancellationToken tokenAsync = tokenSource.Token;
+                    if (tokenAsync.IsCancellationRequested)
+                    {
+                        break;
+                    }
+                    i++;
+                    if (i % 2000 == 0)
+                    {
+                        webClient = SetupWebClient();
+                    }
 
-
-
-                    var webClient = SetupWebClient();
                     var url = BaseConfig.UrlDownloadPDF + id.InvInvoiceAuthId;
 
-                    byte[] ketqua = webClient.DownloadData(url);
+                    byte[] ketqua = await webClient.DownloadDataTaskAsync(url);
 
                     //var url = BaseConfig.UrlDownloadXML;
                     ////var ketqua1 = webClient.UploadString(url, json.ToString());
@@ -382,19 +319,30 @@ namespace toolVanDao.Services
 
 
         }
-        public static void DownloadXML78( string txtPath, List<string> listid ,List<InvoiceObject> invoiceObjects78)
+        public static async Task DownloadXML78Async( string txtPath, List<string> listid ,List<InvoiceObject> invoiceObjects78)
         {
             try
             {
+                int i = 0;
+                var webClient = SetupWebClient();
                 foreach (var id78 in invoiceObjects78)
                 {
-                    
-                   
-                  
-                    var webClient = SetupWebClient();
+                    CancellationToken tokenAsync = tokenSource.Token;
+                    if (tokenAsync.IsCancellationRequested)
+                    {
+                        break;
+                    }
+                    i++;
+                    if (i % 2000 == 0)
+                    {
+                        webClient = SetupWebClient();
+                    }
+
+
+
                     var url = BaseConfig.UrlDownloadXml78 + id78.hoadon68id;
 
-                    var ketqua = webClient.DownloadString(url);
+                    var ketqua = await  webClient.DownloadStringTaskAsync(new Uri(url));
                     // Encoding.ASCII.GetString(ketqua);
                     JObject xml = JObject.Parse(ketqua.ToString());
                     XDocument xmlraw=null;
@@ -432,47 +380,14 @@ namespace toolVanDao.Services
 
 
         }
-        public static void Downloadpdf78(string txtPath, List<string> listid, List<InvoiceObject> invoiceObjects78)
+        public static async Task<string> Downloadpdf78(string txtPath, List<string> listid, List<InvoiceObject> invoiceObjects78)
         {
             try
             {
-                foreach (var id78 in invoiceObjects78)
-                {
+      
+                await DownloadPDF78Async(invoiceObjects78, txtPath);
 
-
-
-                    var webClient = SetupWebClient();
-                    var url = BaseConfig.UrlDownloadpdf78 + id78.hoadon68id;
-
-                    byte[] ketqua = webClient.DownloadData(url);
-                     //Encoding.ASCII.GetString(ketqua);
-                    //JObject pdf = JObject.Parse(ketqua.ToString());
-                    //XDocument pdfraw = null;
-
-
-                    //var body = @"";
-                    //request.AddParameter("application/json", body, ParameterType.RequestBody);
-                    //IRestResponse response = client.Execute(request);
-                    //Console.WriteLine(response.Content);
-                    //if (xml["code"].ToString() == "00")
-                    //{
-                    //    JObject xmlJobject = JObject.Parse(xml["data"].ToString());
-                    //    xmlraw = XDocument.Parse(System.Text.Encoding.UTF8.GetString(System.Convert.FromBase64String(xmlJobject["data"].ToString())));
-
-                    //}
-
-
-
-                    //string theDate = id78.ngay_hd.ToString("yyyy-MM-dd");
-                    // DateTime dt = id78.ngay_hd.Date;
-
-                    //string filenameEncoding = webClient.ResponseHeaders["Content-Disposition"].ToString();
-                    //string fileName = filenameEncoding.Substring(filenameEncoding.IndexOf("=") + 1);
-                    string fileName = "sohd_" + id78.shdon + "_" + id78.ngay_hd.ToString("yyyy-MM-dd") + "_" + id78.KyHieu + ".pdf";
-
-                    System.IO.File.WriteAllBytes(txtPath + "\\" + fileName, ketqua);
-
-                }
+              
             }
             catch (Exception e)
             {
@@ -481,7 +396,7 @@ namespace toolVanDao.Services
                 MessageBoxIcon.Error);
 
             }
-
+            return "ok";
 
 
 
@@ -589,6 +504,36 @@ namespace toolVanDao.Services
             catch (Exception e)
             {
                 XtraMessageBox.Show(e.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static async Task DownloadPDF78Async(List<InvoiceObject> invoiceObjects78, string txtPath)
+        {
+            int i = 0;
+            var webClient = SetupWebClient();
+            foreach (var id78 in invoiceObjects78)
+            {
+                CancellationToken tokenAsync = tokenSource.Token;
+                if (tokenAsync.IsCancellationRequested)
+                {
+                    break;
+                }
+
+
+                i++;
+                if (i % 2000 == 0)
+                {
+                    webClient = SetupWebClient();
+                }
+                var url = BaseConfig.UrlDownloadpdf78 + id78.hoadon68id;
+
+                byte[] ketqua = await webClient.DownloadDataTaskAsync(new Uri(url));
+
+                string fileName = "sohd_" + id78.shdon + "_" + id78.ngay_hd.ToString("yyyy-MM-dd") + "_" + id78.KyHieu + ".pdf";
+
+                System.IO.File.WriteAllBytes(txtPath + "\\" + fileName, ketqua);
+
+
             }
         }
     }

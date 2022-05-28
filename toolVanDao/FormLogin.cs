@@ -61,7 +61,7 @@ namespace toolVanDao
                             FormGetXML frm = new FormGetXML(txtMST.Text, txtTK.Text, txtMK.Text);
 
                             frm.ShowDialog();
-                            this.Close();
+                            this.Show();
                         
                         
                            
@@ -143,7 +143,7 @@ namespace toolVanDao
                             this.Hide();
                             FormGetXML frm = new FormGetXML(txtMST.Text, txtTK.Text, txtMK.Text);
                             frm.ShowDialog();
-                            this.Close();
+                            this.Show();
 
                         }
                         else

@@ -56,6 +56,9 @@ namespace toolVanDao
             this.btn_download = new DevExpress.XtraEditors.SimpleButton();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.Btn_Download_PDF = new DevExpress.XtraEditors.SimpleButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.btn_stop = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtTuNgay.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTuNgay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDenNgay.Properties.CalendarTimeProperties)).BeginInit();
@@ -327,11 +330,42 @@ namespace toolVanDao
             this.Btn_Download_PDF.Text = "Tải File PDF";
             this.Btn_Download_PDF.Click += new System.EventHandler(this.Btn_Download_PDF_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(490, 373);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 17);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Thời gian:";
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Location = new System.Drawing.Point(562, 373);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(0, 17);
+            this.lblTime.TabIndex = 13;
+            // 
+            // btn_stop
+            // 
+            this.btn_stop.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btn_stop.Location = new System.Drawing.Point(401, 359);
+            this.btn_stop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_stop.Name = "btn_stop";
+            this.btn_stop.Size = new System.Drawing.Size(83, 45);
+            this.btn_stop.TabIndex = 14;
+            this.btn_stop.Text = "Dừng";
+            this.btn_stop.Click += new System.EventHandler(this.btn_stop_Click);
+            // 
             // FormGetXML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 407);
+            this.Controls.Add(this.btn_stop);
+            this.Controls.Add(this.lblTime);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Btn_Download_PDF);
             this.Controls.Add(this.btn_download);
             this.Controls.Add(this.btn_Path);
@@ -391,5 +425,8 @@ namespace toolVanDao
         private System.Windows.Forms.CheckBox check78;
         private System.Windows.Forms.CheckBox check32;
         private SimpleButton Btn_Download_PDF;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTime;
+        private SimpleButton btn_stop;
     }
 }
