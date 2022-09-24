@@ -27,7 +27,7 @@ namespace toolVanDao.Services
                 {"ma_dvcs","VP" }
             };
 
-            var urlLogin = BaseConfig.UrlLogin;
+            var urlLogin = Properties.Settings.Default.UrlLogin;
             var token = client.UploadString(urlLogin, json.ToString());
             if (string.IsNullOrEmpty(token))
             {

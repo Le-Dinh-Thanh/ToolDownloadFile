@@ -1,9 +1,12 @@
 ﻿using DevExpress.XtraEditors;
 using Newtonsoft.Json.Linq;
+using PdfSharp.Pdf;
+using PdfSharp.Pdf.IO;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -15,6 +18,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using toolVanDao.Config;
 using toolVanDao.Data;
+using toolVanDao.Forms;
 
 namespace toolVanDao.Services
 {
@@ -22,13 +26,18 @@ namespace toolVanDao.Services
     {
         public static bool ck = false;
         public static CancellationTokenSource tokenSource = null;
-       
+
+        // Define delegate
+        public delegate void PassControl(object sender);
+
+        // Create instance (null)
+        public static PassControl passControl;
 
 
         public static WebClient SetupWebClient()
         {
-            var userName = BaseConfig.UsernameLoginWeb;
-            var passWord = BaseConfig.PasswordLoginWeb;
+            var userName = Properties.Settings.Default.UsernameLoginWeb;
+            var passWord = Properties.Settings.Default.PasswordLoginWeb;
             var webClient = new WebClient
             {
                 Encoding = Encoding.UTF8
@@ -42,7 +51,7 @@ namespace toolVanDao.Services
 
         public static SqlConnection GetSqlConnectionMisaTest()
         {
-            var connectionString = BaseConfig.ConnectionString;
+            var connectionString = Properties.Settings.Default.ConnectionString;
             // Log.Debug(connectionString);
             var sqlConnection = new SqlConnection(connectionString);
             return sqlConnection;
@@ -55,7 +64,7 @@ namespace toolVanDao.Services
                 var sqlConnectionMisa = GetSqlConnectionMisaTest();
                 sqlConnectionMisa.Open();
                 var where = $"WHERE So_Ct >=2700 ";
-                var dataTableInvoice = DataContext.GetDataTableTest(sqlConnectionMisa, BaseConfig.TableInvocie, where);
+                var dataTableInvoice = DataContext.GetDataTableTest(sqlConnectionMisa, Properties.Settings.Default.TableInvocie, where);
                 int i = 0;
 
                 List<String> listrow = new List<String>();
@@ -101,7 +110,7 @@ namespace toolVanDao.Services
 
                                 var dataRequest = jObjectMainData.ToString();
                                 //Log.Debug(dataRequest);
-                                var url = BaseConfig.UrlSave;
+                                var url = Properties.Settings.Default.UrlSave;
                                 using (var scope = new TransactionScope())
                                 {
                                     try
@@ -112,10 +121,10 @@ namespace toolVanDao.Services
                                         if (resultResponse.ContainsKey("ok") && resultResponse.ContainsKey("data"))
                                         {
                                             var jToken = resultResponse["data"];
-                                            /*  DataContext.UpdateMisa(sqlConnectionMisa, refId, BaseConfig.TableInvocie, jToken);
-                                              if (BaseConfig.Version.Equals("2017"))
+                                            /*  DataContext.UpdateMisa(sqlConnectionMisa, refId, Properties.Settings.Default.TableInvocie, jToken);
+                                              if (Properties.Settings.Default.Version.Equals("2017"))
                                               {
-                                                  DataContext.UpdateMisaVoucher(sqlConnectionMisa, refId, BaseConfig.TableVoucher, BaseConfig.TableVoucherDetail, jToken);
+                                                  DataContext.UpdateMisaVoucher(sqlConnectionMisa, refId, Properties.Settings.Default.TableVoucher, Properties.Settings.Default.TableVoucherDetail, jToken);
                                               }*/
                                             scope.Complete();
                                         }
@@ -135,7 +144,7 @@ namespace toolVanDao.Services
                         MessageBoxIcon.Information);
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 XtraMessageBox.Show("Lấy dữ liệu thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -144,7 +153,7 @@ namespace toolVanDao.Services
         {
 
             var webClient = SetupWebClient();
-            var url = BaseConfig.UrlGetInvoiceByInvoiceAuthId + invoiceAuthId;
+            var url = Properties.Settings.Default.UrlGetInvoiceByInvoiceAuthId + invoiceAuthId;
             var result = webClient.DownloadString(url);
             JObject jObject = JObject.Parse(result);
             if (jObject.ContainsKey("inv_InvoiceAuth_id"))
@@ -152,7 +161,7 @@ namespace toolVanDao.Services
                 ck = true;
                 string shd = (string)jObject["inv_invoiceNumber"];
                 // XtraMessageBox.Show($"Hóa đơn số {shd} đã tồn tại trên hệ thống Minvoice! Bạn vui lòng chọn chức năng phù hợp!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                // DataContext.UpdateMisa(sqlConnection, invoiceAuthId, BaseConfig.TableInvocie, jObject);
+                // DataContext.UpdateMisa(sqlConnection, invoiceAuthId, Properties.Settings.Default.TableInvocie, jObject);
                 return true;
             }
             return false;
@@ -165,7 +174,7 @@ namespace toolVanDao.Services
                     var sqlConnectionMisa = GetSqlConnectionMisaTest();
                     sqlConnectionMisa.Open();
                     var where = $"WHERE InvNo IN ({invoiceNumber})";
-                    var dataTableInvoice = DataContext.GetDataTableTest(sqlConnectionMisa, BaseConfig.TableInvocie, where);
+                    var dataTableInvoice = DataContext.GetDataTableTest(sqlConnectionMisa, Properties.Settings.Default.TableInvocie, where);
                     if (dataTableInvoice.Rows.Count > 0)
                     {
                         foreach (DataRow row in dataTableInvoice.Rows)
@@ -183,7 +192,7 @@ namespace toolVanDao.Services
                                 };
 
                             var dataRequest = jObjectMainData.ToString();
-                            var url = BaseConfig.UrlSave;
+                            var url = Properties.Settings.Default.UrlSave;
                             using (var scope = new TransactionScope())
                             {
                                 try
@@ -194,10 +203,10 @@ namespace toolVanDao.Services
                                     if (resultResponse.ContainsKey("ok") && resultResponse.ContainsKey("data"))
                                     {
                                         var jToken = resultResponse["data"];
-                                        DataContext.UpdateMisa(sqlConnectionMisa, refId, BaseConfig.TableInvocie, jToken);
-                                        if (BaseConfig.Version == "2017")
+                                        DataContext.UpdateMisa(sqlConnectionMisa, refId, Properties.Settings.Default.TableInvocie, jToken);
+                                        if (Properties.Settings.Default.Version == "2017")
                                         {
-                                            DataContext.UpdateMisaVoucher(sqlConnectionMisa, refId, BaseConfig.TableVoucher, BaseConfig.TableVoucherDetail, jToken);
+                                            DataContext.UpdateMisaVoucher(sqlConnectionMisa, refId, Properties.Settings.Default.TableVoucher, Properties.Settings.Default.TableVoucherDetail, jToken);
                                         }
                                         scope.Complete();
                                         XtraMessageBox.Show($"Cập nhật hóa đơn {invNo} thành công", "Thông Báo", MessageBoxButtons.OK,
@@ -221,6 +230,7 @@ namespace toolVanDao.Services
         {
             try
             {
+                int i = 0;
                 foreach (var sbm in sobaomat)
                 {
                     ///////////////////////////////
@@ -230,7 +240,7 @@ namespace toolVanDao.Services
                         break;
                     }
 
-
+                    i++;
                     var webClient = new WebClient
                     {
                         Encoding = Encoding.UTF8
@@ -238,12 +248,12 @@ namespace toolVanDao.Services
                     webClient.Headers.Add("Content-Type", "application/json; charset=utf-8");
                     JObject json = new JObject
                     {
-                        {"masothue",BaseConfig.MST},
+                        {"masothue",Properties.Settings.Default.MST},
                         {"sobaomat",sbm.ToString() }
 
                     };
 
-                    var url = BaseConfig.UrlDownloadXML;
+                    var url = Properties.Settings.Default.UrlDownloadXML;
                     //var ketqua1 = webClient.UploadString(url, json.ToString());
                     byte[] byteArray = Encoding.ASCII.GetBytes(json.ToString());
 
@@ -254,7 +264,7 @@ namespace toolVanDao.Services
                     string fileName = filenameEncoding.Substring(filenameEncoding.IndexOf("=") + 1);
 
                     System.IO.File.WriteAllBytes(txtPath + "\\" + fileName, ketqua);
-
+                    FormGetXML.frmget.lblDatai.Text = i.ToString();
                 }
             }
             catch (Exception e)
@@ -277,7 +287,7 @@ namespace toolVanDao.Services
                 var webClient = SetupWebClient();
                 foreach (var id in invoiceObjects)
                 {
-                    
+
                     CancellationToken tokenAsync = tokenSource.Token;
                     if (tokenAsync.IsCancellationRequested)
                     {
@@ -289,11 +299,11 @@ namespace toolVanDao.Services
                         webClient = SetupWebClient();
                     }
 
-                    var url = BaseConfig.UrlDownloadPDF + id.InvInvoiceAuthId;
+                    var url = Properties.Settings.Default.UrlDownloadPDF + id.InvInvoiceAuthId;
 
                     byte[] ketqua = await webClient.DownloadDataTaskAsync(url);
 
-                    //var url = BaseConfig.UrlDownloadXML;
+                    //var url = Properties.Settings.Default.UrlDownloadXML;
                     ////var ketqua1 = webClient.UploadString(url, json.ToString());
                     //byte[] byteArray = Encoding.ASCII.GetBytes(json.ToString());
 
@@ -302,10 +312,10 @@ namespace toolVanDao.Services
 
                     //string filenameEncoding = webClient.ResponseHeaders["Content-Disposition"].ToString();
                     //string fileName = filenameEncoding.Substring(filenameEncoding.IndexOf("=") + 1);
-                    string fileName = "sohd_" + id.InvoiceNumber + "_" + id.ngay_hd.ToString("yyyy-MM-dd") + "_" + id.KyHieu.Trim().Replace("/","-") + ".pdf";
+                    string fileName = "sohd_" + id.InvoiceNumber + "_" + id.ngay_hd.ToString("yyyy-MM-dd") + "_" + id.KyHieu.Trim().Replace("/", "-") + ".pdf";
 
                     System.IO.File.WriteAllBytes(txtPath + "\\" + fileName, ketqua);
-
+                    FormGetXML.frmget.lblDatai.Text = i.ToString();
                 }
             }
             catch (Exception e)
@@ -315,7 +325,7 @@ namespace toolVanDao.Services
                 MessageBoxIcon.Error);
 
             }
-          
+
 
 
         }
@@ -340,7 +350,7 @@ namespace toolVanDao.Services
 
 
 
-                    var url = BaseConfig.UrlDownloadXml78 + id78.hoadon68id;
+                    var url = Properties.Settings.Default.UrlDownloadXml78 + id78.hoadon68id;
 
                     var ketqua = await  webClient.DownloadStringTaskAsync(new Uri(url));
                     // Encoding.ASCII.GetString(ketqua);
@@ -365,7 +375,7 @@ namespace toolVanDao.Services
                     string fileName = "sohd_"+id78.shdon+"_"+ id78.ngay_hd.ToString("yyyy-MM-dd") + "_" + id78.KyHieu+".xml";
 
                     System.IO.File.WriteAllBytes(txtPath + "\\" + fileName, Encoding.UTF8.GetBytes(xmlraw.ToString()));
-
+                    FormGetXML.frmget.lblDatai.Text = i.ToString();
                 }
             }
             catch (Exception e)
@@ -383,10 +393,8 @@ namespace toolVanDao.Services
         public static async Task<string> Downloadpdf78(string txtPath, List<string> listid, List<InvoiceObject> invoiceObjects78)
         {
             try
-            {
-      
+            {      
                 await DownloadPDF78Async(invoiceObjects78, txtPath);
-
               
             }
             catch (Exception e)
@@ -415,7 +423,7 @@ namespace toolVanDao.Services
                 invInvoiceAuthId = invInvoiceAuthId.Substring(0, invInvoiceAuthId.Length - 1);
                 var sqlConnectionMisa = GetSqlConnectionMisaTest();
                 sqlConnectionMisa.Open();
-                string sqlcmd1 = $"SELECT a.*, b.ID_HD FROM {BaseConfig.TableInvocie} a LEFT JOIN B3009CT b ON a.Stt = b.Stt WHERE b.ID_HD IN({invInvoiceAuthId})";
+                string sqlcmd1 = $"SELECT a.*, b.ID_HD FROM {Properties.Settings.Default.TableInvocie} a LEFT JOIN B3009CT b ON a.Stt = b.Stt WHERE b.ID_HD IN({invInvoiceAuthId})";
                 int i = 0;
 
                 List<String> listrow = new List<String>();
@@ -462,7 +470,7 @@ namespace toolVanDao.Services
 
                             // Log.Debug(dataRequest);
 
-                            var url = BaseConfig.UrlSave;
+                            var url = Properties.Settings.Default.UrlSave;
                             using (var scope = new TransactionScope())
                             {
                                 try
@@ -473,10 +481,10 @@ namespace toolVanDao.Services
                                     if (resultResponse.ContainsKey("ok") && resultResponse.ContainsKey("data"))
                                     {
                                         var jToken = resultResponse["data"];
-                                        // DataContext.UpdateMisa(sqlConnectionMisa, refId, BaseConfig.TableInvocie, jToken);
-                                        //      if (BaseConfig.Version == "2017")
+                                        // DataContext.UpdateMisa(sqlConnectionMisa, refId, Properties.Settings.Default.TableInvocie, jToken);
+                                        //      if (Properties.Settings.Default.Version == "2017")
                                         //   {
-                                        //         DataContext.UpdateMisaVoucher(sqlConnectionMisa, refId, BaseConfig.TableVoucher, BaseConfig.TableVoucherDetail, jToken);
+                                        //         DataContext.UpdateMisaVoucher(sqlConnectionMisa, refId, Properties.Settings.Default.TableVoucher, Properties.Settings.Default.TableVoucherDetail, jToken);
                                         //    }
                                         scope.Complete();
                                         XtraMessageBox.Show($"Cập nhật hóa đơn {invNo} thành công", "Thông Báo", MessageBoxButtons.OK,
@@ -525,16 +533,259 @@ namespace toolVanDao.Services
                 {
                     webClient = SetupWebClient();
                 }
-                var url = BaseConfig.UrlDownloadpdf78 + id78.hoadon68id;
+                var url = Properties.Settings.Default.UrlDownloadpdf78 + id78.hoadon68id;
 
                 byte[] ketqua = await webClient.DownloadDataTaskAsync(new Uri(url));
 
-                string fileName = "sohd_" + id78.shdon + "_" + id78.ngay_hd.ToString("yyyy-MM-dd") + "_" + id78.KyHieu + ".pdf";
+                string fileName = "sohd_" + id78.shdon + "_" + id78.ngay_hd.ToString("dd-MM-yyyy") + "_" + id78.KyHieu + ".pdf";
 
                 System.IO.File.WriteAllBytes(txtPath + "\\" + fileName, ketqua);
 
-
+                FormGetXML.frmget.lblDatai.Text = i.ToString();
+                //FormGetXML frm = (FormGetXML)Owner; ;
+                //frm.LabelText = i.ToString();
             }
         }
+
+        private static byte[] CombineTwoByteArrays(byte[] first, byte[] second)
+        {
+            byte[] ret = new byte[first.Length + second.Length];
+            Buffer.BlockCopy(first, 0, ret, 0, first.Length);
+            Buffer.BlockCopy(second, 0, ret, first.Length, second.Length);
+            return ret;
+        }
+
+        // Hàm kiểm tra xem mảng byte có phải pdf hay không
+        public static bool IsPDFFile(byte[] data)
+        {
+            if (data != null && data.Length > 4 &&
+                data[0] == 0x25 && // %
+                data[1] == 0x50 && // P
+                data[2] == 0x44 && // D
+                data[3] == 0x46 && // F
+                data[4] == 0x2D)
+            { // -
+
+                // version 1.3 file terminator
+                if (data[5] == 0x31 && data[6] == 0x2E && data[7] == 0x33 &&
+                        data[data.Length - 7] == 0x25 && // %
+                        data[data.Length - 6] == 0x25 && // %
+                        data[data.Length - 5] == 0x45 && // E
+                        data[data.Length - 4] == 0x4F && // O
+                        data[data.Length - 3] == 0x46 && // F
+                        data[data.Length - 2] == 0x20 && // SPACE
+                        data[data.Length - 1] == 0x0A)
+                { // EOL
+                    return true;
+                }
+
+                // version 1.3 file terminator
+                if (data[5] == 0x31 && data[6] == 0x2E && data[7] == 0x34 &&
+                        data[data.Length - 6] == 0x25 && // %
+                        data[data.Length - 5] == 0x25 && // %
+                        data[data.Length - 4] == 0x45 && // E
+                        data[data.Length - 3] == 0x4F && // O
+                        data[data.Length - 2] == 0x46 && // F
+                        data[data.Length - 1] == 0x0A)
+                { // EOL
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+
+                            /*              Xem in hóa đơn 78               */
+
+
+                         /*         Gộp các file pdf hóa đơn thông tư 32 tải về
+                                    Hiển thị pdf đã gộp lên cho người dùng xem         */
+        public static async Task ShowPrintPDFAsync(string txtPath, List<string> listID, List<InvoiceObject> listInvoiceObject)
+        {
+
+            // Khai báo tên file gộp hóa đơn tải về
+            // Khai báo biến i để kiểm tra số hóa đơn tải về nếu quá 2000 lần thì sẽ phải setup lại WebClient
+            string fileName = "HoaDonTT32.pdf";
+            int i = 0;
+
+            // Tạo danh sách kiểu byte[] chứa các hóa đơn tải về từ API tải PDF
+            List<byte[]> danhSachHoaDon = new List<byte[]>();
+
+            try
+            {
+
+                // Khai báo webClient có thông tin về token và header để chuẩn bị nhận data từ API
+                // Tạo vòng lặp để lấy dữ liệu từ API trả về mảng byte 
+                WebClient webClient = SetupWebClient();
+                foreach(var id in listInvoiceObject)
+                {
+                    // Khai báo biến hoaDon kiểu byte[] để nhận dữ liệu của từng file PDF nhận về
+                    byte[] hoaDon;
+
+
+                    // Nhận token từ Task xem hóa đơn tổng hợp
+                    // Kiểm tra nếu nhấn nút dừng thì sẽ dừng Task xem in hóa đơn đang chạy bất đồng bộ
+                    CancellationToken tokenAsync = tokenSource.Token;
+                    if (tokenAsync.IsCancellationRequested)
+                    {
+                        break;
+                    }
+
+                    var url =  Properties.Settings.Default.UrlDownloadpdf78 + id.hoadon68id;
+
+                    // Kiểm tra số lần lấy dữ liệu từ API
+                    i++;
+                    if(i % 2000 == 0)
+                    {
+                        webClient = SetupWebClient();
+                    }
+
+                    // Nhận dữ liệu file PDF trả về mảng byte từ API
+                    hoaDon = await webClient.DownloadDataTaskAsync(new Uri(url));
+                    danhSachHoaDon.Add(hoaDon);
+                }
+
+
+                // Sử dụng thư viện PDFSharp để gộp các mảng byte PDF đã tải về được
+                // Lưu file vào địa chỉ cho trước
+                using(var ms = new MemoryStream())
+                {
+                    using(var resultPDF = new PdfDocument(ms))
+                    {
+                        foreach(var hoadonPDF in danhSachHoaDon)
+                        {
+                            using(var src = new MemoryStream(hoadonPDF)) 
+                            {
+                                using(var srcPDF = PdfReader.Open(src, PdfDocumentOpenMode.Import))
+                                {
+                                    FormGetXML.frmget.lblDatai.Text = i.ToString();
+                                    for(var count = 0; count < srcPDF.PageCount; count++)
+                                    {
+                                        resultPDF.AddPage(srcPDF.Pages[count]);
+                                    }
+                                } 
+                            }
+                        }
+                        resultPDF.Save(ms);
+                        System.IO.File.WriteAllBytes(txtPath + "\\" + fileName, ms.ToArray());
+                    }
+                }
+
+
+                // Hiển thị xem in cho người dùng xem
+                using (FormPDF form = new FormPDF(txtPath + "\\" + fileName))
+                {
+                    form.ShowDialog();
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+                            /*          Kết thúc xem in theo hóa đơn 32             */
+
+
+
+
+                                /*          Xem in theo hóa đơn 78          */
+        public static async Task ShowPrintPDF78Async(string txtPath, List<string> listID, List<InvoiceObject> listInvoiceObject)
+        {
+            // Khai báo tên file gộp hóa đơn tải về
+            // Khai báo biến i để kiểm tra số hóa đơn tải về nếu quá 2000 lần thì sẽ phải setup lại WebClient
+            string fileName = "HoaDonTT32.pdf";
+            int i = 0;
+
+            // Tạo danh sách kiểu byte[] chứa các hóa đơn tải về từ API tải PDF
+            List<byte[]> danhSachHoaDon = new List<byte[]>();
+
+            try
+            {
+
+                // Khai báo webClient có thông tin về token và header để chuẩn bị nhận data từ API
+                // Tạo vòng lặp để lấy dữ liệu từ API trả về mảng byte 
+                WebClient webClient = SetupWebClient();
+                foreach (var id in listInvoiceObject)
+                {
+                    // Khai báo biến hoaDon kiểu byte[] để nhận dữ liệu của từng file PDF nhận về
+                    byte[] hoaDon;
+
+                    // Nhận token từ Task xem hóa đơn tổng hợp
+                    // Kiểm tra nếu nhấn nút dừng thì sẽ dừng Task xem in hóa đơn đang chạy bất đồng bộ
+                    CancellationToken tokenAsync = tokenSource.Token;
+                    if (tokenAsync.IsCancellationRequested)
+                    {
+                        break;
+                    }
+
+                    var url = Properties.Settings.Default.UrlDownloadpdf78 + id.hoadon68id;
+
+                    // Kiểm tra số lần lấy dữ liệu từ API
+                    i++;
+                    if (i % 2000 == 0)
+                    {
+                        webClient = SetupWebClient();
+                    }
+
+                    // Nhận dữ liệu file PDF trả về mảng byte từ API
+                    hoaDon = await webClient.DownloadDataTaskAsync(url);
+                    danhSachHoaDon.Add(hoaDon);
+                }
+                webClient.Dispose();
+
+
+                // Sử dụng thư viện PDFSharp để gộp các mảng byte PDF đã tải về được
+                // Lưu file vào địa chỉ cho trước
+                using (var ms = new MemoryStream())
+                {
+                    using (var resultPDF = new PdfDocument(ms))
+                    {
+                        foreach (var hoadonPDF in danhSachHoaDon)
+                        {
+                            using (var src = new MemoryStream(hoadonPDF))
+                            {
+                                using (var srcPDF = PdfReader.Open(src, PdfDocumentOpenMode.Import))
+                                {
+                                    // Nén file lại để giảm kích thước của file PDF
+                                    srcPDF.Options.FlateEncodeMode = PdfFlateEncodeMode.BestCompression;
+                                    srcPDF.Options.UseFlateDecoderForJpegImages = PdfUseFlateDecoderForJpegImages.Automatic;
+                                    srcPDF.Options.NoCompression = false;
+                                    srcPDF.Options.CompressContentStreams = true;
+
+
+                                    FormGetXML.frmget.lblDatai.Text = i.ToString();
+
+                                    for (var count = 0; count < srcPDF.PageCount; count++)
+                                    {
+                                        resultPDF.AddPage(srcPDF.Pages[count]);
+                                    }
+                                }
+                            }
+                        }
+                        resultPDF.Save(ms);
+                        System.IO.File.WriteAllBytes(txtPath + "\\" + fileName, ms.ToArray());
+                    }
+                }
+                danhSachHoaDon = null;
+
+                // Sau khi tải xong thì dừng đồng hồ đếm
+                // Gán giá trị đồng hồ đếm cho label để hiển thị cho khách hàng xem thời gian
+                FormGetXML.frmget._stopwatch.Stop();
+                FormGetXML.frmget.UpdateDisplay();
+                FormGetXML.frmget._labelUpdateTimer.Stop();
+
+
+                // Hiển thị xem in cho người dùng xem
+                using (FormPDF form = new FormPDF(txtPath + "\\" + fileName))
+                {
+                    form.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+                            /*          Kết thúc xem in theo hóa đơn 78            */
     }
 }
