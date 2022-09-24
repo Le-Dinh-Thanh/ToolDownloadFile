@@ -58,8 +58,8 @@ namespace toolVanDao.Services
         {
             List<MauHoaDon> mauHoaDons = new List<MauHoaDon>();
             var webClient = MinvoiceService.SetupWebClient();
-            var url = BaseConfig.UrlRef;
-            
+            var url = Properties.Settings.Default.UrlRef;
+
             try
             {
                 var result = webClient.DownloadString(url);
@@ -95,7 +95,7 @@ namespace toolVanDao.Services
 
             List<MauHoaDon78> mauHoaDons78 = new List<MauHoaDon78>();
             var webClient = MinvoiceService.SetupWebClient();
-            var url = BaseConfig.UrlRef78;
+            var url = Properties.Settings.Default.UrlRef78;
 
             try
             {
@@ -112,7 +112,7 @@ namespace toolVanDao.Services
                             MauHoaDon78 mauHoaDon78 = new MauHoaDon78
                             {
                                 ky_hieu = jToken["khhdon"].ToString(),
-                                ngay_bd_sd = Convert.ToDateTime(jToken["date_new"]),
+                                ngay_bd_sd = Convert.ToDateTime(string.IsNullOrEmpty(jToken["date_new"].ToString()) ? DateTime.Now : jToken["date_new"]),
                                 id = jToken["id"].ToString()
 
                             };

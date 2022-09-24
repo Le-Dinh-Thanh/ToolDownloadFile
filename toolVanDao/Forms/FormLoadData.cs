@@ -8,7 +8,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using System.Windows.Forms;
 using toolVanDao.Services;
 using toolVanDao.Config;
 using System.Data.SqlClient;

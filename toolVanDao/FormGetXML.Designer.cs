@@ -15,6 +15,11 @@ namespace toolVanDao
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
+
+            /*pdfViewer2.CloseDocument();
+            pdfViewer1.Dispose();
+            pdfViewer2.Dispose();
+            fileStream.Dispose();*/
             if (disposing && (components != null))
             {
                 components.Dispose();
@@ -28,13 +33,14 @@ namespace toolVanDao
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGetXML));
             this.txtTuNgay = new DevExpress.XtraEditors.DateEdit();
             this.txtDenNgay = new DevExpress.XtraEditors.DateEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.check78 = new System.Windows.Forms.CheckBox();
             this.check32 = new System.Windows.Forms.CheckBox();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -59,12 +65,18 @@ namespace toolVanDao
             this.label1 = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.btn_stop = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_ViewPDF = new DevExpress.XtraEditors.SimpleButton();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblDatai = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtTuNgay.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTuNgay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDenNgay.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDenNgay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtkyhieu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmauso.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkAll.Properties)).BeginInit();
@@ -102,8 +114,7 @@ namespace toolVanDao
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.check78);
-            this.groupControl1.Controls.Add(this.check32);
+            this.groupControl1.Controls.Add(this.groupBox1);
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.labelControl5);
             this.groupControl1.Controls.Add(this.txtkyhieu);
@@ -124,10 +135,21 @@ namespace toolVanDao
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Thông tin cần lấy";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.check78);
+            this.groupBox1.Controls.Add(this.check32);
+            this.groupBox1.Location = new System.Drawing.Point(262, 46);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(154, 48);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chọn loại hóa đơn";
+            // 
             // check78
             // 
             this.check78.AutoSize = true;
-            this.check78.Location = new System.Drawing.Point(355, 70);
+            this.check78.Location = new System.Drawing.Point(83, 22);
             this.check78.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.check78.Name = "check78";
             this.check78.Size = new System.Drawing.Size(65, 21);
@@ -139,7 +161,7 @@ namespace toolVanDao
             // check32
             // 
             this.check32.AutoSize = true;
-            this.check32.Location = new System.Drawing.Point(287, 70);
+            this.check32.Location = new System.Drawing.Point(6, 22);
             this.check32.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.check32.Name = "check32";
             this.check32.Size = new System.Drawing.Size(65, 21);
@@ -188,7 +210,7 @@ namespace toolVanDao
             this.chkAll.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkAll.Name = "chkAll";
             this.chkAll.Properties.Caption = "";
-            this.chkAll.Size = new System.Drawing.Size(20, 19);
+            this.chkAll.Size = new System.Drawing.Size(20, 24);
             this.chkAll.TabIndex = 8;
             this.chkAll.CheckedChanged += new System.EventHandler(this.chkAll_CheckedChanged);
             // 
@@ -234,7 +256,7 @@ namespace toolVanDao
             this.searchLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.searchLookUpEdit1.Properties.NullText = "[Chưa chọn dải hóa đơn]";
-            this.searchLookUpEdit1.Properties.View = this.searchLookUpEdit1View;
+            this.searchLookUpEdit1.Properties.PopupView = this.searchLookUpEdit1View;
             this.searchLookUpEdit1.Size = new System.Drawing.Size(125, 22);
             this.searchLookUpEdit1.TabIndex = 3;
             this.searchLookUpEdit1.EditValueChanged += new System.EventHandler(this.searchLookUpEdit1_EditValueChanged);
@@ -271,7 +293,7 @@ namespace toolVanDao
             this.checkedListBoxControl1.Location = new System.Drawing.Point(0, 114);
             this.checkedListBoxControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBoxControl1.Name = "checkedListBoxControl1";
-            this.checkedListBoxControl1.Size = new System.Drawing.Size(885, 230);
+            this.checkedListBoxControl1.Size = new System.Drawing.Size(885, 196);
             this.checkedListBoxControl1.TabIndex = 7;
             // 
             // txtPath
@@ -279,7 +301,7 @@ namespace toolVanDao
             this.txtPath.Location = new System.Drawing.Point(31, 373);
             this.txtPath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPath.Name = "txtPath";
-            this.txtPath.Size = new System.Drawing.Size(272, 22);
+            this.txtPath.Size = new System.Drawing.Size(167, 22);
             this.txtPath.TabIndex = 8;
             // 
             // labelControl4
@@ -294,7 +316,7 @@ namespace toolVanDao
             // btn_Path
             // 
             this.btn_Path.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Path.ImageOptions.Image")));
-            this.btn_Path.Location = new System.Drawing.Point(310, 359);
+            this.btn_Path.Location = new System.Drawing.Point(207, 361);
             this.btn_Path.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Path.Name = "btn_Path";
             this.btn_Path.Size = new System.Drawing.Size(85, 47);
@@ -333,7 +355,7 @@ namespace toolVanDao
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(490, 373);
+            this.label1.Location = new System.Drawing.Point(387, 376);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 17);
             this.label1.TabIndex = 12;
@@ -342,15 +364,15 @@ namespace toolVanDao
             // lblTime
             // 
             this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(562, 373);
+            this.lblTime.Location = new System.Drawing.Point(459, 376);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(0, 17);
             this.lblTime.TabIndex = 13;
             // 
             // btn_stop
             // 
-            this.btn_stop.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.btn_stop.Location = new System.Drawing.Point(401, 359);
+            this.btn_stop.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_stop.ImageOptions.Image")));
+            this.btn_stop.Location = new System.Drawing.Point(298, 361);
             this.btn_stop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_stop.Name = "btn_stop";
             this.btn_stop.Size = new System.Drawing.Size(83, 45);
@@ -358,11 +380,61 @@ namespace toolVanDao
             this.btn_stop.Text = "Dừng";
             this.btn_stop.Click += new System.EventHandler(this.btn_stop_Click);
             // 
+            // btn_ViewPDF
+            // 
+            this.btn_ViewPDF.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_ViewPDF.ImageOptions.Image")));
+            this.btn_ViewPDF.Location = new System.Drawing.Point(555, 357);
+            this.btn_ViewPDF.Name = "btn_ViewPDF";
+            this.btn_ViewPDF.Size = new System.Drawing.Size(75, 47);
+            this.btn_ViewPDF.TabIndex = 15;
+            this.btn_ViewPDF.Text = "In";
+            this.btn_ViewPDF.Click += new System.EventHandler(this.btn_ViewPDF_Click);
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(473, 336);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(0, 17);
+            this.lblTotal.TabIndex = 17;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(387, 336);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 17);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Tổng số HĐ:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // lblDatai
+            // 
+            this.lblDatai.AutoSize = true;
+            this.lblDatai.Location = new System.Drawing.Point(624, 336);
+            this.lblDatai.Name = "lblDatai";
+            this.lblDatai.Size = new System.Drawing.Size(0, 17);
+            this.lblDatai.TabIndex = 19;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(552, 336);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 17);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Đã tải:";
+            // 
             // FormGetXML
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 407);
+            this.ClientSize = new System.Drawing.Size(898, 411);
+            this.Controls.Add(this.lblDatai);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btn_ViewPDF);
             this.Controls.Add(this.btn_stop);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.label1);
@@ -373,7 +445,7 @@ namespace toolVanDao
             this.Controls.Add(this.txtPath);
             this.Controls.Add(this.checkedListBoxControl1);
             this.Controls.Add(this.groupControl1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("FormGetXML.IconOptions.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "FormGetXML";
@@ -387,6 +459,8 @@ namespace toolVanDao
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtkyhieu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmauso.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkAll.Properties)).EndInit();
@@ -428,5 +502,11 @@ namespace toolVanDao
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTime;
         private SimpleButton btn_stop;
+        private SimpleButton btn_ViewPDF;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label lblDatai;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

@@ -11,8 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using toolVanDao.Services;
-using ClosedXML.Excel;
-using Syncfusion.XlsIO;
+//using ClosedXML.Excel;
+//using Syncfusion.XlsIO;
 
 namespace toolVanDao
 {
@@ -117,30 +117,30 @@ namespace toolVanDao
 
                     }
 
-                    var workbook = new XLWorkbook();
-                    workbook.AddWorksheet("sheetName");
-                    var ws = workbook.Worksheet("sheetName");
-                    //Recorrer el objecto
-                    int row1 = 2;
-                    ws.Cells("A" + "1").Value = "CKS";
-                    ws.Cells("B" + "1").Value = "MST";
-                    ws.Cells("C" + "1").Value = "Ngày hết hạn";
-                    foreach (var c in lstKQ)
-                    {
+                    //var workbook = new XLWorkbook();
+                    //workbook.AddWorksheet("sheetName");
+                    //var ws = workbook.Worksheet("sheetName");
+                    ////Recorrer el objecto
+                    //int row1 = 2;
+                    //ws.Cells("A" + "1").Value = "CKS";
+                    //ws.Cells("B" + "1").Value = "MST";
+                    //ws.Cells("C" + "1").Value = "Ngày hết hạn";
+                    //foreach (var c in lstKQ)
+                    //{
 
-                        //Escribrie en Excel en cada celda
-                        ws.Cell("A" + row1.ToString()).Value = c.CKS;
-                        ws.Cell("B" + row1.ToString()).Value = c.MST;
-                        ws.Cell("C" + row1.ToString()).Value = c.ngayhethan;
+                    //    //Escribrie en Excel en cada celda
+                    //    ws.Cell("A" + row1.ToString()).Value = c.CKS;
+                    //    ws.Cell("B" + row1.ToString()).Value = c.MST;
+                    //    ws.Cell("C" + row1.ToString()).Value = c.ngayhethan;
 
-                        row1++;
+                    //    row1++;
 
-                    }
+                    //}
 
                     string k = $"HetHan_CKS" + i.ToString() + ".xlsx";
                     //Guardar Excel 
                     //Ruta = Nombre_Proyecto\bin\Debug
-                    workbook.SaveAs(@"C:\Users\Quang Huy\Desktop\hETHAN_cks\" + k);
+                    //workbook.SaveAs(@"C:\Users\Quang Huy\Desktop\hETHAN_cks\" + k);
                     i++;
                     _sqlConnection.Close();
                 }
